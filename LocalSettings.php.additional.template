@@ -1,3 +1,5 @@
+$wgDefaultSkin = "tweeki";
+$wgLanguageCode = "de";
 
 # Show Tweeki's advanced features by default
 $wgDefaultUserOptions['tweeki-advanced'] = 1;
@@ -48,11 +50,11 @@ $wgAuthManagerAutoConfig['primaryauth'] += [
 ];
 
 $wgLDAPDomainNames = array( 'habidat-ldap' );
-$wgLDAPServerNames = array( 'habidat-ldap' => '$HABIDAT_DOCKER_PREFIX-ldap' );
+$wgLDAPServerNames = array( 'habidat-ldap' => '$HABIDAT_LDAP_HOST' );
 $wgLDAPUseLocal = false;
 $wgLDAPEncryptionType = array( 'habidat-ldap' => 'clear' );
-$wgLDAPPort = array( 'habidat-ldap' => 389 );
-$wgLDAPProxyAgent = array( 'habidat-ldap' => 'cn=admin,$HABIDAT_LDAP_BASE' );
+$wgLDAPPort = array( 'habidat-ldap' => $HABIDAT_LDAP_PORT );
+$wgLDAPProxyAgent = array( 'habidat-ldap' => '$HABIDAT_LDAP_BINDDN' );
 $wgLDAPProxyAgentPassword = array( 'habidat-ldap' => '$HABIDAT_LDAP_ADMIN_PASSWORD' );
 $wgLDAPSearchAttributes = array( 'habidat-ldap' => 'cn' );
 $wgLDAPBaseDNs = array( 'habidat-ldap' => '$HABIDAT_LDAP_BASE' );

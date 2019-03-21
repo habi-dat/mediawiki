@@ -27,10 +27,10 @@ RUN php composer.phar require mediawiki/semantic-media-wiki "~2.5" --update-no-d
     && php composer.phar require mediawiki/semantic-result-formats "~2.5" --update-no-dev
 
 ADD LocalSettings.php.additional.template ./
-
-RUN chmod +x docker-entrypoint.sh
+ADD additonal-pages.xml.template ./
 
 # set x-frame options to ALLOWALL to enable being shown in an iframe (inside nextcloud)
+RUN a2enmod headers
 COPY apache2-security.conf /etc/apache2/conf-enabled/security.conf
 
 COPY docker-entrypoint.sh /entrypoint.sh

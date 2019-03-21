@@ -37,14 +37,18 @@ if [ ! -e $CONTAINER_INITIALIZED ]; then
 
 
     echo "UPDATE LOCALSETTINGS.PHP..."
-    envsubst < LocalSettings.php.additional.template > LocalSettings.php.additional
+    envsubst '$HABIDAT_LDAP_HOST $HABIDAT_LDAP_PORT $HABIDAT_LDAP_BINDDN $HABIDAT_LDAP_ADMIN_PASSWORD $HABIDAT_LDAP_BASE' < LocalSettings.php.additional.template > LocalSettings.php.additional
+    envsubst '$HABIDAT_LOGO' < additonal-pages.xml.template > additonal-pages.xml
     cp LocalSettings.php LocalSettings.php.bak
-    cat LocalSettings.php LocalSettings.php.additional > LocalSettings.php
-    sed -i 's/wgDefaultSkin = ".*"/wgDefaultSkin = "tweeki"/g' LocalSettings.php
-    sed -i 's/wgLanguageCode = ".*"/wgLanguageCode = "de"/g' LocalSettings.php
+    echo " " >> LocalSettings.php
+    cat LocalSettings.php.additional >> LocalSettings.php
+    #sed -i 's/wgDefaultSkin = ".*"/wgDefaultSkin = "tweeki"/g' LocalSettings.php
+    #sed -i 's/wgLanguageCode = ".*"/wgLanguageCode = "de"/g' LocalSettings.php
+    #sed -i `s/wgSitename = ".*"/wgSitename = "$HABIDAT_TITLE"/g` LocalSettings.php
 
     echo "IMPORTING SEMORG PAGES..."
     php maintenance/importDump.php < extensions/SemanticOrganization/import/semorg_pages.xml
+    php maintenance/importDump.php < additonal-pages.xml
 
     echo "CLEANUP..."
     php maintenance/rebuildrecentchanges.php
@@ -52,5 +56,6 @@ if [ ! -e $CONTAINER_INITIALIZED ]; then
 
     touch $CONTAINER_INITIALIZED
 fi
+
 echo "STARTUP WEB SERVER..."
 exec "apache2-foreground"
