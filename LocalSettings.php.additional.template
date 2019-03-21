@@ -1,0 +1,82 @@
+
+# Show Tweeki's advanced features by default
+$wgDefaultUserOptions['tweeki-advanced'] = 1;
+
+# Load Parser Functions extension
+wfLoadExtension( 'ParserFunctions' );
+# Enable String Functions
+$wgPFEnableStringFunctions = true;
+
+# Enable Semantic MediaWiki
+enableSemantics('localhost');
+$smwgEnabledEditPageHelp = false;
+$smwgLinksInValues = true;
+
+# Load Page Forms and Semantic Organization extensions
+wfLoadExtension('PageForms');
+$wgPageFormsAutocompleteOnAllChars = true;
+wfLoadExtension('SemanticOrganization');
+
+# Disable caching
+$wgEnableParserCache = false;
+$wgCachePages = false;
+
+# Allow display titles for automatically created page names
+$wgRestrictDisplayTitle = false;
+
+# Make Wiki private
+$wgGroupPermissions['*']['createaccount'] = false;
+$wgGroupPermissions['*']['read'] = false;
+$wgGroupPermissions['*']['edit'] = false;
+
+# Load auto user page creation extension
+wfLoadExtension( 'CreateUserPage' );
+
+# Load extension to get current user name
+wfLoadExtension( 'MyVariables' );
+
+# LDAP
+#LDAP Settings
+require_once ('extensions/LdapAuthentication/LdapAuthentication.php');
+
+$wgAuthManagerAutoConfig['primaryauth'] += [
+  LdapPrimaryAuthenticationProvider::class => [
+    'class' => LdapPrimaryAuthenticationProvider::class,
+    'args' => [['authoritative' => false]], // don't allow local non-LDAP accounts
+    'sort' => 50, // must be smaller than local pw provider
+  ],
+];
+
+$wgLDAPDomainNames = array( 'habidat-ldap' );
+$wgLDAPServerNames = array( 'habidat-ldap' => '$HABIDAT_DOCKER_PREFIX-ldap' );
+$wgLDAPUseLocal = false;
+$wgLDAPEncryptionType = array( 'habidat-ldap' => 'clear' );
+$wgLDAPPort = array( 'habidat-ldap' => 389 );
+$wgLDAPProxyAgent = array( 'habidat-ldap' => 'cn=admin,$HABIDAT_LDAP_BASE' );
+$wgLDAPProxyAgentPassword = array( 'habidat-ldap' => '$HABIDAT_LDAP_ADMIN_PASSWORD' );
+$wgLDAPSearchAttributes = array( 'habidat-ldap' => 'cn' );
+$wgLDAPBaseDNs = array( 'habidat-ldap' => '$HABIDAT_LDAP_BASE' );
+$wgLDAPUserBaseDNs = array( 'habidat-ldap' => 'ou=users,$HABIDAT_LDAP_BASE' );
+$wgLDAPGroupBaseDNs = array( 'habidat-ldap' => 'ou=groups,$HABIDAT_LDAP_BASE' );
+
+# Map specific LDAP attributes like e-mail addresses
+$wgLDAPPreferences = array( 'habidat-ldap' => array('email' => 'mail', 'realname' => 'cn', 'nickname' => 'givenName' ) );
+
+# Group based restriction:
+$wgLDAPGroupUseFullDN = array( 'habidat-ldap' => true );
+$wgLDAPGroupObjectclass = array( 'habidat-ldap' => 'groupOfNames' );
+$wgLDAPGroupAttribute = array( 'habidat-ldap' => 'member' );
+$wgLDAPGroupSearchNestedGroups = array( 'habidat-ldap' => false );
+$wgLDAPGroupNameAttribute = array( 'habidat-ldap' => 'cn' );
+$wgLDAPLowerCaseUsername = array( 'habidat-ldap' => true );
+#$wgLDAPRequiredGroups = array(
+#  'habidat-ldap' => array(
+#    'cn=somegroup,ou=groups,$HABIDAT_LDAP_BASE',
+#  ),
+#);
+
+
+
+$wgLDAPDebug = 3;
+$wgDebugLogGroups['ldap'] = "/tmp/debug.log" ;
+
