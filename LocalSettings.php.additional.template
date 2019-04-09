@@ -77,7 +77,18 @@ $wgLDAPLowerCaseUsername = array( 'habidat-ldap' => true );
 #  ),
 #);
 
+// This hook is called by the LdapAuthentication plugin. It is a configuration hook. Here we
+// are specifying what attibute we want to use for a username in the wiki.
+// Note that this hook is NOT called on a straight bind.
+// The hook calls the function defined below.
+$wgHooks['SetUsernameAttributeFromLDAP'][] = 'SetUsernameAttribute';
 
+// This function allows you to get the username from LDAP however you need to do it.
+// This is the username MediaWiki will use.
+function SetUsernameAttribute(&$LDAPUsername, $info) {
+        $LDAPUsername = ucwords($info[0]['cn'][0]);
+        return true;
+}
 
 $wgLDAPDebug = 3;
 $wgDebugLogGroups['ldap'] = "/tmp/debug.log" ;

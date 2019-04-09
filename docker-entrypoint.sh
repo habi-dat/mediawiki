@@ -42,6 +42,14 @@ if [ ! -e $CONTAINER_INITIALIZED ]; then
     cp LocalSettings.php LocalSettings.php.bak
     echo " " >> LocalSettings.php
     cat LocalSettings.php.additional >> LocalSettings.php
+
+    if [ $HABIDAT_SSO == "true" ]
+    then
+        export HABIDAT_SSO_CERTIFICATE=$(echo $HABIDAT_SSO_CERTIFICATE | sed --expression='s/\\n/\n/g')
+        envsubst '$HABIDAT_MEDIAWIKI_SUBDOMAIN $HABIDAT_DOMAIN $HABIDAT_SSO_CERTIFICATE' < LocalSettings.php.sso.template > LocalSettings.php.sso
+        echo " " >> LocalSettings.php
+        cat LocalSettings.php.sso >> LocalSettings.php        
+    fi
     #sed -i 's/wgDefaultSkin = ".*"/wgDefaultSkin = "tweeki"/g' LocalSettings.php
     #sed -i 's/wgLanguageCode = ".*"/wgLanguageCode = "de"/g' LocalSettings.php
     #sed -i `s/wgSitename = ".*"/wgSitename = "$HABIDAT_TITLE"/g` LocalSettings.php
