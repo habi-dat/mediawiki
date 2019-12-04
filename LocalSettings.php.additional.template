@@ -93,3 +93,4 @@ function SetUsernameAttribute(&$LDAPUsername, $info) {
 $wgLDAPDebug = 3;
 $wgDebugLogGroups['ldap'] = "/tmp/debug.log" ;
 
+error_reporting(E_ERROR | E_PARSE);

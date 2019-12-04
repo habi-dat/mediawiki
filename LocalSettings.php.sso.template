@@ -15,6 +15,9 @@ $wgMoSamlIssuer = 'https://sso.$HABIDAT_DOMAIN';
 # Enter SAML Login URL or ACS(Assertion Consumer Service) URL here 
 $wgMoSamlLoginURL = 'https://sso.$HABIDAT_DOMAIN/simplesaml/saml2/idp/SSOService.php';
 
+# Enter SAML SLO URLhere 
+$wgMoSamlLogoutURL = 'https://sso.$HABIDAT_DOMAIN/simplesaml/saml2/idp/SingleLogoutService.php';
+
 # Set binding type for login. Two possible values - HttpRedirect and HttpPost
 $wgMoSamlLoginBindingType = 'HttpRedirect';
 
@@ -41,7 +44,7 @@ $wgMoSamlCreateUser = true;
 
 # Map attributes
 $wgMoSamlEmailAttr = 'mail';
-$wgMoSamlUsernameAttr = 'uid';
+$wgMoSamlUsernameAttr = 'cn';
 $wgMoSamlFNameAttr = 'givenName';
 $wgMoSamlLNameAttr = 'sn';
 $wgMoSamlGroupAttr = 'memberOf';

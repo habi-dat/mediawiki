@@ -16,12 +16,11 @@ WORKDIR /var/www/html
 RUN git clone https://github.com/thaider/Tweeki /var/www/html/skins/Tweeki \
     && git clone -b REL1_32 https://gerrit.wikimedia.org/r/p/mediawiki/extensions/PageForms.git /var/www/html/extensions/PageForms \
     && git clone https://github.com/oteloegen/SemanticOrganization.git /var/www/html/extensions/SemanticOrganization \
+    && git clone https://github.com/soudis/mediawiki-saml.git /var/www/html/extensions/SamlSingleSignOnAuth \
     && git clone -b REL1_32 https://github.com/wikimedia/mediawiki-extensions-LdapAuthentication extensions/LdapAuthentication \
     && git clone -b REL1_32 https://gerrit.wikimedia.org/r/p/mediawiki/extensions/CreateUserPage.git extensions/CreateUserPage \
     && git clone -b REL1_32 https://gerrit.wikimedia.org/r/p/mediawiki/extensions/MyVariables.git extensions/MyVariables \
-    && wget https://www.miniorange.com/downloads/mediawiki_saml_1.1.2.zip -P extensions \
-    && unzip extensions/mediawiki_saml_1.1.2.zip -d extensions \
-    && rm extensions/mediawiki_saml_1.1.2.zip
+    && git clone -b REL1_32 https://gerrit.wikimedia.org/r/p/mediawiki/extensions/UserMerge.git extensions/UserMerge 
 
 
 RUN curl --silent --show-error https://getcomposer.org/installer | php
