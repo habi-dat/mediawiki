@@ -18,6 +18,7 @@ RUN git clone https://github.com/thaider/Tweeki /var/www/html/skins/Tweeki \
     && git clone https://github.com/oteloegen/SemanticOrganization.git /var/www/html/extensions/SemanticOrganization \
     && git clone https://github.com/soudis/mediawiki-saml.git /var/www/html/extensions/SamlSingleSignOnAuth \
     && git clone -b REL1_32 https://github.com/wikimedia/mediawiki-extensions-LdapAuthentication extensions/LdapAuthentication \
+    && git clone -b REL1_32 https://github.com/wikimedia/mediawiki-extensions-Auth_remoteuser.git extensions/Auth_remoteuser \  
     && git clone -b REL1_32 https://gerrit.wikimedia.org/r/p/mediawiki/extensions/CreateUserPage.git extensions/CreateUserPage \
     && git clone -b REL1_32 https://gerrit.wikimedia.org/r/p/mediawiki/extensions/MyVariables.git extensions/MyVariables \
     && git clone -b REL1_32 https://gerrit.wikimedia.org/r/p/mediawiki/extensions/UserMerge.git extensions/UserMerge 
