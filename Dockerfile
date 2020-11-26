@@ -1,6 +1,6 @@
 FROM mediawiki:lts
 
-RUN apt update && apt install -y zip unzip zlib1g-dev
+RUN apt update && apt install -y zip unzip libzip-dev zlib1g-dev
 
 RUN docker-php-ext-install zip
 
