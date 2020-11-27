@@ -1,4 +1,4 @@
-FROM mediawiki:lts
+FROM mediawiki:1.31
 
 RUN apt update && apt install -y zip unzip libzip-dev zlib1g-dev
 
@@ -14,24 +14,43 @@ RUN apt-get update && \
 WORKDIR /var/www/html
 
 RUN git clone https://github.com/thaider/Tweeki /var/www/html/skins/Tweeki \
-    && git clone -b REL1_32 https://gerrit.wikimedia.org/r/p/mediawiki/extensions/PageForms.git /var/www/html/extensions/PageForms \
+    && git clone -b REL1_31 https://gerrit.wikimedia.org/r/p/mediawiki/extensions/PageForms.git /var/www/html/extensions/PageForms \
     && git clone https://github.com/oteloegen/SemanticOrganization.git /var/www/html/extensions/SemanticOrganization \
-    && git clone https://github.com/soudis/mediawiki-saml.git /var/www/html/extensions/SamlSingleSignOnAuth \
-    && git clone -b REL1_32 https://github.com/wikimedia/mediawiki-extensions-LdapAuthentication extensions/LdapAuthentication \
-    && git clone -b REL1_32 https://github.com/wikimedia/mediawiki-extensions-Auth_remoteuser.git extensions/Auth_remoteuser \  
-    && git clone -b REL1_32 https://gerrit.wikimedia.org/r/p/mediawiki/extensions/CreateUserPage.git extensions/CreateUserPage \
-    && git clone -b REL1_32 https://gerrit.wikimedia.org/r/p/mediawiki/extensions/MyVariables.git extensions/MyVariables \
-    && git clone -b REL1_32 https://gerrit.wikimedia.org/r/p/mediawiki/extensions/UserMerge.git extensions/UserMerge 
+#    && git clone https://github.com/soudis/mediawiki-saml.git /var/www/html/extensions/SamlSingleSignOnAuth \
+    && git clone -b REL1_31 https://gerrit.wikimedia.org/r/p/mediawiki/extensions/PluggableAuth.git extensions/PluggableAuth \
+    && git clone -b REL1_31 https://github.com/wikimedia/mediawiki-extensions-SimpleSAMLphp extensions/SimpleSAMLphp \
+    && git clone -b REL1_31 https://github.com/wikimedia/mediawiki-extensions-LdapAuthentication extensions/LdapAuthentication \
+    && git clone -b REL1_31 https://github.com/wikimedia/mediawiki-extensions-Auth_remoteuser.git extensions/Auth_remoteuser \  
+    && git clone -b REL1_31 https://gerrit.wikimedia.org/r/p/mediawiki/extensions/CreateUserPage.git extensions/CreateUserPage \
+#    && git clone -b REL1_31 https://gerrit.wikimedia.org/r/p/mediawiki/extensions/MyVariables.git extensions/MyVariables \
+    && git clone -b REL1_31 https://gerrit.wikimedia.org/r/p/mediawiki/extensions/UserMerge.git extensions/UserMerge 
+
+RUN wget https://github.com/simplesamlphp/simplesamlphp/releases/download/v1.18.8/simplesamlphp-1.18.8.tar.gz \
+    && tar xzf simplesamlphp-1.18.8.tar.gz \
+    && rm simplesamlphp-1.18.8.tar.gz \
+    && mv simplesamlphp-1.18.8 /var/simplesamlphp \
+    && chown -R www-data:www-data /var/simplesamlphp
+
+COPY sso/000-default.conf /etc/apache2/sites-available
+
+ADD composer.local.json ./
 
 
-RUN curl --silent --show-error https://getcomposer.org/installer | php
+RUN wget https://getcomposer.org/composer-1.phar
+RUN php composer-1.phar update --no-dev
 
-RUN php composer.phar require mediawiki/semantic-media-wiki "~2.5" --update-no-dev \
-    && php composer.phar require mediawiki/semantic-result-formats "~2.5" --update-no-dev
 
-ADD LocalSettings.php.additional.template ./
-ADD LocalSettings.php.sso.template ./
-ADD additonal-pages.xml.template ./
+#RUN php composer.phar require mediawiki/semantic-media-wiki "~2.5" --update-no-dev \
+#    && php composer.phar require mediawiki/semantic-result-formats "~2.5" --update-no-dev
+
+RUN mkdir ./templates
+
+ADD sso ./templates/sso
+ADD config ./templates/config
+
+RUN mkdir config
+ADD LocalSettings.override.php config
+RUN chown -R www-data:www-data config
 
 # set x-frame options to ALLOWALL to enable being shown in an iframe (inside nextcloud)
 RUN a2enmod headers

@@ -1,5 +1,9 @@
+<?php
+
 $wgDefaultSkin = "tweeki";
 $wgLanguageCode = "de";
+
+$wgEnableUploads = true; 
 
 # Show Tweeki's advanced features by default
 $wgDefaultUserOptions['tweeki-advanced'] = 1;
@@ -33,13 +37,26 @@ $wgGroupPermissions['*']['edit'] = false;
 
 # Load auto user page creation extension
 wfLoadExtension( 'CreateUserPage' );
+$wgCreateUserPage_PageContent = '{{semorg-person-user-custom}}';
 
 # Load extension to get current user name
-wfLoadExtension( 'MyVariables' );
+#wfLoadExtension( 'MyVariables' );
+
+wfLoadExtension('UserMerge');
+$wgGroupPermissions['bureaucrat']['usermerge'] = true;
+
+$wgTweekiSkinHideAnon['navbar'] = true; 
+$wgTweekiSkinHideAnon['footer'] = true; 
+$wgTweekiSkinHideAll['footer-info'] = false; 
+$wgTweekiSkinHideAll['footer-places'] = true; 
+$wgTweekiSkinHideAll['footer-info-copyright'] = true; 
+$wgTweekiSkinHideAll['footer-icons'] = true;
+$wgJobRunRate = 100;
+
+$wgMaxCredits = 1;
 
 # LDAP
-#LDAP Settings
-require_once ('extensions/LdapAuthentication/LdapAuthentication.php');
+/*require_once ('extensions/LdapAuthentication/LdapAuthentication.php');
 
 $wgAuthManagerAutoConfig['primaryauth'] += [
   LdapPrimaryAuthenticationProvider::class => [
@@ -71,11 +88,11 @@ $wgLDAPGroupAttribute = array( 'habidat-ldap' => 'member' );
 $wgLDAPGroupSearchNestedGroups = array( 'habidat-ldap' => false );
 $wgLDAPGroupNameAttribute = array( 'habidat-ldap' => 'cn' );
 $wgLDAPLowerCaseUsername = array( 'habidat-ldap' => true );
-#$wgLDAPRequiredGroups = array(
-#  'habidat-ldap' => array(
-#    'cn=somegroup,ou=groups,$HABIDAT_LDAP_BASE',
-#  ),
-#);
+$wgLDAPRequiredGroups = array(
+  'habidat-ldap' => array(
+    'cn=$HABIDAT_MEDIAWIKI_LDAP_GROUP,ou=groups,$HABIDAT_LDAP_BASE',
+  ),
+);
 
 // This hook is called by the LdapAuthentication plugin. It is a configuration hook. Here we
 // are specifying what attibute we want to use for a username in the wiki.
@@ -92,5 +109,6 @@ function SetUsernameAttribute(&$LDAPUsername, $info) {
 
 $wgLDAPDebug = 3;
 $wgDebugLogGroups['ldap'] = "/tmp/debug.log" ;
+*/
 
 error_reporting(E_ERROR | E_PARSE);
