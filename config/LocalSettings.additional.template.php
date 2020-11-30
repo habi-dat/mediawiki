@@ -23,6 +23,8 @@ wfLoadExtension('PageForms');
 $wgPageFormsAutocompleteOnAllChars = true;
 wfLoadExtension('SemanticOrganization');
 
+$wgSemorgUseRealnames = true;
+
 # Disable caching
 $wgEnableParserCache = false;
 $wgCachePages = false;

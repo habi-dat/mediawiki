@@ -15,7 +15,7 @@ WORKDIR /var/www/html
 
 RUN git clone https://github.com/thaider/Tweeki /var/www/html/skins/Tweeki \
     && git clone -b REL1_31 https://gerrit.wikimedia.org/r/p/mediawiki/extensions/PageForms.git /var/www/html/extensions/PageForms \
-    && git clone https://github.com/oteloegen/SemanticOrganization.git /var/www/html/extensions/SemanticOrganization \
+    && git clone https://github.com/thaider/SemanticOrganization.git /var/www/html/extensions/SemanticOrganization \
 #    && git clone https://github.com/soudis/mediawiki-saml.git /var/www/html/extensions/SamlSingleSignOnAuth \
     && git clone -b REL1_31 https://gerrit.wikimedia.org/r/p/mediawiki/extensions/PluggableAuth.git extensions/PluggableAuth \
     && git clone -b REL1_31 https://github.com/wikimedia/mediawiki-extensions-SimpleSAMLphp extensions/SimpleSAMLphp \
