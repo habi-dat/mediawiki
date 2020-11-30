@@ -11,11 +11,15 @@ if [ ! -e $CONTAINER_INSTALLED ]; then
     echo "SETUP (SEMANTIC-)MEDIAWIKI..."
     php maintenance/install.php --dbserver=$MYSQL_HOST --dbname=$MYSQL_DATABASE --dbuser=$MYSQL_USER --dbpass=$MYSQL_PASSWORD --scriptpath="" --lang=de --pass=$MEDIAWIKI_ADMIN_PASSWORD "$MEDIAWIKI_NAME" "$MEDIAWIKI_ADMIN_USERNAME"
 
+    cp -a LocalSettings.php config/
+
     touch $CONTAINER_INSTALLED
 
 fi
 
 if [ ! -e $CONTAINER_UPDATED ]; then
+
+    cp -a config/LocalSettings.php ./
 
     php maintenance/update.php --skip-external-dependencies
 
