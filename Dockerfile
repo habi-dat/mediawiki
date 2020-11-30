@@ -14,7 +14,7 @@ RUN apt-get update && \
 WORKDIR /var/www/html
 
 RUN git clone https://github.com/thaider/Tweeki /var/www/html/skins/Tweeki \
-    && git clone -b REL1_31 https://gerrit.wikimedia.org/r/p/mediawiki/extensions/PageForms.git /var/www/html/extensions/PageForms \
+    && git clone https://gerrit.wikimedia.org/r/p/mediawiki/extensions/PageForms.git /var/www/html/extensions/PageForms \
     && git clone https://github.com/thaider/SemanticOrganization.git /var/www/html/extensions/SemanticOrganization \
 #    && git clone https://github.com/soudis/mediawiki-saml.git /var/www/html/extensions/SamlSingleSignOnAuth \
     && git clone -b REL1_31 https://gerrit.wikimedia.org/r/p/mediawiki/extensions/PluggableAuth.git extensions/PluggableAuth \
@@ -24,6 +24,11 @@ RUN git clone https://github.com/thaider/Tweeki /var/www/html/skins/Tweeki \
     && git clone -b REL1_31 https://gerrit.wikimedia.org/r/p/mediawiki/extensions/CreateUserPage.git extensions/CreateUserPage \
 #    && git clone -b REL1_31 https://gerrit.wikimedia.org/r/p/mediawiki/extensions/MyVariables.git extensions/MyVariables \
     && git clone -b REL1_31 https://gerrit.wikimedia.org/r/p/mediawiki/extensions/UserMerge.git extensions/UserMerge 
+
+WORKDIR /var/www/html/extensions/PageForms
+RUN git checkout 397dfbb
+
+WORKDIR /var/www/html
 
 RUN wget https://github.com/simplesamlphp/simplesamlphp/releases/download/v1.18.8/simplesamlphp-1.18.8.tar.gz \
     && tar xzf simplesamlphp-1.18.8.tar.gz \
