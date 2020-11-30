@@ -50,6 +50,7 @@ if [ ! -e $CONTAINER_UPDATED ]; then
     php maintenance/rebuildrecentchanges.php
     php maintenance/runJobs.php
 
+    cp -a LocalSettings.php config/
     touch $CONTAINER_UPDATED
 fi
 
