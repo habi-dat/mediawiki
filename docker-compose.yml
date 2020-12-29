@@ -1,51 +1,40 @@
-version: '3'
+version: '3.5'
 
-networks:
-  semorg-back:
-    driver: bridge
-
-volumes:
+volumes: 
   db:
-  semorg:
+  images:
+  config:
 
 services:
-
-  # HABIDAT-MYSQL-DB
-  #
-  # Central mysql instances
-  #
-  mysql-db:
+  db:
     image: mariadb
     restart: unless-stopped
     volumes:
       - db:/var/lib/mysql
     environment:
-      - MYSQL_ROOT_PASSWORD=sandbox
-      - MYSQL_DATABASE=sandbox
-      - MYSQL_USER=sandbox
-      - MYSQL_PASSWORD=sandbox
-    networks:
-      - semorg-back
+      - MYSQL_ROOT_PASSWORD=secret
+      - MYSQL_DATABASE=mediawiki
+      - MYSQL_USER=mediawiki
+      - MYSQL_PASSWORD=secret  
+    logging:
+      options:
+        max-size: 50m
 
-  semorg:
-    build: ./
-    restart: unless-stopped
+  web:
+    image: habidat/mediawiki
     environment:
-      - MYSQL_DATABASE=sandbox
-      - MYSQL_USER=sandbox
-      - MYSQL_HOST=mysql-db      
-      - MYSQL_PASSWORD=sandbox
-      - MEDIAWIKI_ADMIN_PASSWORD=sandbox
-      - MEDIAWIKI_ADMIN_USERNAME=admin 
-      - MEDIAWIKI_NAME=sandbox
+      - MYSQL_ROOT_PASSWORD=secret
+      - MYSQL_DATABASE=mediawiki
+      - MYSQL_USER=mediawiki
+      - MYSQL_PASSWORD=secret
+      - MEDIAWIKI_ADMIN_USERNAME=admin
+      - MEDIAWIKI_ADMIN_PASSWORD=secret
+      - MEDIAWIKI_NAME=Testwiki
     volumes:
-      - semorg:/var/www/html
+      - images:/var/www/html/images
+      - config:/var/www/html/config
     depends_on:
-      - mysql-db
-    links:
-      - mysql-db
-    ports:
-      - 8025:80
-    networks:
-      - semorg-back
-
+      - db
+    logging:
+      options:
+        max-size: 50m

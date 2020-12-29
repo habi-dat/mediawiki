@@ -1,8 +1,8 @@
 <mediawiki xmlns="http://www.mediawiki.org/xml/export-0.10/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.10/ http://www.mediawiki.org/xml/export-0.10.xsd" version="0.10" xml:lang="de">
   <siteinfo>
-    <sitename>$MEDIAWIKI_NAME</sitename>
+    <sitename>habi*DAT</sitename>
     <dbname>mediawiki</dbname>
-    <base>https://$HABIDAT_MEDIAWIKI_SUBDOMAIN.$HABIDAT_DOMAIN/index.php/Spezial:MyPage</base>
+    <base>https://orga.habidat.org/index.php/Spezial:MyPage</base>
     <generator>MediaWiki 1.31.5</generator>
     <case>first-letter</case>
     <namespaces>
@@ -41,7 +41,7 @@
       <parentid>2796</parentid>
       <timestamp>2020-07-12T14:09:20Z</timestamp>
       <contributor>
-        <username>admin</username>
+        <username>System</username>
         <id>5</id>
       </contributor>
       <comment>/* Überblick */</comment>
@@ -49,7 +49,7 @@
       <format>text/x-wiki</format>
       <text xml:space="preserve" bytes="1187">{{habidat-bundle}}{{DISPLAYTITLE:Organize!}}
 
-Willkommen in der Organisierungsdezentrale! Hier findest du alle Protokolle von Treffen, deine Aufgaben aus diesen Treffen und die Teams und Projekte in denen du dabei bist.
+Willkommen im Wiki! Hier findest du Anleitungen, alle Protokolle von Treffen, deine Aufgaben aus diesen Treffen und die Teams und Projekte in denen du bist.
 
 &lt;div class=&quot;semorg-dashboard&quot;&gt;
 {{semorg-card
@@ -88,7 +88,7 @@ Willkommen in der Organisierungsdezentrale! Hier findest du alle Protokolle von 
       <parentid>2505</parentid>
       <timestamp>2020-07-12T13:22:22Z</timestamp>
       <contributor>
-        <username>admin</username>
+        <username>System</username>
         <id>5</id>
       </contributor>
       <model>wikitext</model>
@@ -102,40 +102,6 @@ Willkommen in der Organisierungsdezentrale! Hier findest du alle Protokolle von 
     </revision>
   </page>
   <page>
-    <title>Aufgaben</title>
-    <ns>0</ns>
-    <id>349</id>
-    <revision>
-      <id>2800</id>
-      <parentid>2731</parentid>
-      <timestamp>2020-07-12T13:22:37Z</timestamp>
-      <contributor>
-        <username>admin</username>
-        <id>5</id>
-      </contributor>
-      <model>wikitext</model>
-      <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="695">{{habidat-bundle}}
-=== {{#ask:[[semorg-agenda-erledigt::false]][[semorg-agenda-responsible::+]]|format=count}} offene Aufgaben ===
-
-{{#semorg-list:agenda
-  |sort=semorg-agenda-meeting.semorg-meeting-date
-  |query=[[semorg-agenda-erledigt::false]][[semorg-agenda-responsible::+]]
-  |category=-
-  |filter links=agenda-responsible.semorg-person-name
-  |row template=agenda-aufgaben
-  |headers=agenda-meeting,agenda-title,agenda-responsible
-  |?semorg-agenda-responsible=responsible
-  |?semorg-agenda-erledigt=erledigt
-  |?semorg-agenda-meeting.semorg-meeting-date#ISO=date
-  |?semorg-agenda-meeting.semorg-meeting-group=group
-  |?semorg-agenda-meeting.semorg-meeting-project=project
-  |limit=100
-}}</text>
-      <sha1>d4n6i0clx2m87tssta6fpg5lbtskc1n</sha1>
-    </revision>
-  </page>
-  <page>
     <title>Beschlüsse</title>
     <ns>0</ns>
     <id>416</id>
@@ -144,7 +110,7 @@ Willkommen in der Organisierungsdezentrale! Hier findest du alle Protokolle von 
       <parentid>792</parentid>
       <timestamp>2020-07-12T13:22:49Z</timestamp>
       <contributor>
-        <username>admin</username>
+        <username>System</username>
         <id>5</id>
       </contributor>
       <model>wikitext</model>
@@ -171,7 +137,7 @@ Willkommen in der Organisierungsdezentrale! Hier findest du alle Protokolle von 
       <parentid>3087</parentid>
       <timestamp>2020-09-02T07:22:25Z</timestamp>
       <contributor>
-        <username>admin</username>
+        <username>System</username>
         <id>5</id>
       </contributor>
       <model>wikitext</model>
@@ -199,23 +165,19 @@ Willkommen in der Organisierungsdezentrale! Hier findest du alle Protokolle von 
     <ns>0</ns>
     <id>356</id>
     <revision>
-      <id>2804</id>
-      <parentid>2803</parentid>
-      <timestamp>2020-07-12T13:23:47Z</timestamp>
+      <id>4169</id>
+      <parentid>4168</parentid>
+      <timestamp>2020-12-09T09:24:54Z</timestamp>
       <contributor>
-        <username>admin</username>
+        <username>System</username>
         <id>5</id>
       </contributor>
       <model>wikitext</model>
       <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="235">{{habidat-bundle}}{{#semorg-list:project
-  |heading={{int:semorg-project-page-name}}
-  |links={{semorg-project-links}}
-  |formlink={{#semorg-forminput:project}}
-  |query=[[semorg-project-closed::false]]
-  |filters=project-department
+      <text xml:space="preserve" bytes="58">{{habidat-bundle}}{{semorg-project-overview
+  |limit=50
 }}</text>
-      <sha1>1re3y12qjk9ri1dpl2u7mhycbkaw7sd</sha1>
+      <sha1>a1iuz0rv0rbaxz9uwje3ddrk7fg16tf</sha1>
     </revision>
   </page>
   <page>
@@ -227,7 +189,7 @@ Willkommen in der Organisierungsdezentrale! Hier findest du alle Protokolle von 
       <parentid>2499</parentid>
       <timestamp>2020-07-12T13:23:59Z</timestamp>
       <contributor>
-        <username>admin</username>
+        <username>System</username>
         <id>5</id>
       </contributor>
       <model>wikitext</model>
@@ -245,7 +207,7 @@ Willkommen in der Organisierungsdezentrale! Hier findest du alle Protokolle von 
       <parentid>1628</parentid>
       <timestamp>2020-07-12T13:24:11Z</timestamp>
       <contributor>
-        <username>admin</username>
+        <username>System</username>
         <id>5</id>
       </contributor>
       <model>wikitext</model>
@@ -263,7 +225,7 @@ Willkommen in der Organisierungsdezentrale! Hier findest du alle Protokolle von 
       <parentid>2778</parentid>
       <timestamp>2020-07-12T13:24:37Z</timestamp>
       <contributor>
-        <username>admin</username>
+        <username>System</username>
         <id>5</id>
       </contributor>
       <model>wikitext</model>
@@ -281,7 +243,7 @@ Willkommen in der Organisierungsdezentrale! Hier findest du alle Protokolle von 
       <parentid>1993</parentid>
       <timestamp>2020-07-12T13:27:09Z</timestamp>
       <contributor>
-        <username>admin</username>
+        <username>System</username>
         <id>5</id>
       </contributor>
       <model>wikitext</model>
@@ -337,7 +299,7 @@ Willkommen in der Organisierungsdezentrale! Hier findest du alle Protokolle von 
       <parentid>957</parentid>
       <timestamp>2020-07-12T13:30:33Z</timestamp>
       <contributor>
-        <username>admin</username>
+        <username>System</username>
         <id>5</id>
       </contributor>
       <model>wikitext</model>
@@ -385,7 +347,7 @@ Willkommen in der Organisierungsdezentrale! Hier findest du alle Protokolle von 
       <parentid>222</parentid>
       <timestamp>2020-07-12T13:30:39Z</timestamp>
       <contributor>
-        <username>admin</username>
+        <username>System</username>
         <id>5</id>
       </contributor>
       <model>wikitext</model>
@@ -413,7 +375,7 @@ Willkommen in der Organisierungsdezentrale! Hier findest du alle Protokolle von 
       <parentid>946</parentid>
       <timestamp>2020-07-12T13:30:50Z</timestamp>
       <contributor>
-        <username>admin</username>
+        <username>System</username>
         <id>5</id>
       </contributor>
       <model>wikitext</model>
@@ -443,27 +405,20 @@ Willkommen in der Organisierungsdezentrale! Hier findest du alle Protokolle von 
     <ns>10</ns>
     <id>71</id>
     <revision>
-      <id>3760</id>
-      <parentid>3758</parentid>
-      <timestamp>2020-11-24T11:37:02Z</timestamp>
+      <id>4036</id>
+      <parentid>3898</parentid>
+      <timestamp>2020-12-04T14:05:28Z</timestamp>
       <contributor>
-        <username>admin</username>
+        <username>System</username>
         <id>5</id>
       </contributor>
       <model>wikitext</model>
       <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="1257">&lt;noinclude&gt;{{habidat-bundle}}&lt;/noinclude&gt;&lt;includeonly&gt;&lt;tr&gt;
+      <text xml:space="preserve" bytes="1081">&lt;noinclude&gt;{{habidat-bundle}}&lt;/noinclude&gt;&lt;includeonly&gt;&lt;tr&gt;
 &lt;td&gt;[[{{{?target|}}}]]{{#semorg-true:{{{?closed|}}}
   |&lt;br&gt;&lt;span class=&quot;badge badge-secondary&quot;&gt;{{int:semorg-value-status-closed}}&lt;/span&gt;
 }}&lt;div class=&quot;semorg-list-row-details&quot;&gt;
-{{{?description|}}}&lt;/div&gt;&lt;div class=&quot;semorg-list-row-details mt-2 ml-2 mr-2 pl-1&quot; style=&quot;border-left:1px #0056b3 solid;&quot;&gt;'''letztes Update''': {{semorg-project-last-update
-  |{{{?target|}}}
-  |{{#formlink:form=semorg-project-update
-    |query string=semorg-project-update[project]={{{?target|}}}
-    |returnto={{FULLPAGENAME}}
-    |link text=erstellen
-  }}
-}}&lt;/div&gt;&lt;/td&gt; 
+{{{?description|}}}&lt;/div&gt;&lt;div class=&quot;semorg-list-row-details m-2 px-2 py-1 bg-light&quot;&gt;'''{{int:semorg-field-project-last-update-name}}''': {{semorg-project-last-update|{{{?target|}}}}}&lt;/div&gt;&lt;/td&gt; 
 &lt;td&gt;{{semorg-date|{{{?end|}}}}}&lt;/td&gt; 
 &lt;td style=&quot;font-size:small&quot;&gt;{{#ask:[[semorg-project-team-project::{{{?target|}}}]][[Semorg-project-team-main-responsible::true]]
   |mainlabel=-
@@ -482,7 +437,7 @@ Willkommen in der Organisierungsdezentrale! Hier findest du alle Protokolle von 
 {{semorg-showedit
   |target={{{?target|}}}
 }}&lt;/tr&gt;&lt;/includeonly&gt;</text>
-      <sha1>kc1eyfylpo0gf7uxf7vd45rc1nbpfb8</sha1>
+      <sha1>6dx21fzlspn14tjshrtybefrh5z1snz</sha1>
     </revision>
   </page>
   <page>
@@ -494,7 +449,7 @@ Willkommen in der Organisierungsdezentrale! Hier findest du alle Protokolle von 
       <parentid>3394</parentid>
       <timestamp>2020-09-29T20:28:14Z</timestamp>
       <contributor>
-        <username>admin</username>
+        <username>System</username>
         <id>5</id>
       </contributor>
       <model>wikitext</model>
@@ -536,7 +491,7 @@ Willkommen in der Organisierungsdezentrale! Hier findest du alle Protokolle von 
       <parentid>1983</parentid>
       <timestamp>2020-07-12T13:30:25Z</timestamp>
       <contributor>
-        <username>admin</username>
+        <username>System</username>
         <id>5</id>
       </contributor>
       <model>wikitext</model>
@@ -562,7 +517,7 @@ Willkommen in der Organisierungsdezentrale! Hier findest du alle Protokolle von 
       <parentid>3412</parentid>
       <timestamp>2020-11-23T12:06:50Z</timestamp>
       <contributor>
-        <username>admin</username>
+        <username>System</username>
         <id>5</id>
       </contributor>
       <model>wikitext</model>
@@ -612,7 +567,7 @@ Willkommen in der Organisierungsdezentrale! Hier findest du alle Protokolle von 
       <parentid>1322</parentid>
       <timestamp>2020-07-12T13:31:13Z</timestamp>
       <contributor>
-        <username>admin</username>
+        <username>System</username>
         <id>5</id>
       </contributor>
       <model>wikitext</model>
@@ -639,7 +594,7 @@ Willkommen in der Organisierungsdezentrale! Hier findest du alle Protokolle von 
       <parentid>2436</parentid>
       <timestamp>2020-07-12T13:30:58Z</timestamp>
       <contributor>
-        <username>admin</username>
+        <username>System</username>
         <id>5</id>
       </contributor>
       <model>wikitext</model>
@@ -670,6 +625,78 @@ Willkommen in der Organisierungsdezentrale! Hier findest du alle Protokolle von 
     </revision>
   </page>
   <page>
+    <title>Vorlage:Habidat-bundle</title>
+    <ns>10</ns>
+    <id>740</id>
+    <revision>
+      <id>3796</id>
+      <parentid>2798</parentid>
+      <timestamp>2020-11-26T20:52:18Z</timestamp>
+      <contributor>
+        <username>System</username>
+        <id>5</id>
+      </contributor>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="302">[[Kategorie:habidat-bundle]]&lt;noinclude&gt;Diese Vorlage weist Seiten der Kategorie [[:Kategorie:habidat-bundle|&lt;code&gt;habidat-bundle&lt;/code&gt;]]. So lassen sich Seiten markieren, die zum Nachbauen der Struktur des Orga-Wikis benötigt werden und gemeinsam exportiert bzw. importiert werden sollen.&lt;/noinclude&gt;</text>
+      <sha1>iz3zlcuxigi4un12nyriosz2spanc7c</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Todos</title>
+    <ns>0</ns>
+    <id>859</id>
+    <revision>
+      <id>3828</id>
+      <timestamp>2020-11-26T21:48:08Z</timestamp>
+      <contributor>
+        <username>System</username>
+        <id>5</id>
+      </contributor>
+      <comment>Die Seite wurde neu angelegt: „{{habidat-bundle}}{{semorg-task-overview}}“</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="42">{{habidat-bundle}}{{semorg-task-overview}}</text>
+      <sha1>fde5nhiu7am7wn9r262ba1dt510nv3d</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Erledigte Todos</title>
+    <ns>0</ns>
+    <id>860</id>
+    <revision>
+      <id>3829</id>
+      <timestamp>2020-11-26T21:48:30Z</timestamp>
+      <contributor>
+        <username>System</username>
+        <id>5</id>
+      </contributor>
+      <comment>Die Seite wurde neu angelegt: „{{habidat-bundle}}{{semorg-task-done-overview}}“</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="47">{{habidat-bundle}}{{semorg-task-done-overview}}</text>
+      <sha1>t0gd16nf4n8tzil0hznvtn8zm66pkno</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Kategorie:Habidat-bundle</title>
+    <ns>14</ns>
+    <id>739</id>
+    <revision>
+      <id>3848</id>
+      <parentid>2795</parentid>
+      <timestamp>2020-11-28T15:05:43Z</timestamp>
+      <contributor>
+        <username>System</username>
+        <id>5</id>
+      </contributor>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="18">{{habidat-bundle}}</text>
+      <sha1>dnaal0eyk11qd64nkn9dxffnjvt829w</sha1>
+    </revision>
+  </page>
+  <page>
     <title>MediaWiki:Semorg-agenda-template</title>
     <ns>8</ns>
     <id>227</id>
@@ -678,7 +705,7 @@ Willkommen in der Organisierungsdezentrale! Hier findest du alle Protokolle von 
       <parentid>239</parentid>
       <timestamp>2020-07-12T14:06:13Z</timestamp>
       <contributor>
-        <username>admin</username>
+        <username>System</username>
         <id>5</id>
       </contributor>
       <model>wikitext</model>
@@ -696,31 +723,13 @@ Willkommen in der Organisierungsdezentrale! Hier findest du alle Protokolle von 
       <parentid>1806</parentid>
       <timestamp>2019-11-16T13:36:30Z</timestamp>
       <contributor>
-        <username>admin</username>
+        <username>System</username>
         <id>5</id>
       </contributor>
       <model>wikitext</model>
       <format>text/x-wiki</format>
       <text xml:space="preserve" bytes="24">(Agenda: $1 min geplant)</text>
       <sha1>h2qzx0t99cibynz9n42hmvfgd1nuvvq</sha1>
-    </revision>
-  </page>
-  <page>
-    <title>MediaWiki:Semorg-field-manual-role-name</title>
-    <ns>8</ns>
-    <id>575</id>
-    <revision>
-      <id>1639</id>
-      <timestamp>2019-09-11T16:51:27Z</timestamp>
-      <contributor>
-        <username>admin</username>
-        <id>5</id>
-      </contributor>
-      <comment>Die Seite wurde neu angelegt: „Verantwortliches Team“</comment>
-      <model>wikitext</model>
-      <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="21">Verantwortliches Team</text>
-      <sha1>pn3xk3ruv0lynngzx67aqziz25izd3t</sha1>
     </revision>
   </page>
   <page>
@@ -731,7 +740,7 @@ Willkommen in der Organisierungsdezentrale! Hier findest du alle Protokolle von 
       <id>720</id>
       <timestamp>2019-05-27T18:30:55Z</timestamp>
       <contributor>
-        <username>admin</username>
+        <username>System</username>
         <id>5</id>
       </contributor>
       <comment>Die Seite wurde neu angelegt: „geplant bis“</comment>
@@ -749,7 +758,7 @@ Willkommen in der Organisierungsdezentrale! Hier findest du alle Protokolle von 
       <id>2687</id>
       <timestamp>2020-06-17T15:00:35Z</timestamp>
       <contributor>
-        <username>admin</username>
+        <username>System</username>
         <id>5</id>
       </contributor>
       <comment>Die Seite wurde neu angelegt: „geplant bis “</comment>
@@ -767,7 +776,7 @@ Willkommen in der Organisierungsdezentrale! Hier findest du alle Protokolle von 
       <id>711</id>
       <timestamp>2019-05-27T18:20:14Z</timestamp>
       <contributor>
-        <username>admin</username>
+        <username>System</username>
         <id>5</id>
       </contributor>
       <comment>Die Seite wurde neu angelegt: „Team“</comment>
@@ -786,7 +795,7 @@ Willkommen in der Organisierungsdezentrale! Hier findest du alle Protokolle von 
       <parentid>1298</parentid>
       <timestamp>2020-06-17T14:56:24Z</timestamp>
       <contributor>
-        <username>admin</username>
+        <username>System</username>
         <id>5</id>
       </contributor>
       <model>wikitext</model>
@@ -803,7 +812,7 @@ Willkommen in der Organisierungsdezentrale! Hier findest du alle Protokolle von 
       <id>1297</id>
       <timestamp>2019-06-12T21:27:35Z</timestamp>
       <contributor>
-        <username>admin</username>
+        <username>System</username>
         <id>5</id>
       </contributor>
       <comment>Die Seite wurde neu angelegt: „team-internal,role,main-responsible“</comment>
@@ -822,7 +831,7 @@ Willkommen in der Organisierungsdezentrale! Hier findest du alle Protokolle von 
       <parentid>712</parentid>
       <timestamp>2019-06-12T21:40:59Z</timestamp>
       <contributor>
-        <username>admin</username>
+        <username>System</username>
         <id>5</id>
       </contributor>
       <model>wikitext</model>
@@ -840,31 +849,13 @@ Willkommen in der Organisierungsdezentrale! Hier findest du alle Protokolle von 
       <parentid>662</parentid>
       <timestamp>2019-05-27T15:27:46Z</timestamp>
       <contributor>
-        <username>admin</username>
+        <username>System</username>
         <id>5</id>
       </contributor>
       <model>wikitext</model>
       <format>text/x-wiki</format>
       <text xml:space="preserve" bytes="43">holder,start-date,end-date,main-responsible</text>
       <sha1>0uvynbm7oonb0s5la6w8se9sopo9ypu</sha1>
-    </revision>
-  </page>
-  <page>
-    <title>MediaWiki:Semorg-field-role-holders-name</title>
-    <ns>8</ns>
-    <id>334</id>
-    <revision>
-      <id>511</id>
-      <timestamp>2019-05-14T21:37:44Z</timestamp>
-      <contributor>
-        <username>admin</username>
-        <id>5</id>
-      </contributor>
-      <comment>Die Seite wurde neu angelegt: „Team“</comment>
-      <model>wikitext</model>
-      <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="4">Team</text>
-      <sha1>3x0ikxjb3s2sya5c0fywfxhu6u9setr</sha1>
     </revision>
   </page>
   <page>
@@ -876,7 +867,7 @@ Willkommen in der Organisierungsdezentrale! Hier findest du alle Protokolle von 
       <parentid>700</parentid>
       <timestamp>2019-05-27T16:14:36Z</timestamp>
       <contributor>
-        <username>admin</username>
+        <username>System</username>
         <id>5</id>
       </contributor>
       <model>wikitext</model>
@@ -894,12 +885,12 @@ Willkommen in der Organisierungsdezentrale! Hier findest du alle Protokolle von 
       <parentid>1753</parentid>
       <timestamp>2019-11-16T14:54:23Z</timestamp>
       <contributor>
-        <username>admin</username>
+        <username>System</username>
         <id>5</id>
       </contributor>
       <model>wikitext</model>
       <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="60">title,person,timer,description,proposal</text>
+      <text xml:space="preserve" bytes="60">title,person,timer,description,proposal,responsible,erledigt</text>
       <sha1>q6ai9y7phb3b32is9cvwxlkq8qt9ak5</sha1>
     </revision>
   </page>
@@ -929,7 +920,7 @@ Willkommen in der Organisierungsdezentrale! Hier findest du alle Protokolle von 
       <id>1667</id>
       <timestamp>2019-09-16T10:02:15Z</timestamp>
       <contributor>
-        <username>admin</username>
+        <username>System</username>
         <id>5</id>
       </contributor>
       <comment>Die Seite wurde neu angelegt: „project,datetime,location,participant,excused,secretary,moderator,overview,guest,files“</comment>
@@ -944,17 +935,18 @@ Willkommen in der Organisierungsdezentrale! Hier findest du alle Protokolle von 
     <ns>8</ns>
     <id>236</id>
     <revision>
-      <id>329</id>
-      <parentid>272</parentid>
-      <timestamp>2019-03-19T16:33:13Z</timestamp>
+      <id>3836</id>
+      <parentid>3835</parentid>
+      <timestamp>2020-11-26T21:58:03Z</timestamp>
       <contributor>
-        <username>admin</username>
-        <id>4</id>
+        <username>System</username>
+        <id>5</id>
       </contributor>
+      <comment>Die Seite wurde geleert.</comment>
       <model>wikitext</model>
       <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="8">fullname</text>
-      <sha1>oimydolus0x8bb5tn9n1vwaquaj8w23</sha1>
+      <text xml:space="preserve" bytes="0" />
+      <sha1>phoiac9h4m842xq45sp7s6u21eteeq1</sha1>
     </revision>
   </page>
   <page>
@@ -966,7 +958,7 @@ Willkommen in der Organisierungsdezentrale! Hier findest du alle Protokolle von 
       <parentid>2685</parentid>
       <timestamp>2020-06-17T15:08:12Z</timestamp>
       <contributor>
-        <username>admin</username>
+        <username>System</username>
         <id>5</id>
       </contributor>
       <model>wikitext</model>
@@ -983,7 +975,7 @@ Willkommen in der Organisierungsdezentrale! Hier findest du alle Protokolle von 
       <id>1991</id>
       <timestamp>2020-02-07T04:44:09Z</timestamp>
       <contributor>
-        <username>admin</username>
+        <username>System</username>
         <id>5</id>
       </contributor>
       <comment>Die Seite wurde neu angelegt: „Teammitglied hinzufügen“</comment>
@@ -991,42 +983,6 @@ Willkommen in der Organisierungsdezentrale! Hier findest du alle Protokolle von 
       <format>text/x-wiki</format>
       <text xml:space="preserve" bytes="24">Teammitglied hinzufügen</text>
       <sha1>bderd7diwc79neubrvmit9q8twe47cb</sha1>
-    </revision>
-  </page>
-  <page>
-    <title>MediaWiki:Semorg-form-role-create-title</title>
-    <ns>8</ns>
-    <id>339</id>
-    <revision>
-      <id>518</id>
-      <timestamp>2019-05-14T21:45:13Z</timestamp>
-      <contributor>
-        <username>admin</username>
-        <id>5</id>
-      </contributor>
-      <comment>Die Seite wurde neu angelegt: „Team erstellen“</comment>
-      <model>wikitext</model>
-      <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="14">Team erstellen</text>
-      <sha1>k4x44coe5nog8s2ydl5a8f4qqaft1wt</sha1>
-    </revision>
-  </page>
-  <page>
-    <title>MediaWiki:Semorg-form-role-edit-title</title>
-    <ns>8</ns>
-    <id>340</id>
-    <revision>
-      <id>519</id>
-      <timestamp>2019-05-14T21:45:19Z</timestamp>
-      <contributor>
-        <username>admin</username>
-        <id>5</id>
-      </contributor>
-      <comment>Die Seite wurde neu angelegt: „Team bearbeiten“</comment>
-      <model>wikitext</model>
-      <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="15">Team bearbeiten</text>
-      <sha1>i6mxsu4knwlwe7r2errsqibrhcz6xow</sha1>
     </revision>
   </page>
   <page>
@@ -1038,7 +994,7 @@ Willkommen in der Organisierungsdezentrale! Hier findest du alle Protokolle von 
       <parentid>517</parentid>
       <timestamp>2019-05-27T16:05:20Z</timestamp>
       <contributor>
-        <username>admin</username>
+        <username>System</username>
         <id>5</id>
       </contributor>
       <model>wikitext</model>
@@ -1055,7 +1011,7 @@ Willkommen in der Organisierungsdezentrale! Hier findest du alle Protokolle von 
       <id>948</id>
       <timestamp>2019-05-28T11:46:43Z</timestamp>
       <contributor>
-        <username>admin</username>
+        <username>System</username>
         <id>5</id>
       </contributor>
       <comment>Die Seite wurde neu angelegt: „Gruppe“</comment>
@@ -1073,7 +1029,7 @@ Willkommen in der Organisierungsdezentrale! Hier findest du alle Protokolle von 
       <id>949</id>
       <timestamp>2019-05-28T11:46:55Z</timestamp>
       <contributor>
-        <username>admin</username>
+        <username>System</username>
         <id>5</id>
       </contributor>
       <comment>Die Seite wurde neu angelegt: „Gruppen“</comment>
@@ -1091,7 +1047,7 @@ Willkommen in der Organisierungsdezentrale! Hier findest du alle Protokolle von 
       <id>530</id>
       <timestamp>2019-05-22T11:18:54Z</timestamp>
       <contributor>
-        <username>admin</username>
+        <username>System</username>
         <id>5</id>
       </contributor>
       <comment>Die Seite wurde neu angelegt: „semorg-group-custom“</comment>
@@ -1109,7 +1065,7 @@ Willkommen in der Organisierungsdezentrale! Hier findest du alle Protokolle von 
       <id>782</id>
       <timestamp>2019-05-28T05:44:34Z</timestamp>
       <contributor>
-        <username>admin</username>
+        <username>System</username>
         <id>5</id>
       </contributor>
       <comment>Die Seite wurde neu angelegt: „meeting-group,agenda-meeting,agenda-proposal“</comment>
@@ -1145,7 +1101,7 @@ Willkommen in der Organisierungsdezentrale! Hier findest du alle Protokolle von 
       <id>725</id>
       <timestamp>2019-05-27T18:43:08Z</timestamp>
       <contributor>
-        <username>admin</username>
+        <username>System</username>
         <id>5</id>
       </contributor>
       <comment>Die Seite wurde neu angelegt: „project-title, project-end, project-team-internal“</comment>
@@ -1164,7 +1120,7 @@ Willkommen in der Organisierungsdezentrale! Hier findest du alle Protokolle von 
       <parentid>514</parentid>
       <timestamp>2020-06-09T15:42:01Z</timestamp>
       <contributor>
-        <username>admin</username>
+        <username>System</username>
         <id>5</id>
       </contributor>
       <model>wikitext</model>
@@ -1181,7 +1137,7 @@ Willkommen in der Organisierungsdezentrale! Hier findest du alle Protokolle von 
       <id>2515</id>
       <timestamp>2020-04-01T10:18:16Z</timestamp>
       <contributor>
-        <username>admin</username>
+        <username>System</username>
         <id>5</id>
       </contributor>
       <comment>Die Seite wurde neu angelegt: „Treffen“</comment>
@@ -1199,7 +1155,7 @@ Willkommen in der Organisierungsdezentrale! Hier findest du alle Protokolle von 
       <id>1980</id>
       <timestamp>2020-02-04T22:26:52Z</timestamp>
       <contributor>
-        <username>admin</username>
+        <username>System</username>
         <id>5</id>
       </contributor>
       <comment>Die Seite wurde neu angelegt: „Vergangene Treffen“</comment>
@@ -1217,7 +1173,7 @@ Willkommen in der Organisierungsdezentrale! Hier findest du alle Protokolle von 
       <id>1622</id>
       <timestamp>2019-09-11T15:41:47Z</timestamp>
       <contributor>
-        <username>admin</username>
+        <username>System</username>
         <id>5</id>
       </contributor>
       <comment>Die Seite wurde neu angelegt: „Benutzer*innen“</comment>
@@ -1235,7 +1191,7 @@ Willkommen in der Organisierungsdezentrale! Hier findest du alle Protokolle von 
       <id>265</id>
       <timestamp>2019-01-16T17:52:18Z</timestamp>
       <contributor>
-        <username>admin</username>
+        <username>System</username>
         <id>5</id>
       </contributor>
       <comment>Die Seite wurde neu angelegt: „semorg-person-user-custom“</comment>
@@ -1254,49 +1210,13 @@ Willkommen in der Organisierungsdezentrale! Hier findest du alle Protokolle von 
       <parentid>740</parentid>
       <timestamp>2019-06-12T21:38:26Z</timestamp>
       <contributor>
-        <username>admin</username>
+        <username>System</username>
         <id>5</id>
       </contributor>
       <model>wikitext</model>
       <format>text/x-wiki</format>
       <text xml:space="preserve" bytes="35">semorg-project-team-internal-custom</text>
       <sha1>6stkv3n7e89s0bdh9zh8kovaz15chl3</sha1>
-    </revision>
-  </page>
-  <page>
-    <title>MediaWiki:Semorg-role-entity-name</title>
-    <ns>8</ns>
-    <id>424</id>
-    <revision>
-      <id>940</id>
-      <timestamp>2019-05-28T11:12:18Z</timestamp>
-      <contributor>
-        <username>admin</username>
-        <id>5</id>
-      </contributor>
-      <comment>Die Seite wurde neu angelegt: „Team“</comment>
-      <model>wikitext</model>
-      <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="4">Team</text>
-      <sha1>3x0ikxjb3s2sya5c0fywfxhu6u9setr</sha1>
-    </revision>
-  </page>
-  <page>
-    <title>MediaWiki:Semorg-role-page-name</title>
-    <ns>8</ns>
-    <id>425</id>
-    <revision>
-      <id>941</id>
-      <timestamp>2019-05-28T11:12:32Z</timestamp>
-      <contributor>
-        <username>admin</username>
-        <id>5</id>
-      </contributor>
-      <comment>Die Seite wurde neu angelegt: „Teams“</comment>
-      <model>wikitext</model>
-      <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="5">Teams</text>
-      <sha1>nttdvfefbkx834ugbxbiscic67bth1d</sha1>
     </revision>
   </page>
   <page>
@@ -1307,7 +1227,7 @@ Willkommen in der Organisierungsdezentrale! Hier findest du alle Protokolle von 
       <id>685</id>
       <timestamp>2019-05-27T16:00:22Z</timestamp>
       <contributor>
-        <username>admin</username>
+        <username>System</username>
         <id>5</id>
       </contributor>
       <comment>Die Seite wurde neu angelegt: „semorg-role-task-custom“</comment>
@@ -1325,7 +1245,7 @@ Willkommen in der Organisierungsdezentrale! Hier findest du alle Protokolle von 
       <id>678</id>
       <timestamp>2019-05-27T15:48:43Z</timestamp>
       <contributor>
-        <username>admin</username>
+        <username>System</username>
         <id>5</id>
       </contributor>
       <comment>Die Seite wurde neu angelegt: „semorg-role-custom“</comment>
@@ -1343,7 +1263,7 @@ Willkommen in der Organisierungsdezentrale! Hier findest du alle Protokolle von 
       <id>952</id>
       <timestamp>2019-05-28T11:54:35Z</timestamp>
       <contributor>
-        <username>admin</username>
+        <username>System</username>
         <id>5</id>
       </contributor>
       <comment>Die Seite wurde neu angelegt: „Treffen“</comment>
@@ -1358,11 +1278,11 @@ Willkommen in der Organisierungsdezentrale! Hier findest du alle Protokolle von 
     <ns>8</ns>
     <id>208</id>
     <revision>
-      <id>2019</id>
-      <parentid>791</parentid>
-      <timestamp>2020-02-20T16:36:05Z</timestamp>
+      <id>3895</id>
+      <parentid>3894</parentid>
+      <timestamp>2020-11-30T21:48:19Z</timestamp>
       <contributor>
-        <username>admin</username>
+        <username>System</username>
         <id>5</id>
       </contributor>
       <model>wikitext</model>
@@ -1372,6 +1292,7 @@ Willkommen in der Organisierungsdezentrale! Hier findest du alle Protokolle von 
 *
 * {{#ask:[[category:semorg-group]]}}
 *
+* Aufgaben
 * Beschlüsse
 Teams
 Projekte
@@ -1379,24 +1300,6 @@ Anleitungen</text>
       <sha1>c2bcz8kjprnf2rfoe4bk0tneoezirwf</sha1>
     </revision>
   </page>
-<page>
-    <title>MediaWiki:Tweeki-navbar-brand</title>
-    <ns>8</ns>
-    <id>269</id>
-    <revision>
-      <id>364</id>
-      <timestamp>2019-03-19T17:30:48Z</timestamp>
-      <contributor>
-        <username>admin</username>
-        <id>4</id>
-      </contributor>
-      <comment>Die Seite wurde neu angelegt</comment>
-      <model>wikitext</model>
-      <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="16">file:$HABIDAT_LOGO</text>
-      <sha1>lmds21pevaw29ib1pkj8rsyk32lwmqe</sha1>
-    </revision>
-  </page>  
   <page>
     <title>MediaWiki:Tweeki-navbar-right</title>
     <ns>8</ns>
@@ -1406,7 +1309,7 @@ Anleitungen</text>
       <parentid>261</parentid>
       <timestamp>2019-05-27T19:17:32Z</timestamp>
       <contributor>
-        <username>admin</username>
+        <username>System</username>
         <id>5</id>
       </contributor>
       <model>wikitext</model>
@@ -1417,14 +1320,32 @@ Anleitungen</text>
     </revision>
   </page>
   <page>
+    <title>MediaWiki:Tweeki-navbar-brand</title>
+    <ns>8</ns>
+    <id>269</id>
+    <revision>
+      <id>364</id>
+      <timestamp>2019-03-19T17:30:48Z</timestamp>
+      <contributor>
+        <username>Florian Humer</username>
+        <id>4</id>
+      </contributor>
+      <comment>Die Seite wurde neu angelegt: „file:igel-03.gif“</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="16">file:igel-03.gif</text>
+      <sha1>lmds21pevaw29ib1pkj8rsyk32lwmqe</sha1>
+    </revision>
+  </page>
+  <page>
     <title>MediaWiki:Siteuser</title>
     <ns>8</ns>
-    <id>738</id>
+    <id>861</id>
     <revision>
-      <id>2792</id>
-      <timestamp>2020-07-12T13:16:31Z</timestamp>
+      <id>3837</id>
+      <timestamp>2020-11-26T22:02:42Z</timestamp>
       <contributor>
-        <username>admin</username>
+        <username>System</username>
         <id>5</id>
       </contributor>
       <comment>Die Seite wurde neu angelegt: „$1“</comment>
@@ -1435,24 +1356,6 @@ Anleitungen</text>
     </revision>
   </page>
   <page>
-    <title>Todos</title>
-    <ns>0</ns>
-    <id>445</id>
-    <revision>
-      <id>446</id>
-      <timestamp>2020-11-27T09:36:35Z</timestamp>
-      <contributor>
-        <username>admin</username>
-        <id>3</id>
-      </contributor>
-      <comment>Leere Seite erstellt</comment>
-      <model>wikitext</model>
-      <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="0" />
-      <sha1>phoiac9h4m842xq45sp7s6u21eteeq1</sha1>
-    </revision>
-  </page> 
-     <page>
     <title>MediaWiki:Mainpage</title>
     <ns>8</ns>
     <id>813</id>
@@ -1460,7 +1363,7 @@ Anleitungen</text>
       <id>3411</id>
       <timestamp>2020-09-29T20:45:02Z</timestamp>
       <contributor>
-        <username>admin</username>
+        <username>System</username>
         <id>5</id>
       </contributor>
       <comment>Die Seite wurde neu angelegt: „Special:MyPage“</comment>
@@ -1468,6 +1371,24 @@ Anleitungen</text>
       <format>text/x-wiki</format>
       <text xml:space="preserve" bytes="14">Special:MyPage</text>
       <sha1>t0qf36cvnwn141nia71tbhkp48bpdoi</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>MediaWiki:Yourrealname</title>
+    <ns>8</ns>
+    <id>862</id>
+    <revision>
+      <id>3849</id>
+      <timestamp>2020-11-28T22:33:19Z</timestamp>
+      <contributor>
+        <username>System</username>
+        <id>5</id>
+      </contributor>
+      <comment>Die Seite wurde neu angelegt: „Anzeigename:“</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="12">Anzeigename:</text>
+      <sha1>25lkxhuocw6r90da8em5du2x50ood3u</sha1>
     </revision>
   </page>
 </mediawiki>

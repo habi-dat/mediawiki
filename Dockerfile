@@ -1,28 +1,23 @@
 FROM mediawiki:1.31
 
-RUN apt update && apt install -y zip unzip libzip-dev zlib1g-dev
-
-RUN docker-php-ext-install zip
-
 RUN apt-get update && \
-    apt-get install -y libldap2-dev nano gettext-base wget && \
+    apt-get install -y libldap2-dev nano gettext-base wget zip unzip libzip-dev zlib1g-dev && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
     docker-php-ext-configure ldap --with-libdir=lib/x86_64-linux-gnu/ && \
-    docker-php-ext-install ldap
+    docker-php-ext-install ldap && \
+    docker-php-ext-install zip
 
 WORKDIR /var/www/html
 
 RUN git clone https://github.com/thaider/Tweeki /var/www/html/skins/Tweeki \
     && git clone https://gerrit.wikimedia.org/r/p/mediawiki/extensions/PageForms.git /var/www/html/extensions/PageForms \
     && git clone https://github.com/thaider/SemanticOrganization.git /var/www/html/extensions/SemanticOrganization \
-#    && git clone https://github.com/soudis/mediawiki-saml.git /var/www/html/extensions/SamlSingleSignOnAuth \
     && git clone -b REL1_31 https://gerrit.wikimedia.org/r/p/mediawiki/extensions/PluggableAuth.git extensions/PluggableAuth \
     && git clone -b REL1_31 https://github.com/wikimedia/mediawiki-extensions-SimpleSAMLphp extensions/SimpleSAMLphp \
     && git clone -b REL1_31 https://github.com/wikimedia/mediawiki-extensions-LdapAuthentication extensions/LdapAuthentication \
     && git clone -b REL1_31 https://github.com/wikimedia/mediawiki-extensions-Auth_remoteuser.git extensions/Auth_remoteuser \  
     && git clone -b REL1_31 https://gerrit.wikimedia.org/r/p/mediawiki/extensions/CreateUserPage.git extensions/CreateUserPage \
-#    && git clone -b REL1_31 https://gerrit.wikimedia.org/r/p/mediawiki/extensions/MyVariables.git extensions/MyVariables \
     && git clone -b REL1_31 https://gerrit.wikimedia.org/r/p/mediawiki/extensions/UserMerge.git extensions/UserMerge 
 
 WORKDIR /var/www/html/extensions/PageForms
@@ -40,13 +35,8 @@ COPY sso/000-default.conf /etc/apache2/sites-available
 
 ADD composer.local.json ./
 
-
 RUN wget https://getcomposer.org/composer-1.phar
 RUN php composer-1.phar update --no-dev
-
-
-#RUN php composer.phar require mediawiki/semantic-media-wiki "~2.5" --update-no-dev \
-#    && php composer.phar require mediawiki/semantic-result-formats "~2.5" --update-no-dev
 
 RUN mkdir ./templates
 
