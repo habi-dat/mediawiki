@@ -2,8 +2,8 @@
   <siteinfo>
     <sitename>habi*DAT</sitename>
     <dbname>mediawiki</dbname>
-    <base>https://orga.habidat.org/index.php/Spezial:MyPage</base>
-    <generator>MediaWiki 1.31.5</generator>
+    <base>https://demo.orga.habidat.org/index.php/Spezial:MyPage</base>
+    <generator>MediaWiki 1.31.10</generator>
     <case>first-letter</case>
     <namespaces>
       <namespace key="-2" case="first-letter">Medium</namespace>
@@ -33,145 +33,150 @@
     </namespaces>
   </siteinfo>
   <page>
-    <title>Hauptseite</title>
+    <title>Benutzer*innen</title>
     <ns>0</ns>
-    <id>1</id>
+    <id>499</id>
     <revision>
-      <id>2951</id>
-      <parentid>2796</parentid>
-      <timestamp>2020-07-12T14:09:20Z</timestamp>
+      <id>617</id>
+      <parentid>613</parentid>
+      <timestamp>2021-01-08T23:26:49Z</timestamp>
       <contributor>
         <username>System</username>
-        <id>5</id>
+        <id>4</id>
       </contributor>
-      <comment>/* Überblick */</comment>
       <model>wikitext</model>
       <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="1187">{{habidat-bundle}}{{DISPLAYTITLE:Organize!}}
-
-Willkommen im Wiki! Hier findest du Anleitungen, alle Protokolle von Treffen, deine Aufgaben aus diesen Treffen und die Teams und Projekte in denen du bist.
-
-&lt;div class=&quot;semorg-dashboard&quot;&gt;
-{{semorg-card
-  |title=Meine Aufgaben
-  |links=[[Aufgaben|&lt;span class=&quot;btn btn-sm btn-secondary&quot;&gt;alle Aufgaben&lt;/span&gt;]]
-  |tables={{#semorg-list:agenda
-    |sort=semorg-agenda-meeting.semorg-meeting-date
-    |query=[[semorg-agenda-erledigt::false]][[semorg-agenda-responsible::Benutzer:{{CURRENTLOGGEDUSER}}]]
-    |category=-
-    |row template=agenda-aufgaben
-    |headers=agenda-meeting,agenda-title,agenda-responsible
-    |?semorg-agenda-responsible=responsible
-    |?semorg-agenda-erledigt=erledigt
-    |?semorg-agenda-meeting.semorg-meeting-date#ISO=date
-    |?semorg-agenda-meeting.semorg-meeting-group=group
-    |nopagination
-  }}
-}}
-{{semorg-meeting-dashboard}}
-{{semorg-meeting-past-dashboard}}
-{{semorg-role-dashboard}}
-{{#semorg-dashboard:project
-  |query=[[-semorg-project-team-project.semorg-project-team-team::{{{user|{{#semorg-user:}}}}}]][[semorg-project-closed::false]]
-}}
-{{semorg-vacation-dashboard}}
-&lt;/div&gt;</text>
-      <sha1>o05pi7yqu7q8xw6dnst8cqik4rj5q0x</sha1>
+      <text xml:space="preserve" bytes="199">{{habidat-bundle}}{{#semorg-list:person
+  |heading={{int:semorg-person-user-page-name}}
+  |category=semorg-person-user
+  |row template=person-user-custom
+  |headers=person-username,person-realname
+}}</text>
+      <sha1>22mjl47bxw2srqqv293a4gk3c6b3tcj</sha1>
     </revision>
   </page>
   <page>
-    <title>Gruppen</title>
-    <ns>0</ns>
-    <id>211</id>
+    <title>Vorlage:Semorg-role-task-custom</title>
+    <ns>10</ns>
+    <id>438</id>
     <revision>
-      <id>2799</id>
-      <parentid>2505</parentid>
-      <timestamp>2020-07-12T13:22:22Z</timestamp>
+      <id>572</id>
+      <parentid>439</parentid>
+      <timestamp>2021-01-08T22:34:52Z</timestamp>
       <contributor>
         <username>System</username>
-        <id>5</id>
+        <id>4</id>
       </contributor>
       <model>wikitext</model>
       <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="152">{{habidat-bundle}}{{#semorg-list:group
-  |heading={{int:semorg-group-page-name}}
-  |formlink={{#semorg-forminput:group}}
-  |row template=group-custom
-}}</text>
-      <sha1>qbraetph616ozr6qzk4f41i24h19bpe</sha1>
+      <text xml:space="preserve" bytes="512">&lt;noinclude&gt;{{habidat-bundle}}&lt;/noinclude&gt;&lt;includeonly&gt;{{#subobject:
+  |semorg-role-task-role={{FULLPAGENAME}} 
+  |semorg-role-task-name={{{name|}}} 
+  |semorg-role-task-description={{{description|}}} 
+  |semorg-role-task-hours={{{hours|}}} 
+  |semorg-role-task-month={{{month|}}}|+sep=,
+  |semorg-role-task-responsible={{{responsible|}}}|+sep=,
+}}&lt;tr&gt;
+&lt;td&gt;
+{{{name|}}}{{#if:{{{description|}}}
+  |&lt;br&gt;&lt;small&gt;
+{{{description|}}}&lt;/small&gt;}}&lt;/td&gt;
+&lt;td&gt;{{semorg-person-link|{{{responsible|}}}}}&lt;/td&gt;
+&lt;/tr&gt;&lt;/includeonly&gt;</text>
+      <sha1>68xvsplgbe2iqeluuosc3m34elj28gw</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Todos</title>
+    <ns>0</ns>
+    <id>428</id>
+    <revision>
+      <id>576</id>
+      <parentid>575</parentid>
+      <timestamp>2021-01-08T22:42:32Z</timestamp>
+      <contributor>
+        <username>System</username>
+        <id>4</id>
+      </contributor>
+      <minor/>
+      <comment>Admin verschob die Seite [[Aufgaben]] nach [[Todos]], ohne dabei eine Weiterleitung anzulegen</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="42">{{habidat-bundle}}{{semorg-task-overview}}</text>
+      <sha1>fde5nhiu7am7wn9r262ba1dt510nv3d</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Gremien</title>
+    <ns>0</ns>
+    <id>427</id>
+    <revision>
+      <id>589</id>
+      <parentid>584</parentid>
+      <timestamp>2021-01-08T23:02:57Z</timestamp>
+      <contributor>
+        <username>System</username>
+        <id>4</id>
+      </contributor>
+      <minor/>
+      <comment>Admin verschob die Seite [[Gruppen]] nach [[Gremien]], ohne dabei eine Weiterleitung anzulegen</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="43">{{habidat-bundle}}{{semorg-group-overview}}</text>
+      <sha1>dmudxwq1vmubhddn1vc240epgvhcevy</sha1>
     </revision>
   </page>
   <page>
     <title>Beschlüsse</title>
     <ns>0</ns>
-    <id>416</id>
+    <id>429</id>
     <revision>
-      <id>2801</id>
-      <parentid>792</parentid>
-      <timestamp>2020-07-12T13:22:49Z</timestamp>
+      <id>606</id>
+      <parentid>605</parentid>
+      <timestamp>2021-01-08T23:15:39Z</timestamp>
       <contributor>
         <username>System</username>
-        <id>5</id>
+        <id>4</id>
       </contributor>
       <model>wikitext</model>
       <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="344">{{habidat-bundle}}{{#semorg-list:agenda
-  |category=-
-  |query=[[semorg-agenda-proposal::+]]
-  |?semorg-agenda-meeting.semorg-meeting-group=group
-  |?semorg-agenda-meeting.semorg-meeting-date#ISO=date
-  |sort=semorg-agenda-meeting.semorg-meeting-date
-  |order=desc
-  |filter links=agenda-meeting.semorg-meeting-group
-  |filters=agenda-person
-}}</text>
-      <sha1>lmwyzjfufz7amywssltu8w31xrmg6kf</sha1>
+      <text xml:space="preserve" bytes="55">{{habidat-bundle}}{{semorg-agenda-resolution-overview}}</text>
+      <sha1>pmfpv5mzyd7ueaj2y05ob4426gyn8qz</sha1>
     </revision>
   </page>
   <page>
-    <title>Teams</title>
+    <title>Rollen</title>
     <ns>0</ns>
-    <id>263</id>
+    <id>430</id>
     <revision>
-      <id>3088</id>
-      <parentid>3087</parentid>
-      <timestamp>2020-09-02T07:22:25Z</timestamp>
+      <id>623</id>
+      <parentid>607</parentid>
+      <timestamp>2021-01-08T23:35:17Z</timestamp>
       <contributor>
         <username>System</username>
-        <id>5</id>
+        <id>4</id>
       </contributor>
+      <comment>Der Seiteninhalt wurde durch einen anderen Text ersetzt: „{{habidat-bundle}}{{semorg-role-overview}}“</comment>
       <model>wikitext</model>
       <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="575">{{habidat-bundle}}{{#semorg-list:role
-  |limit=1000
-  |links={{#ask:[[Category:Semorg-role]][[semorg-role-active::true]]
-    |mainlabel=-
-    |?semorg-role-name=Rolle
-    |?-semorg-role-task-role.semorg-role-task-name=Aufgaben
-    |?-semorg-role-holder-role.semorg-role-holder-holder.semorg-person-name=Inhaber*innen
-    |format=csv
-    |searchlabel=&lt;i class=&quot;fa fa-download&quot;&gt;&lt;/i&gt; Download als CSV
-    |limit=1000
-  }}
-  |heading={{int:semorg-role-page-name}}
-  |formlink={{#semorg-formlink:role}}
-  |filter links=role-holder.semorg-person-name,role-group,role-active=true
-}}</text>
-      <sha1>2s3bp00gcec0wux0kodzwzekr75x3cp</sha1>
+      <text xml:space="preserve" bytes="42">{{habidat-bundle}}{{semorg-role-overview}}</text>
+      <sha1>iw0q6aehq2w0qb68b7uappnrqvsqokt</sha1>
     </revision>
   </page>
   <page>
     <title>Projekte</title>
     <ns>0</ns>
-    <id>356</id>
+    <id>431</id>
     <revision>
-      <id>4169</id>
-      <parentid>4168</parentid>
-      <timestamp>2020-12-09T09:24:54Z</timestamp>
+      <id>504</id>
+      <parentid>503</parentid>
+      <timestamp>2020-12-29T17:36:38Z</timestamp>
       <contributor>
         <username>System</username>
-        <id>5</id>
+        <id>3</id>
       </contributor>
+      <minor/>
+      <comment>1 Version importiert</comment>
       <model>wikitext</model>
       <format>text/x-wiki</format>
       <text xml:space="preserve" bytes="58">{{habidat-bundle}}{{semorg-project-overview
@@ -183,14 +188,13 @@ Willkommen im Wiki! Hier findest du Anleitungen, alle Protokolle von Treffen, de
   <page>
     <title>Abgeschlossene Projekte</title>
     <ns>0</ns>
-    <id>563</id>
+    <id>432</id>
     <revision>
-      <id>2805</id>
-      <parentid>2499</parentid>
+      <id>433</id>
       <timestamp>2020-07-12T13:23:59Z</timestamp>
       <contributor>
-        <username>System</username>
-        <id>5</id>
+        <username>Admin</username>
+        <id>1</id>
       </contributor>
       <model>wikitext</model>
       <format>text/x-wiki</format>
@@ -201,14 +205,13 @@ Willkommen im Wiki! Hier findest du Anleitungen, alle Protokolle von Treffen, de
   <page>
     <title>Anleitungen</title>
     <ns>0</ns>
-    <id>568</id>
+    <id>433</id>
     <revision>
-      <id>2806</id>
-      <parentid>1628</parentid>
+      <id>434</id>
       <timestamp>2020-07-12T13:24:11Z</timestamp>
       <contributor>
-        <username>System</username>
-        <id>5</id>
+        <username>Admin</username>
+        <id>1</id>
       </contributor>
       <model>wikitext</model>
       <format>text/x-wiki</format>
@@ -217,17 +220,157 @@ Willkommen im Wiki! Hier findest du Anleitungen, alle Protokolle von Treffen, de
     </revision>
   </page>
   <page>
-    <title>Urlaube</title>
+    <title>Ehemalige Gremien</title>
     <ns>0</ns>
-    <id>436</id>
+    <id>513</id>
     <revision>
-      <id>2807</id>
-      <parentid>2778</parentid>
-      <timestamp>2020-07-12T13:24:37Z</timestamp>
+      <id>590</id>
+      <timestamp>2021-01-08T23:03:46Z</timestamp>
       <contributor>
         <username>System</username>
-        <id>5</id>
+        <id>4</id>
       </contributor>
+      <comment>Die Seite wurde neu angelegt: „{{habidat-bundle}}{{semorg-group-inactive-overview}}“</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="52">{{habidat-bundle}}{{semorg-group-inactive-overview}}</text>
+      <sha1>2rd7bihf8eocrbfqd79v2qb8v7b7v1t</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Treffen</title>
+    <ns>0</ns>
+    <id>516</id>
+    <revision>
+      <id>598</id>
+      <parentid>597</parentid>
+      <timestamp>2021-01-08T23:11:07Z</timestamp>
+      <contributor>
+        <username>System</username>
+        <id>4</id>
+      </contributor>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="45">{{habidat-bundle}}{{semorg-meeting-overview}}</text>
+      <sha1>0r1cf90co09ippbjz7ddahwph2xhl69</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Vergangene Treffen</title>
+    <ns>0</ns>
+    <id>517</id>
+    <revision>
+      <id>599</id>
+      <timestamp>2021-01-08T23:11:19Z</timestamp>
+      <contributor>
+        <username>System</username>
+        <id>4</id>
+      </contributor>
+      <comment>Die Seite wurde neu angelegt: „{{habidat-bundle}}{{semorg-meeting-past-overview}}“</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="50">{{habidat-bundle}}{{semorg-meeting-past-overview}}</text>
+      <sha1>nywz0dulp1oept9ep2xphwisdg7tb6n</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Projektbesprechungen</title>
+    <ns>0</ns>
+    <id>518</id>
+    <revision>
+      <id>601</id>
+      <timestamp>2021-01-08T23:13:32Z</timestamp>
+      <contributor>
+        <username>System</username>
+        <id>4</id>
+      </contributor>
+      <comment>Die Seite wurde neu angelegt: „{{habidat-bundle}}{{semorg-meeting-project-overview}}“</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="53">{{habidat-bundle}}{{semorg-meeting-project-overview}}</text>
+      <sha1>94q2akh19ny31c03kmbact5nuol5xr2</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Vergangene Projektbesprechungen</title>
+    <ns>0</ns>
+    <id>519</id>
+    <revision>
+      <id>602</id>
+      <timestamp>2021-01-08T23:13:44Z</timestamp>
+      <contributor>
+        <username>System</username>
+        <id>4</id>
+      </contributor>
+      <comment>Die Seite wurde neu angelegt: „{{habidat-bundle}}{{semorg-meeting-project-past-overview}}“</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="58">{{habidat-bundle}}{{semorg-meeting-project-past-overview}}</text>
+      <sha1>3uwkerjw7u2gpiuelwirnrbrdwsmu5h</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Vorlage:Semorg-person-user-custom-row</title>
+    <ns>10</ns>
+    <id>520</id>
+    <revision>
+      <id>631</id>
+      <parentid>630</parentid>
+      <timestamp>2021-01-08T23:43:22Z</timestamp>
+      <contributor>
+        <username>System</username>
+        <id>4</id>
+      </contributor>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="217">&lt;noinclude&gt;{{habidat-bundle}}&lt;/noinclude&gt;&lt;includeonly&gt;&lt;tr&gt;
+&lt;td&gt;[[{{{?target}}}|{{PAGENAME:{{{?target|}}}}}&lt;i&gt;&lt;/i&gt;]]&lt;/td&gt;
+&lt;td&gt;{{#tweekirealname:{{{?target}}}}}&lt;/td&gt;
+&lt;td class=&quot;semorg-showedit&quot;&gt;&lt;/td&gt;
+&lt;/tr&gt;&lt;/includeonly&gt;</text>
+      <sha1>k4mse2eguomeg3t5ais8hyf24bd2l6q</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Hilfe</title>
+    <ns>0</ns>
+    <id>523</id>
+    <revision>
+      <id>622</id>
+      <timestamp>2021-01-08T23:31:50Z</timestamp>
+      <contributor>
+        <username>System</username>
+        <id>4</id>
+      </contributor>
+      <comment>Die Seite wurde neu angelegt: „{{habidat-bundle}} === Herzlich Willkommen in eurem neuen Wiki! ===  Hier findet ihr ein paar Tips, wie ihr es an eure Bedürfnisse anpassen könnt…  Technis…“</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="570">{{habidat-bundle}}
+=== Herzlich Willkommen in eurem neuen Wiki! ===
+
+Hier findet ihr ein paar Tips, wie ihr es an eure Bedürfnisse anpassen könnt…
+
+Technische Grundlagen:
+* es handelt sich um eine [https://www.mediawiki.org/ MediaWiki]-Installation, die mit [https://www.semantic-mediawiki.org/ Semantic MediaWiki] erweitert wurde
+* sie nutzt die auf Bootstrap basierende Skin [https://tweeki.kollabor.at/ Tweeki]
+* die Vorlagen und Formulare für die Selbstorganisation werden durch die Erweiterung [https://semorg.kollabor.at/ Semantic Organization] bereitgestellt</text>
+      <sha1>enuuqosv3qdoyjmfnkh5fv2wgvymi0f</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Abwesenheiten</title>
+    <ns>0</ns>
+    <id>434</id>
+    <revision>
+      <id>624</id>
+      <parentid>435</parentid>
+      <timestamp>2021-01-08T23:36:04Z</timestamp>
+      <contributor>
+        <username>System</username>
+        <id>4</id>
+      </contributor>
+      <minor/>
+      <comment>Admin verschob die Seite [[Urlaube]] nach [[Abwesenheiten]]</comment>
       <model>wikitext</model>
       <format>text/x-wiki</format>
       <text xml:space="preserve" bytes="46">{{habidat-bundle}}{{semorg-vacation-overview}}</text>
@@ -235,16 +378,69 @@ Willkommen im Wiki! Hier findest du Anleitungen, alle Protokolle von Treffen, de
     </revision>
   </page>
   <page>
-    <title>Vorlage:Semorg-agenda-custom</title>
+    <title>Vorlage:Semorg-person-user-custom</title>
     <ns>10</ns>
-    <id>225</id>
+    <id>442</id>
     <revision>
-      <id>2808</id>
-      <parentid>1993</parentid>
-      <timestamp>2020-07-12T13:27:09Z</timestamp>
+      <id>627</id>
+      <parentid>626</parentid>
+      <timestamp>2021-01-08T23:37:23Z</timestamp>
       <contributor>
         <username>System</username>
-        <id>5</id>
+        <id>4</id>
+      </contributor>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="736">&lt;noinclude&gt;{{habidat-bundle}}&lt;/noinclude&gt;&lt;includeonly&gt;[[Category:{{int:semorg-person-user-category}}]][[Category:{{int:semorg-person-category}}]]{{#semorg-detail:person-user
+  |heading={{{firstname|}}} {{{lastname|}}}
+}}{{#semorg-set:person
+  |name = {{PAGENAME}}
+}}
+&lt;div class=&quot;semorg-dashboard&quot;&gt;
+{{semorg-task-dashboard|user={{FULLPAGENAME}}}}
+{{semorg-meeting-dashboard|user={{FULLPAGENAME}}}}
+{{semorg-meeting-past-dashboard|user={{FULLPAGENAME}}}}
+{{semorg-role-dashboard|user={{FULLPAGENAME}}}}
+{{#semorg-dashboard:project
+  |query=[[-semorg-project-team-project.semorg-project-team-team::{{FULLPAGENAME}}]][[semorg-project-closed::false]]
+}}
+{{semorg-project-update-dashboard}}
+{{semorg-vacation-dashboard}}
+&lt;/div&gt;
+&lt;/includeonly&gt;</text>
+      <sha1>a5thcbms16geaxs6sxifs5nkkxm3j68</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Erledigte Todos</title>
+    <ns>0</ns>
+    <id>495</id>
+    <revision>
+      <id>512</id>
+      <parentid>511</parentid>
+      <timestamp>2020-12-29T17:36:39Z</timestamp>
+      <contributor>
+        <username>System</username>
+        <id>3</id>
+      </contributor>
+      <minor/>
+      <comment>1 Version importiert</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="47">{{habidat-bundle}}{{semorg-task-done-overview}}</text>
+      <sha1>t0gd16nf4n8tzil0hznvtn8zm66pkno</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Vorlage:Semorg-agenda-custom</title>
+    <ns>10</ns>
+    <id>435</id>
+    <revision>
+      <id>436</id>
+      <timestamp>2020-07-12T13:27:09Z</timestamp>
+      <contributor>
+        <username>Admin</username>
+        <id>1</id>
       </contributor>
       <model>wikitext</model>
       <format>text/x-wiki</format>
@@ -291,127 +487,19 @@ Willkommen im Wiki! Hier findest du Anleitungen, alle Protokolle von Treffen, de
     </revision>
   </page>
   <page>
-    <title>Vorlage:Semorg-group-custom</title>
-    <ns>10</ns>
-    <id>342</id>
-    <revision>
-      <id>2811</id>
-      <parentid>957</parentid>
-      <timestamp>2020-07-12T13:30:33Z</timestamp>
-      <contributor>
-        <username>System</username>
-        <id>5</id>
-      </contributor>
-      <model>wikitext</model>
-      <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="1057">&lt;noinclude&gt;{{habidat-bundle}}&lt;/noinclude&gt;&lt;includeonly&gt;[[Category:{{int:semorg-group-category}}]]{{#semorg-set:group 
-  |name={{{name|}}} 
-  |description={{{description|}}} 
-  |permanent={{{permanent|}}} 
-  |active={{{active|}}} 
-  |host={{{host|}}}
-}}
-{{#semorg-detail:group}}
-{{#semorg-table:group 
-  |name={{{name|}}} 
-  |description={{{description|}}} 
-  |host={{semorg-person-link|{{{host|}}}}}
-  |members={{{members|}}}
-}}
-{{#semorg-tabs:group
-  |?meetings={{#semorg-meetings:group}}
-  |{{#ifexpr:{{#ask:[[Category:semorg-role]][[semorg-role-group::{{FULLPAGENAME}}]]|format=count}}&gt;0|?teams=&lt;h3&gt;Teams&lt;/h3&gt;
-
-{{#semorg-list:role
-  |query=[[semorg-role-group::{{FULLPAGENAME}}]]
-}}
-
-{{#ask:[[-semorg-role-holder-holder::+]][[-semorg-role-holder-holder.semorg-role-holder-role.semorg-role-group::{{FULLPAGENAME}}]]
-  |format=count
-}} Personen sind Teams in dieser Übergruppe zugeordnet:
-{{#ask:[[-semorg-role-holder-holder::+]][[-semorg-role-holder-holder.semorg-role-holder-role.semorg-role-group::{{FULLPAGENAME}}]]
-  |format=ul
-}}
-}}
-}}
-&lt;/includeonly&gt;</text>
-      <sha1>0svaor1eqskedrb2w8wdufdxcq2z68d</sha1>
-    </revision>
-  </page>
-  <page>
-    <title>Vorlage:Semorg-group-custom-row</title>
-    <ns>10</ns>
-    <id>217</id>
-    <revision>
-      <id>2812</id>
-      <parentid>222</parentid>
-      <timestamp>2020-07-12T13:30:39Z</timestamp>
-      <contributor>
-        <username>System</username>
-        <id>5</id>
-      </contributor>
-      <model>wikitext</model>
-      <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="334">&lt;noinclude&gt;{{habidat-bundle}}&lt;/noinclude&gt;&lt;includeonly&gt;&lt;tr&gt;
-&lt;td&gt;[[{{{?target|}}}]]&lt;/td&gt; 
-&lt;td&gt;{{{?description|}}}&lt;/td&gt; 
-&lt;td&gt;{{#ask:[[semorg-group-member-group::{{{?target|+}}}]][[semorg-group-member-open-end::true]]
-  |mainlabel=-
-  |?semorg-group-member-member=
-}}&lt;/td&gt;
-{{semorg-showedit
-  |target={{{?target|}}}
-}}
-&lt;/tr&gt;&lt;/includeonly&gt;</text>
-      <sha1>2bir4r06vc6jewhqtqt9t6k7v5r0w5n</sha1>
-    </revision>
-  </page>
-  <page>
-    <title>Vorlage:Semorg-role-task-custom</title>
-    <ns>10</ns>
-    <id>389</id>
-    <revision>
-      <id>2813</id>
-      <parentid>946</parentid>
-      <timestamp>2020-07-12T13:30:50Z</timestamp>
-      <contributor>
-        <username>System</username>
-        <id>5</id>
-      </contributor>
-      <model>wikitext</model>
-      <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="544">&lt;noinclude&gt;{{habidat-bundle}}&lt;/noinclude&gt;&lt;includeonly&gt;{{#subobject:
-  |semorg-role-task-role={{FULLPAGENAME}} 
-  |semorg-role-task-name={{{name|}}} 
-  |semorg-role-task-description={{{description|}}} 
-  |semorg-role-task-hours={{{hours|}}} 
-  |semorg-role-task-month={{{month|}}}|+sep=,
-  |semorg-role-task-responsible={{{responsible|}}}|+sep=,
-}}&lt;tr&gt;
-&lt;td&gt;
-{{{name|}}}{{#if:{{{description|}}}
-  |&lt;br&gt;&lt;small&gt;
-{{{description|}}}&lt;/small&gt;
-}}&lt;/td&gt;
-&lt;td&gt;{{#if:{{{responsible|}}}
-  |{{semorg-person-link|{{{responsible|}}}}}
-}}&lt;/td&gt;
-&lt;/tr&gt;&lt;/includeonly&gt;</text>
-      <sha1>izbtws6dqiqv3lnl1jw3t6ikdlll3e1</sha1>
-    </revision>
-  </page>
-  <page>
     <title>Vorlage:Semorg-project-custom-row</title>
     <ns>10</ns>
-    <id>71</id>
+    <id>439</id>
     <revision>
-      <id>4036</id>
-      <parentid>3898</parentid>
-      <timestamp>2020-12-04T14:05:28Z</timestamp>
+      <id>506</id>
+      <parentid>505</parentid>
+      <timestamp>2020-12-29T17:36:38Z</timestamp>
       <contributor>
         <username>System</username>
-        <id>5</id>
+        <id>3</id>
       </contributor>
+      <minor/>
+      <comment>1 Version importiert</comment>
       <model>wikitext</model>
       <format>text/x-wiki</format>
       <text xml:space="preserve" bytes="1081">&lt;noinclude&gt;{{habidat-bundle}}&lt;/noinclude&gt;&lt;includeonly&gt;&lt;tr&gt;
@@ -443,14 +531,13 @@ Willkommen im Wiki! Hier findest du Anleitungen, alle Protokolle von Treffen, de
   <page>
     <title>Vorlage:Semorg-role-custom-row</title>
     <ns>10</ns>
-    <id>90</id>
+    <id>440</id>
     <revision>
-      <id>3395</id>
-      <parentid>3394</parentid>
+      <id>441</id>
       <timestamp>2020-09-29T20:28:14Z</timestamp>
       <contributor>
-        <username>System</username>
-        <id>5</id>
+        <username>Admin</username>
+        <id>1</id>
       </contributor>
       <model>wikitext</model>
       <format>text/x-wiki</format>
@@ -483,16 +570,60 @@ Willkommen im Wiki! Hier findest du Anleitungen, alle Protokolle von Treffen, de
     </revision>
   </page>
   <page>
-    <title>Vorlage:Semorg-agenda-custom-row</title>
+    <title>Vorlage:Habidat-bundle</title>
     <ns>10</ns>
-    <id>417</id>
+    <id>494</id>
     <revision>
-      <id>2810</id>
-      <parentid>1983</parentid>
-      <timestamp>2020-07-12T13:30:25Z</timestamp>
+      <id>628</id>
+      <parentid>508</parentid>
+      <timestamp>2021-01-08T23:38:55Z</timestamp>
       <contributor>
         <username>System</username>
-        <id>5</id>
+        <id>4</id>
+      </contributor>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="305">[[Kategorie:habidat-bundle]]&lt;noinclude&gt;Diese Vorlage weist Seiten der Kategorie [[:Kategorie:habidat-bundle|&lt;code&gt;habidat-bundle&lt;/code&gt;]] zu. So lassen sich Seiten markieren, die zum Nachbauen der Struktur des Orga-Wikis benötigt werden und gemeinsam exportiert bzw. importiert werden sollen.&lt;/noinclude&gt;</text>
+      <sha1>tdigdl4hv82qmvet3xmordzmcvlxu4v</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Vorlage:Semorg-group-custom-row</title>
+    <ns>10</ns>
+    <id>437</id>
+    <revision>
+      <id>438</id>
+      <timestamp>2020-07-12T13:30:39Z</timestamp>
+      <contributor>
+        <username>Admin</username>
+        <id>1</id>
+      </contributor>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="334">&lt;noinclude&gt;{{habidat-bundle}}&lt;/noinclude&gt;&lt;includeonly&gt;&lt;tr&gt;
+&lt;td&gt;[[{{{?target|}}}]]&lt;/td&gt; 
+&lt;td&gt;{{{?description|}}}&lt;/td&gt; 
+&lt;td&gt;{{#ask:[[semorg-group-member-group::{{{?target|+}}}]][[semorg-group-member-open-end::true]]
+  |mainlabel=-
+  |?semorg-group-member-member=
+}}&lt;/td&gt;
+{{semorg-showedit
+  |target={{{?target|}}}
+}}
+&lt;/tr&gt;&lt;/includeonly&gt;</text>
+      <sha1>2bir4r06vc6jewhqtqt9t6k7v5r0w5n</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Vorlage:Semorg-agenda-custom-row</title>
+    <ns>10</ns>
+    <id>441</id>
+    <revision>
+      <id>442</id>
+      <timestamp>2020-07-12T13:30:25Z</timestamp>
+      <contributor>
+        <username>Admin</username>
+        <id>1</id>
       </contributor>
       <model>wikitext</model>
       <format>text/x-wiki</format>
@@ -509,66 +640,15 @@ Willkommen im Wiki! Hier findest du Anleitungen, alle Protokolle von Treffen, de
     </revision>
   </page>
   <page>
-    <title>Vorlage:Semorg-person-user-custom</title>
-    <ns>10</ns>
-    <id>234</id>
-    <revision>
-      <id>3659</id>
-      <parentid>3412</parentid>
-      <timestamp>2020-11-23T12:06:50Z</timestamp>
-      <contributor>
-        <username>System</username>
-        <id>5</id>
-      </contributor>
-      <model>wikitext</model>
-      <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="1373">&lt;noinclude&gt;{{habidat-bundle}}&lt;/noinclude&gt;&lt;includeonly&gt;[[Category:{{int:semorg-person-user-category}}]][[Category:{{int:semorg-person-category}}]]{{#semorg-detail:person-user
-  |heading={{{firstname|}}} {{{lastname|}}}
-}}{{#semorg-set:person
-  |name = {{PAGENAME}}
-}}
-&lt;div class=&quot;semorg-dashboard&quot;&gt;
-{{semorg-card
-  |title=Meine Aufgaben
-  |links=[[Aufgaben|&lt;span class=&quot;btn btn-sm btn-secondary&quot;&gt;alle Aufgaben&lt;/span&gt;]]
-  |tables={{#semorg-list:agenda
-    |sort=semorg-agenda-meeting.semorg-meeting-date
-    |query=[[semorg-agenda-erledigt::false]][[semorg-agenda-responsible::{{FULLPAGENAME}}]]
-    |category=-
-    |row template=agenda-aufgaben
-    |headers=agenda-meeting,agenda-title,agenda-responsible
-    |?semorg-agenda-responsible=responsible
-    |?semorg-agenda-erledigt=erledigt
-    |?semorg-agenda-meeting.semorg-meeting-date#ISO=date
-    |?semorg-agenda-meeting.semorg-meeting-group=group
-    |?semorg-agenda-meeting.semorg-meeting-project=project
-    |nopagination
-  }}
-}}
-{{semorg-meeting-dashboard|user={{FULLPAGENAME}}}}
-{{semorg-meeting-past-dashboard|user={{FULLPAGENAME}}}}
-{{semorg-role-dashboard|user={{FULLPAGENAME}}}}
-{{#semorg-dashboard:project
-  |query=[[-semorg-project-team-project.semorg-project-team-team::{{FULLPAGENAME}}]][[semorg-project-closed::false]]
-}}
-{{semorg-project-update-dashboard}}
-{{semorg-vacation-dashboard}}
-&lt;/div&gt;
-&lt;/includeonly&gt;</text>
-      <sha1>3ga831tm5rj3v7jezajf1tozsgizhy2</sha1>
-    </revision>
-  </page>
-  <page>
     <title>Vorlage:Semorg-project-team-internal-custom</title>
     <ns>10</ns>
-    <id>402</id>
+    <id>443</id>
     <revision>
-      <id>2816</id>
-      <parentid>1322</parentid>
+      <id>444</id>
       <timestamp>2020-07-12T13:31:13Z</timestamp>
       <contributor>
-        <username>System</username>
-        <id>5</id>
+        <username>Admin</username>
+        <id>1</id>
       </contributor>
       <model>wikitext</model>
       <format>text/x-wiki</format>
@@ -586,127 +666,15 @@ Willkommen im Wiki! Hier findest du Anleitungen, alle Protokolle von Treffen, de
     </revision>
   </page>
   <page>
-    <title>Vorlage:Semorg-role-custom</title>
-    <ns>10</ns>
-    <id>388</id>
-    <revision>
-      <id>2814</id>
-      <parentid>2436</parentid>
-      <timestamp>2020-07-12T13:30:58Z</timestamp>
-      <contributor>
-        <username>System</username>
-        <id>5</id>
-      </contributor>
-      <model>wikitext</model>
-      <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="677">&lt;noinclude&gt;{{habidat-bundle}}&lt;/noinclude&gt;&lt;includeonly&gt;[[Category:{{int:semorg-role-category}}]]{{DISPLAYTITLE:{{{name|}}}}}{{#semorg-set:role 
-  |name={{{name|}}} 
-  |group={{{group|}}}
-  |active={{{active|true}}}
-  |active-reason={{{active-reason|}}}
-}}{{#semorg-detail:role
-  |heading={{{name|}}}
-}}{{#semorg-true:{{{active|true}}}
-  |
-  |&lt;div class=&quot;alert alert-danger&quot;&gt;{{int:semorg-role-inactive-warning|{{{active-reason|}}}}}&lt;/div&gt;
-}}
-
-{{#semorg-table:role 
-  |group={{#if:{{{group|}}}|[[{{{group|}}}]]}}
-  |holders={{{holders|}}}
-}}
-
-&lt;br&gt;&lt;br&gt;
-
-&lt;h3&gt;{{int:semorg-field-role-tasks-name}}&lt;/h3&gt;
-&lt;table class=&quot;table table-condensed table-sm&quot;&gt;{{{tasks|}}}&lt;/table&gt;
-&lt;/includeonly&gt;</text>
-      <sha1>tfr73gokggdoln45kxdr8g46p5rv8at</sha1>
-    </revision>
-  </page>
-  <page>
-    <title>Vorlage:Habidat-bundle</title>
-    <ns>10</ns>
-    <id>740</id>
-    <revision>
-      <id>3796</id>
-      <parentid>2798</parentid>
-      <timestamp>2020-11-26T20:52:18Z</timestamp>
-      <contributor>
-        <username>System</username>
-        <id>5</id>
-      </contributor>
-      <model>wikitext</model>
-      <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="302">[[Kategorie:habidat-bundle]]&lt;noinclude&gt;Diese Vorlage weist Seiten der Kategorie [[:Kategorie:habidat-bundle|&lt;code&gt;habidat-bundle&lt;/code&gt;]]. So lassen sich Seiten markieren, die zum Nachbauen der Struktur des Orga-Wikis benötigt werden und gemeinsam exportiert bzw. importiert werden sollen.&lt;/noinclude&gt;</text>
-      <sha1>iz3zlcuxigi4un12nyriosz2spanc7c</sha1>
-    </revision>
-  </page>
-  <page>
-    <title>Todos</title>
-    <ns>0</ns>
-    <id>859</id>
-    <revision>
-      <id>3828</id>
-      <timestamp>2020-11-26T21:48:08Z</timestamp>
-      <contributor>
-        <username>System</username>
-        <id>5</id>
-      </contributor>
-      <comment>Die Seite wurde neu angelegt: „{{habidat-bundle}}{{semorg-task-overview}}“</comment>
-      <model>wikitext</model>
-      <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="42">{{habidat-bundle}}{{semorg-task-overview}}</text>
-      <sha1>fde5nhiu7am7wn9r262ba1dt510nv3d</sha1>
-    </revision>
-  </page>
-  <page>
-    <title>Erledigte Todos</title>
-    <ns>0</ns>
-    <id>860</id>
-    <revision>
-      <id>3829</id>
-      <timestamp>2020-11-26T21:48:30Z</timestamp>
-      <contributor>
-        <username>System</username>
-        <id>5</id>
-      </contributor>
-      <comment>Die Seite wurde neu angelegt: „{{habidat-bundle}}{{semorg-task-done-overview}}“</comment>
-      <model>wikitext</model>
-      <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="47">{{habidat-bundle}}{{semorg-task-done-overview}}</text>
-      <sha1>t0gd16nf4n8tzil0hznvtn8zm66pkno</sha1>
-    </revision>
-  </page>
-  <page>
-    <title>Kategorie:Habidat-bundle</title>
-    <ns>14</ns>
-    <id>739</id>
-    <revision>
-      <id>3848</id>
-      <parentid>2795</parentid>
-      <timestamp>2020-11-28T15:05:43Z</timestamp>
-      <contributor>
-        <username>System</username>
-        <id>5</id>
-      </contributor>
-      <model>wikitext</model>
-      <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="18">{{habidat-bundle}}</text>
-      <sha1>dnaal0eyk11qd64nkn9dxffnjvt829w</sha1>
-    </revision>
-  </page>
-  <page>
     <title>MediaWiki:Semorg-agenda-template</title>
     <ns>8</ns>
-    <id>227</id>
+    <id>445</id>
     <revision>
-      <id>2949</id>
-      <parentid>239</parentid>
+      <id>446</id>
       <timestamp>2020-07-12T14:06:13Z</timestamp>
       <contributor>
-        <username>System</username>
-        <id>5</id>
+        <username>Admin</username>
+        <id>1</id>
       </contributor>
       <model>wikitext</model>
       <format>text/x-wiki</format>
@@ -717,14 +685,13 @@ Willkommen im Wiki! Hier findest du Anleitungen, alle Protokolle von Treffen, de
   <page>
     <title>MediaWiki:Semorg-agenda-times</title>
     <ns>8</ns>
-    <id>605</id>
+    <id>446</id>
     <revision>
-      <id>1807</id>
-      <parentid>1806</parentid>
+      <id>447</id>
       <timestamp>2019-11-16T13:36:30Z</timestamp>
       <contributor>
-        <username>System</username>
-        <id>5</id>
+        <username>Admin</username>
+        <id>1</id>
       </contributor>
       <model>wikitext</model>
       <format>text/x-wiki</format>
@@ -733,15 +700,51 @@ Willkommen im Wiki! Hier findest du Anleitungen, alle Protokolle von Treffen, de
     </revision>
   </page>
   <page>
-    <title>MediaWiki:Semorg-field-project-end-name</title>
+    <title>MediaWiki:Semorg-field-person-realname-name</title>
     <ns>8</ns>
-    <id>407</id>
+    <id>522</id>
     <revision>
-      <id>720</id>
-      <timestamp>2019-05-27T18:30:55Z</timestamp>
+      <id>620</id>
+      <timestamp>2021-01-08T23:28:07Z</timestamp>
       <contributor>
         <username>System</username>
-        <id>5</id>
+        <id>4</id>
+      </contributor>
+      <comment>Die Seite wurde neu angelegt: „Anzeigename“</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="11">Anzeigename</text>
+      <sha1>2lscofo7ydmqsofarm0oemgt5un2gzi</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>MediaWiki:Semorg-field-person-username-name</title>
+    <ns>8</ns>
+    <id>521</id>
+    <revision>
+      <id>618</id>
+      <timestamp>2021-01-08T23:27:07Z</timestamp>
+      <contributor>
+        <username>System</username>
+        <id>4</id>
+      </contributor>
+      <comment>Die Seite wurde neu angelegt: „Benutzername“</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="12">Benutzername</text>
+      <sha1>hx11l0c6xtlmuv72ue3c7z942ep9urc</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>MediaWiki:Semorg-field-project-end-name</title>
+    <ns>8</ns>
+    <id>448</id>
+    <revision>
+      <id>449</id>
+      <timestamp>2019-05-27T18:30:55Z</timestamp>
+      <contributor>
+        <username>Admin</username>
+        <id>1</id>
       </contributor>
       <comment>Die Seite wurde neu angelegt: „geplant bis“</comment>
       <model>wikitext</model>
@@ -753,13 +756,13 @@ Willkommen im Wiki! Hier findest du Anleitungen, alle Protokolle von Treffen, de
   <page>
     <title>MediaWiki:Semorg-field-project-end-prefix</title>
     <ns>8</ns>
-    <id>728</id>
+    <id>449</id>
     <revision>
-      <id>2687</id>
+      <id>450</id>
       <timestamp>2020-06-17T15:00:35Z</timestamp>
       <contributor>
-        <username>System</username>
-        <id>5</id>
+        <username>Admin</username>
+        <id>1</id>
       </contributor>
       <comment>Die Seite wurde neu angelegt: „geplant bis “</comment>
       <model>wikitext</model>
@@ -771,13 +774,13 @@ Willkommen im Wiki! Hier findest du Anleitungen, alle Protokolle von Treffen, de
   <page>
     <title>MediaWiki:Semorg-field-project-team-internal-name</title>
     <ns>8</ns>
-    <id>403</id>
+    <id>450</id>
     <revision>
-      <id>711</id>
+      <id>451</id>
       <timestamp>2019-05-27T18:20:14Z</timestamp>
       <contributor>
-        <username>System</username>
-        <id>5</id>
+        <username>Admin</username>
+        <id>1</id>
       </contributor>
       <comment>Die Seite wurde neu angelegt: „Team“</comment>
       <model>wikitext</model>
@@ -789,14 +792,13 @@ Willkommen im Wiki! Hier findest du Anleitungen, alle Protokolle von Treffen, de
   <page>
     <title>MediaWiki:Semorg-field-project-team-main-responsible-suffix</title>
     <ns>8</ns>
-    <id>495</id>
+    <id>451</id>
     <revision>
-      <id>2682</id>
-      <parentid>1298</parentid>
+      <id>452</id>
       <timestamp>2020-06-17T14:56:24Z</timestamp>
       <contributor>
-        <username>System</username>
-        <id>5</id>
+        <username>Admin</username>
+        <id>1</id>
       </contributor>
       <model>wikitext</model>
       <format>text/x-wiki</format>
@@ -807,13 +809,13 @@ Willkommen im Wiki! Hier findest du Anleitungen, alle Protokolle von Treffen, de
   <page>
     <title>MediaWiki:Semorg-field-project-team-oneliner-internal-fields</title>
     <ns>8</ns>
-    <id>496</id>
+    <id>452</id>
     <revision>
-      <id>1297</id>
+      <id>453</id>
       <timestamp>2019-06-12T21:27:35Z</timestamp>
       <contributor>
-        <username>System</username>
-        <id>5</id>
+        <username>Admin</username>
+        <id>1</id>
       </contributor>
       <comment>Die Seite wurde neu angelegt: „team-internal,role,main-responsible“</comment>
       <model>wikitext</model>
@@ -825,14 +827,13 @@ Willkommen im Wiki! Hier findest du Anleitungen, alle Protokolle von Treffen, de
   <page>
     <title>MediaWiki:Semorg-field-project-team-role-parameters</title>
     <ns>8</ns>
-    <id>404</id>
+    <id>453</id>
     <revision>
-      <id>1315</id>
-      <parentid>712</parentid>
+      <id>454</id>
       <timestamp>2019-06-12T21:40:59Z</timestamp>
       <contributor>
-        <username>System</username>
-        <id>5</id>
+        <username>Admin</username>
+        <id>1</id>
       </contributor>
       <model>wikitext</model>
       <format>text/x-wiki</format>
@@ -843,14 +844,13 @@ Willkommen im Wiki! Hier findest du Anleitungen, alle Protokolle von Treffen, de
   <page>
     <title>MediaWiki:Semorg-field-role-holder-oneliner-fields</title>
     <ns>8</ns>
-    <id>383</id>
+    <id>454</id>
     <revision>
-      <id>663</id>
-      <parentid>662</parentid>
+      <id>455</id>
       <timestamp>2019-05-27T15:27:46Z</timestamp>
       <contributor>
-        <username>System</username>
-        <id>5</id>
+        <username>Admin</username>
+        <id>1</id>
       </contributor>
       <model>wikitext</model>
       <format>text/x-wiki</format>
@@ -861,14 +861,13 @@ Willkommen im Wiki! Hier findest du Anleitungen, alle Protokolle von Treffen, de
   <page>
     <title>MediaWiki:Semorg-field-role-task-responsible-parameters</title>
     <ns>8</ns>
-    <id>398</id>
+    <id>456</id>
     <revision>
-      <id>701</id>
-      <parentid>700</parentid>
+      <id>457</id>
       <timestamp>2019-05-27T16:14:36Z</timestamp>
       <contributor>
-        <username>System</username>
-        <id>5</id>
+        <username>Admin</username>
+        <id>1</id>
       </contributor>
       <model>wikitext</model>
       <format>text/x-wiki</format>
@@ -879,31 +878,33 @@ Willkommen im Wiki! Hier findest du Anleitungen, alle Protokolle von Treffen, de
   <page>
     <title>MediaWiki:Semorg-form-agenda-rows</title>
     <ns>8</ns>
-    <id>219</id>
+    <id>457</id>
     <revision>
-      <id>1811</id>
-      <parentid>1753</parentid>
-      <timestamp>2019-11-16T14:54:23Z</timestamp>
+      <id>516</id>
+      <parentid>458</parentid>
+      <timestamp>2020-12-29T17:36:39Z</timestamp>
       <contributor>
         <username>System</username>
-        <id>5</id>
+        <id>3</id>
       </contributor>
+      <minor/>
+      <comment>1 Version importiert</comment>
       <model>wikitext</model>
       <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="60">title,person,timer,description,proposal,responsible,erledigt</text>
-      <sha1>q6ai9y7phb3b32is9cvwxlkq8qt9ak5</sha1>
+      <text xml:space="preserve" bytes="39">title,person,timer,description,proposal</text>
+      <sha1>2w162o5mfdfqxcc20otyx3dw3zowj5q</sha1>
     </revision>
   </page>
   <page>
     <title>MediaWiki:Semorg-form-group-rows</title>
     <ns>8</ns>
-    <id>215</id>
+    <id>458</id>
     <revision>
-      <id>219</id>
+      <id>459</id>
       <timestamp>2019-01-16T14:34:10Z</timestamp>
       <contributor>
-        <username>Admin</username>
-        <id>1</id>
+        <username>imported&gt;Admin</username>
+        <id>0</id>
       </contributor>
       <comment>Die Seite wurde neu angelegt: „description, properties, members“</comment>
       <model>wikitext</model>
@@ -915,13 +916,13 @@ Willkommen im Wiki! Hier findest du Anleitungen, alle Protokolle von Treffen, de
   <page>
     <title>MediaWiki:Semorg-form-meeting-project-rows</title>
     <ns>8</ns>
-    <id>585</id>
+    <id>459</id>
     <revision>
-      <id>1667</id>
+      <id>460</id>
       <timestamp>2019-09-16T10:02:15Z</timestamp>
       <contributor>
-        <username>System</username>
-        <id>5</id>
+        <username>Admin</username>
+        <id>1</id>
       </contributor>
       <comment>Die Seite wurde neu angelegt: „project,datetime,location,participant,excused,secretary,moderator,overview,guest,files“</comment>
       <model>wikitext</model>
@@ -933,16 +934,17 @@ Willkommen im Wiki! Hier findest du Anleitungen, alle Protokolle von Treffen, de
   <page>
     <title>MediaWiki:Semorg-form-person-user-rows</title>
     <ns>8</ns>
-    <id>236</id>
+    <id>460</id>
     <revision>
-      <id>3836</id>
-      <parentid>3835</parentid>
-      <timestamp>2020-11-26T21:58:03Z</timestamp>
+      <id>518</id>
+      <parentid>517</parentid>
+      <timestamp>2020-12-29T17:36:39Z</timestamp>
       <contributor>
         <username>System</username>
-        <id>5</id>
+        <id>3</id>
       </contributor>
-      <comment>Die Seite wurde geleert.</comment>
+      <minor/>
+      <comment>1 Version importiert</comment>
       <model>wikitext</model>
       <format>text/x-wiki</format>
       <text xml:space="preserve" bytes="0" />
@@ -952,14 +954,13 @@ Willkommen im Wiki! Hier findest du Anleitungen, alle Protokolle von Treffen, de
   <page>
     <title>MediaWiki:Semorg-form-project-rows</title>
     <ns>8</ns>
-    <id>401</id>
+    <id>461</id>
     <revision>
-      <id>2703</id>
-      <parentid>2685</parentid>
+      <id>462</id>
       <timestamp>2020-06-17T15:08:12Z</timestamp>
       <contributor>
-        <username>System</username>
-        <id>5</id>
+        <username>Admin</username>
+        <id>1</id>
       </contributor>
       <model>wikitext</model>
       <format>text/x-wiki</format>
@@ -970,13 +971,13 @@ Willkommen im Wiki! Hier findest du Anleitungen, alle Protokolle von Treffen, de
   <page>
     <title>MediaWiki:Semorg-form-project-team-internal-add-button-text</title>
     <ns>8</ns>
-    <id>627</id>
+    <id>462</id>
     <revision>
-      <id>1991</id>
+      <id>463</id>
       <timestamp>2020-02-07T04:44:09Z</timestamp>
       <contributor>
-        <username>System</username>
-        <id>5</id>
+        <username>Admin</username>
+        <id>1</id>
       </contributor>
       <comment>Die Seite wurde neu angelegt: „Teammitglied hinzufügen“</comment>
       <model>wikitext</model>
@@ -988,14 +989,13 @@ Willkommen im Wiki! Hier findest du Anleitungen, alle Protokolle von Treffen, de
   <page>
     <title>MediaWiki:Semorg-form-role-task-rows</title>
     <ns>8</ns>
-    <id>338</id>
+    <id>465</id>
     <revision>
-      <id>691</id>
-      <parentid>517</parentid>
+      <id>466</id>
       <timestamp>2019-05-27T16:05:20Z</timestamp>
       <contributor>
-        <username>System</username>
-        <id>5</id>
+        <username>Admin</username>
+        <id>1</id>
       </contributor>
       <model>wikitext</model>
       <format>text/x-wiki</format>
@@ -1004,69 +1004,15 @@ Willkommen im Wiki! Hier findest du Anleitungen, alle Protokolle von Treffen, de
     </revision>
   </page>
   <page>
-    <title>MediaWiki:Semorg-group-entity-name</title>
-    <ns>8</ns>
-    <id>426</id>
-    <revision>
-      <id>948</id>
-      <timestamp>2019-05-28T11:46:43Z</timestamp>
-      <contributor>
-        <username>System</username>
-        <id>5</id>
-      </contributor>
-      <comment>Die Seite wurde neu angelegt: „Gruppe“</comment>
-      <model>wikitext</model>
-      <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="6">Gruppe</text>
-      <sha1>slvpa9oiv7juw4caxghefdro7lcsebv</sha1>
-    </revision>
-  </page>
-  <page>
-    <title>MediaWiki:Semorg-group-page-name</title>
-    <ns>8</ns>
-    <id>427</id>
-    <revision>
-      <id>949</id>
-      <timestamp>2019-05-28T11:46:55Z</timestamp>
-      <contributor>
-        <username>System</username>
-        <id>5</id>
-      </contributor>
-      <comment>Die Seite wurde neu angelegt: „Gruppen“</comment>
-      <model>wikitext</model>
-      <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="7">Gruppen</text>
-      <sha1>3e2ep4xlv0l90ef7u4hnkbgj9sq19n7</sha1>
-    </revision>
-  </page>
-  <page>
-    <title>MediaWiki:Semorg-group-template</title>
-    <ns>8</ns>
-    <id>343</id>
-    <revision>
-      <id>530</id>
-      <timestamp>2019-05-22T11:18:54Z</timestamp>
-      <contributor>
-        <username>System</username>
-        <id>5</id>
-      </contributor>
-      <comment>Die Seite wurde neu angelegt: „semorg-group-custom“</comment>
-      <model>wikitext</model>
-      <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="19">semorg-group-custom</text>
-      <sha1>8p0nbw7khulg3c0wp4qpw6mt1ikyr20</sha1>
-    </revision>
-  </page>
-  <page>
     <title>MediaWiki:Semorg-list-agenda-headers</title>
     <ns>8</ns>
-    <id>420</id>
+    <id>469</id>
     <revision>
-      <id>782</id>
+      <id>470</id>
       <timestamp>2019-05-28T05:44:34Z</timestamp>
       <contributor>
-        <username>System</username>
-        <id>5</id>
+        <username>Admin</username>
+        <id>1</id>
       </contributor>
       <comment>Die Seite wurde neu angelegt: „meeting-group,agenda-meeting,agenda-proposal“</comment>
       <model>wikitext</model>
@@ -1078,13 +1024,13 @@ Willkommen im Wiki! Hier findest du Anleitungen, alle Protokolle von Treffen, de
   <page>
     <title>MediaWiki:Semorg-list-group-headers</title>
     <ns>8</ns>
-    <id>216</id>
+    <id>470</id>
     <revision>
-      <id>220</id>
+      <id>471</id>
       <timestamp>2019-01-16T14:35:05Z</timestamp>
       <contributor>
-        <username>Admin</username>
-        <id>1</id>
+        <username>imported&gt;Admin</username>
+        <id>0</id>
       </contributor>
       <comment>Die Seite wurde neu angelegt: „group-name, group-description, group-members“</comment>
       <model>wikitext</model>
@@ -1094,15 +1040,33 @@ Willkommen im Wiki! Hier findest du Anleitungen, alle Protokolle von Treffen, de
     </revision>
   </page>
   <page>
-    <title>MediaWiki:Semorg-list-project-headers</title>
+    <title>MediaWiki:Semorg-list-group-row-template</title>
     <ns>8</ns>
-    <id>409</id>
+    <id>515</id>
     <revision>
-      <id>725</id>
-      <timestamp>2019-05-27T18:43:08Z</timestamp>
+      <id>594</id>
+      <timestamp>2021-01-08T23:09:17Z</timestamp>
       <contributor>
         <username>System</username>
-        <id>5</id>
+        <id>4</id>
+      </contributor>
+      <comment>Die Seite wurde neu angelegt: „group-custom“</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="12">group-custom</text>
+      <sha1>j8cg2o2ov69vj1wnnmzdem8xofvutps</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>MediaWiki:Semorg-list-project-headers</title>
+    <ns>8</ns>
+    <id>471</id>
+    <revision>
+      <id>472</id>
+      <timestamp>2019-05-27T18:43:08Z</timestamp>
+      <contributor>
+        <username>Admin</username>
+        <id>1</id>
       </contributor>
       <comment>Die Seite wurde neu angelegt: „project-title, project-end, project-team-internal“</comment>
       <model>wikitext</model>
@@ -1114,14 +1078,13 @@ Willkommen im Wiki! Hier findest du Anleitungen, alle Protokolle von Treffen, de
   <page>
     <title>MediaWiki:Semorg-list-role-headers</title>
     <ns>8</ns>
-    <id>336</id>
+    <id>472</id>
     <revision>
-      <id>2647</id>
-      <parentid>514</parentid>
+      <id>473</id>
       <timestamp>2020-06-09T15:42:01Z</timestamp>
       <contributor>
-        <username>System</username>
-        <id>5</id>
+        <username>Admin</username>
+        <id>1</id>
       </contributor>
       <model>wikitext</model>
       <format>text/x-wiki</format>
@@ -1130,15 +1093,33 @@ Willkommen im Wiki! Hier findest du Anleitungen, alle Protokolle von Treffen, de
     </revision>
   </page>
   <page>
-    <title>MediaWiki:Semorg-meeting-group-page-name</title>
+    <title>MediaWiki:Semorg-list-role-row-template</title>
     <ns>8</ns>
-    <id>705</id>
+    <id>498</id>
     <revision>
-      <id>2515</id>
-      <timestamp>2020-04-01T10:18:16Z</timestamp>
+      <id>527</id>
+      <timestamp>2020-12-29T17:43:16Z</timestamp>
       <contributor>
         <username>System</username>
-        <id>5</id>
+        <id>4</id>
+      </contributor>
+      <comment>Die Seite wurde neu angelegt: „role-custom“</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="11">role-custom</text>
+      <sha1>m2wodtrnabsct9bxta71bw9zhsxct0p</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>MediaWiki:Semorg-meeting-group-page-name</title>
+    <ns>8</ns>
+    <id>473</id>
+    <revision>
+      <id>474</id>
+      <timestamp>2020-04-01T10:18:16Z</timestamp>
+      <contributor>
+        <username>Admin</username>
+        <id>1</id>
       </contributor>
       <comment>Die Seite wurde neu angelegt: „Treffen“</comment>
       <model>wikitext</model>
@@ -1150,13 +1131,13 @@ Willkommen im Wiki! Hier findest du Anleitungen, alle Protokolle von Treffen, de
   <page>
     <title>MediaWiki:Semorg-meeting-group-past-page-name</title>
     <ns>8</ns>
-    <id>625</id>
+    <id>474</id>
     <revision>
-      <id>1980</id>
+      <id>475</id>
       <timestamp>2020-02-04T22:26:52Z</timestamp>
       <contributor>
-        <username>System</username>
-        <id>5</id>
+        <username>Admin</username>
+        <id>1</id>
       </contributor>
       <comment>Die Seite wurde neu angelegt: „Vergangene Treffen“</comment>
       <model>wikitext</model>
@@ -1168,13 +1149,13 @@ Willkommen im Wiki! Hier findest du Anleitungen, alle Protokolle von Treffen, de
   <page>
     <title>MediaWiki:Semorg-person-user-page-name</title>
     <ns>8</ns>
-    <id>566</id>
+    <id>475</id>
     <revision>
-      <id>1622</id>
+      <id>476</id>
       <timestamp>2019-09-11T15:41:47Z</timestamp>
       <contributor>
-        <username>System</username>
-        <id>5</id>
+        <username>Admin</username>
+        <id>1</id>
       </contributor>
       <comment>Die Seite wurde neu angelegt: „Benutzer*innen“</comment>
       <model>wikitext</model>
@@ -1186,13 +1167,13 @@ Willkommen im Wiki! Hier findest du Anleitungen, alle Protokolle von Treffen, de
   <page>
     <title>MediaWiki:Semorg-person-user-template</title>
     <ns>8</ns>
-    <id>233</id>
+    <id>476</id>
     <revision>
-      <id>265</id>
+      <id>477</id>
       <timestamp>2019-01-16T17:52:18Z</timestamp>
       <contributor>
-        <username>System</username>
-        <id>5</id>
+        <username>Admin</username>
+        <id>1</id>
       </contributor>
       <comment>Die Seite wurde neu angelegt: „semorg-person-user-custom“</comment>
       <model>wikitext</model>
@@ -1204,14 +1185,13 @@ Willkommen im Wiki! Hier findest du Anleitungen, alle Protokolle von Treffen, de
   <page>
     <title>MediaWiki:Semorg-project-team-internal-template</title>
     <ns>8</ns>
-    <id>414</id>
+    <id>477</id>
     <revision>
-      <id>1309</id>
-      <parentid>740</parentid>
+      <id>478</id>
       <timestamp>2019-06-12T21:38:26Z</timestamp>
       <contributor>
-        <username>System</username>
-        <id>5</id>
+        <username>Admin</username>
+        <id>1</id>
       </contributor>
       <model>wikitext</model>
       <format>text/x-wiki</format>
@@ -1222,13 +1202,13 @@ Willkommen im Wiki! Hier findest du Anleitungen, alle Protokolle von Treffen, de
   <page>
     <title>MediaWiki:Semorg-role-task-template</title>
     <ns>8</ns>
-    <id>394</id>
+    <id>480</id>
     <revision>
-      <id>685</id>
+      <id>481</id>
       <timestamp>2019-05-27T16:00:22Z</timestamp>
       <contributor>
-        <username>System</username>
-        <id>5</id>
+        <username>Admin</username>
+        <id>1</id>
       </contributor>
       <comment>Die Seite wurde neu angelegt: „semorg-role-task-custom“</comment>
       <model>wikitext</model>
@@ -1238,33 +1218,15 @@ Willkommen im Wiki! Hier findest du Anleitungen, alle Protokolle von Treffen, de
     </revision>
   </page>
   <page>
-    <title>MediaWiki:Semorg-role-template</title>
-    <ns>8</ns>
-    <id>390</id>
-    <revision>
-      <id>678</id>
-      <timestamp>2019-05-27T15:48:43Z</timestamp>
-      <contributor>
-        <username>System</username>
-        <id>5</id>
-      </contributor>
-      <comment>Die Seite wurde neu angelegt: „semorg-role-custom“</comment>
-      <model>wikitext</model>
-      <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="18">semorg-role-custom</text>
-      <sha1>ornbuvbpwfj8nyyz0asc58mm1yrjece</sha1>
-    </revision>
-  </page>
-  <page>
     <title>MediaWiki:Semorg-tab-group-meetings</title>
     <ns>8</ns>
-    <id>428</id>
+    <id>482</id>
     <revision>
-      <id>952</id>
+      <id>483</id>
       <timestamp>2019-05-28T11:54:35Z</timestamp>
       <contributor>
-        <username>System</username>
-        <id>5</id>
+        <username>Admin</username>
+        <id>1</id>
       </contributor>
       <comment>Die Seite wurde neu angelegt: „Treffen“</comment>
       <model>wikitext</model>
@@ -1276,79 +1238,85 @@ Willkommen im Wiki! Hier findest du Anleitungen, alle Protokolle von Treffen, de
   <page>
     <title>MediaWiki:Tweeki-navbar-left</title>
     <ns>8</ns>
-    <id>208</id>
+    <id>483</id>
     <revision>
-      <id>3895</id>
-      <parentid>3894</parentid>
-      <timestamp>2020-11-30T21:48:19Z</timestamp>
+      <id>604</id>
+      <parentid>603</parentid>
+      <timestamp>2021-01-08T23:14:51Z</timestamp>
       <contributor>
         <username>System</username>
-        <id>5</id>
+        <id>4</id>
       </contributor>
       <model>wikitext</model>
       <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="125">Gruppen
-* Gruppen|''Übersicht''
+      <text xml:space="preserve" bytes="131">Treffen
+Gremien
+* Gremien|''Übersicht''
 *
 * {{#ask:[[category:semorg-group]]}}
 *
-* Aufgaben
+* Todos
 * Beschlüsse
-Teams
+Rollen
 Projekte
 Anleitungen</text>
-      <sha1>c2bcz8kjprnf2rfoe4bk0tneoezirwf</sha1>
+      <sha1>caga2izwqxxw8rjjtoztbbxyft81juy</sha1>
     </revision>
   </page>
   <page>
     <title>MediaWiki:Tweeki-navbar-right</title>
     <ns>8</ns>
-    <id>231</id>
+    <id>485</id>
     <revision>
-      <id>753</id>
-      <parentid>261</parentid>
-      <timestamp>2019-05-27T19:17:32Z</timestamp>
+      <id>621</id>
+      <parentid>486</parentid>
+      <timestamp>2021-01-08T23:28:28Z</timestamp>
       <contributor>
         <username>System</username>
-        <id>5</id>
+        <id>4</id>
       </contributor>
       <model>wikitext</model>
       <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="46">TOOLBOX,PERSONAL,SEARCH,Admin
-* Benutzer*innen</text>
-      <sha1>f1ashpil1dfwtkn3v39aj6bk5mbays2</sha1>
+      <text xml:space="preserve" bytes="54">TOOLBOX,PERSONAL,SEARCH,Admin
+* Benutzer*innen
+* Hilfe</text>
+      <sha1>33rmes2nk4hs5sp1w38l39l9x569mjt</sha1>
     </revision>
   </page>
   <page>
     <title>MediaWiki:Tweeki-navbar-brand</title>
     <ns>8</ns>
-    <id>269</id>
+    <id>484</id>
     <revision>
-      <id>364</id>
-      <timestamp>2019-03-19T17:30:48Z</timestamp>
+      <id>522</id>
+      <parentid>485</parentid>
+      <timestamp>2020-12-29T17:36:39Z</timestamp>
       <contributor>
-        <username>Florian Humer</username>
-        <id>4</id>
+        <username>System</username>
+        <id>3</id>
       </contributor>
-      <comment>Die Seite wurde neu angelegt: „file:igel-03.gif“</comment>
+      <minor/>
+      <comment>1 Version importiert</comment>
       <model>wikitext</model>
       <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="16">file:igel-03.gif</text>
-      <sha1>lmds21pevaw29ib1pkj8rsyk32lwmqe</sha1>
+      <text xml:space="preserve" bytes="16">file:$HABIDAT_LOGO</text>
+      <sha1>oysc4zq6qhfokdhrw1pxkknty0w6c1a</sha1>
     </revision>
   </page>
   <page>
     <title>MediaWiki:Siteuser</title>
     <ns>8</ns>
-    <id>861</id>
+    <id>486</id>
     <revision>
-      <id>3837</id>
-      <timestamp>2020-11-26T22:02:42Z</timestamp>
+      <id>524</id>
+      <parentid>523</parentid>
+      <timestamp>2020-12-29T17:36:39Z</timestamp>
       <contributor>
         <username>System</username>
-        <id>5</id>
+        <id>3</id>
       </contributor>
-      <comment>Die Seite wurde neu angelegt: „$1“</comment>
+      <minor/>
+      <comment>1 Version importiert</comment>
       <model>wikitext</model>
       <format>text/x-wiki</format>
       <text xml:space="preserve" bytes="2">$1</text>
@@ -1358,13 +1326,13 @@ Anleitungen</text>
   <page>
     <title>MediaWiki:Mainpage</title>
     <ns>8</ns>
-    <id>813</id>
+    <id>488</id>
     <revision>
-      <id>3411</id>
+      <id>489</id>
       <timestamp>2020-09-29T20:45:02Z</timestamp>
       <contributor>
-        <username>System</username>
-        <id>5</id>
+        <username>Admin</username>
+        <id>1</id>
       </contributor>
       <comment>Die Seite wurde neu angelegt: „Special:MyPage“</comment>
       <model>wikitext</model>
@@ -1376,15 +1344,17 @@ Anleitungen</text>
   <page>
     <title>MediaWiki:Yourrealname</title>
     <ns>8</ns>
-    <id>862</id>
+    <id>497</id>
     <revision>
-      <id>3849</id>
-      <timestamp>2020-11-28T22:33:19Z</timestamp>
+      <id>526</id>
+      <parentid>525</parentid>
+      <timestamp>2020-12-29T17:36:39Z</timestamp>
       <contributor>
         <username>System</username>
-        <id>5</id>
+        <id>3</id>
       </contributor>
-      <comment>Die Seite wurde neu angelegt: „Anzeigename:“</comment>
+      <minor/>
+      <comment>1 Version importiert</comment>
       <model>wikitext</model>
       <format>text/x-wiki</format>
       <text xml:space="preserve" bytes="12">Anzeigename:</text>
