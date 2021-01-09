@@ -23,8 +23,6 @@ wfLoadExtension('PageForms');
 $wgPageFormsAutocompleteOnAllChars = true;
 wfLoadExtension('SemanticOrganization');
 
-$wgSemorgUseRealnames = true;
-
 # Disable caching
 $wgEnableParserCache = false;
 $wgCachePages = false;
@@ -53,6 +51,8 @@ $wgTweekiSkinHideAll['footer-info'] = false;
 $wgTweekiSkinHideAll['footer-places'] = true; 
 $wgTweekiSkinHideAll['footer-info-copyright'] = true; 
 $wgTweekiSkinHideAll['footer-icons'] = true;
+$wgTweekiSkinUseTooltips = true;
+$wgTweekiSkinUseRealnames = true;
 $wgJobRunRate = 100;
 
 $wgMaxCredits = 1;

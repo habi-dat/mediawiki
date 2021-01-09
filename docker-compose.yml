@@ -23,6 +23,7 @@ services:
   web:
     build: ./
     environment:
+      - MYSQL_HOST=db
       - MYSQL_ROOT_PASSWORD=secret
       - MYSQL_DATABASE=mediawiki
       - MYSQL_USER=mediawiki
