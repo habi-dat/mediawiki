@@ -3,7 +3,7 @@
     <sitename>habi*DAT</sitename>
     <dbname>mediawiki</dbname>
     <base>https://demo.orga.habidat.org/index.php/Spezial:MyPage</base>
-    <generator>MediaWiki 1.31.10</generator>
+    <generator>MediaWiki 1.31.12</generator>
     <case>first-letter</case>
     <namespaces>
       <namespace key="-2" case="first-letter">Medium</namespace>
@@ -37,22 +37,22 @@
     <ns>0</ns>
     <id>499</id>
     <revision>
-      <id>617</id>
-      <parentid>613</parentid>
-      <timestamp>2021-01-08T23:26:49Z</timestamp>
+      <id>651</id>
+      <parentid>617</parentid>
+      <timestamp>2021-01-09T13:14:34Z</timestamp>
       <contributor>
         <username>System</username>
         <id>4</id>
       </contributor>
       <model>wikitext</model>
       <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="199">{{habidat-bundle}}{{#semorg-list:person
+      <text xml:space="preserve" bytes="179">{{habidat-bundle}}{{#semorg-list:person
   |heading={{int:semorg-person-user-page-name}}
   |category=semorg-person-user
   |row template=person-user-custom
-  |headers=person-username,person-realname
+  |headers=person-name
 }}</text>
-      <sha1>22mjl47bxw2srqqv293a4gk3c6b3tcj</sha1>
+      <sha1>hf7t0wjyapa5qgvdrvfu3gvlor6pre5</sha1>
     </revision>
   </page>
   <page>
@@ -99,7 +99,7 @@
         <id>4</id>
       </contributor>
       <minor/>
-      <comment>Admin verschob die Seite [[Aufgaben]] nach [[Todos]], ohne dabei eine Weiterleitung anzulegen</comment>
+      <comment>System verschob die Seite [[Aufgaben]] nach [[Todos]], ohne dabei eine Weiterleitung anzulegen</comment>
       <model>wikitext</model>
       <format>text/x-wiki</format>
       <text xml:space="preserve" bytes="42">{{habidat-bundle}}{{semorg-task-overview}}</text>
@@ -119,7 +119,7 @@
         <id>4</id>
       </contributor>
       <minor/>
-      <comment>Admin verschob die Seite [[Gruppen]] nach [[Gremien]], ohne dabei eine Weiterleitung anzulegen</comment>
+      <comment>System verschob die Seite [[Gruppen]] nach [[Gremien]], ohne dabei eine Weiterleitung anzulegen</comment>
       <model>wikitext</model>
       <format>text/x-wiki</format>
       <text xml:space="preserve" bytes="43">{{habidat-bundle}}{{semorg-group-overview}}</text>
@@ -314,21 +314,20 @@
     <ns>10</ns>
     <id>520</id>
     <revision>
-      <id>631</id>
-      <parentid>630</parentid>
-      <timestamp>2021-01-08T23:43:22Z</timestamp>
+      <id>650</id>
+      <parentid>631</parentid>
+      <timestamp>2021-01-09T13:14:25Z</timestamp>
       <contributor>
         <username>System</username>
         <id>4</id>
       </contributor>
       <model>wikitext</model>
       <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="217">&lt;noinclude&gt;{{habidat-bundle}}&lt;/noinclude&gt;&lt;includeonly&gt;&lt;tr&gt;
-&lt;td&gt;[[{{{?target}}}|{{PAGENAME:{{{?target|}}}}}&lt;i&gt;&lt;/i&gt;]]&lt;/td&gt;
-&lt;td&gt;{{#tweekirealname:{{{?target}}}}}&lt;/td&gt;
+      <text xml:space="preserve" bytes="169">&lt;noinclude&gt;{{habidat-bundle}}&lt;/noinclude&gt;&lt;includeonly&gt;&lt;tr&gt;
+&lt;td&gt;[[{{{?target}}}]] ({{PAGENAME:{{{?target|}}}}})&lt;/td&gt;
 &lt;td class=&quot;semorg-showedit&quot;&gt;&lt;/td&gt;
 &lt;/tr&gt;&lt;/includeonly&gt;</text>
-      <sha1>k4mse2eguomeg3t5ais8hyf24bd2l6q</sha1>
+      <sha1>20juu7o03qm0s08ke89foefxfv5qgd5</sha1>
     </revision>
   </page>
   <page>
@@ -370,7 +369,7 @@ Technische Grundlagen:
         <id>4</id>
       </contributor>
       <minor/>
-      <comment>Admin verschob die Seite [[Urlaube]] nach [[Abwesenheiten]]</comment>
+      <comment>System verschob die Seite [[Urlaube]] nach [[Abwesenheiten]]</comment>
       <model>wikitext</model>
       <format>text/x-wiki</format>
       <text xml:space="preserve" bytes="46">{{habidat-bundle}}{{semorg-vacation-overview}}</text>
@@ -382,19 +381,19 @@ Technische Grundlagen:
     <ns>10</ns>
     <id>442</id>
     <revision>
-      <id>627</id>
-      <parentid>626</parentid>
-      <timestamp>2021-01-08T23:37:23Z</timestamp>
+      <id>649</id>
+      <parentid>647</parentid>
+      <timestamp>2021-01-09T13:12:52Z</timestamp>
       <contributor>
         <username>System</username>
         <id>4</id>
       </contributor>
       <model>wikitext</model>
       <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="736">&lt;noinclude&gt;{{habidat-bundle}}&lt;/noinclude&gt;&lt;includeonly&gt;[[Category:{{int:semorg-person-user-category}}]][[Category:{{int:semorg-person-category}}]]{{#semorg-detail:person-user
-  |heading={{{firstname|}}} {{{lastname|}}}
+      <text xml:space="preserve" bytes="793">&lt;noinclude&gt;{{habidat-bundle}}&lt;/noinclude&gt;&lt;includeonly&gt;{{#tweekihide:sidebar-right}}[[Category:{{int:semorg-person-user-category}}]][[Category:{{int:semorg-person-category}}]]{{#semorg-detail:person-user
+  |heading={{#tweekirealname:{{FULLPAGENAME}}}}
 }}{{#semorg-set:person
-  |name = {{PAGENAME}}
+  |name = {{#tweekirealname:{{FULLPAGENAME}}}}
 }}
 &lt;div class=&quot;semorg-dashboard&quot;&gt;
 {{semorg-task-dashboard|user={{FULLPAGENAME}}}}
@@ -408,7 +407,7 @@ Technische Grundlagen:
 {{semorg-vacation-dashboard}}
 &lt;/div&gt;
 &lt;/includeonly&gt;</text>
-      <sha1>a5thcbms16geaxs6sxifs5nkkxm3j68</sha1>
+      <sha1>gtearj9a5n2p8sat2lcg05ag1xbuxhe</sha1>
     </revision>
   </page>
   <page>
@@ -663,6 +662,96 @@ Technische Grundlagen:
   |({{{role}}})
 }} {{#ifeq:{{{main-responsible|}}}|Ja|(hauptverantwortlich)}}&lt;/includeonly&gt;</text>
       <sha1>m3ihsksh955vyko4kolh95eos099fzu</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Gruppen</title>
+    <ns>0</ns>
+    <id>526</id>
+    <revision>
+      <id>634</id>
+      <timestamp>2020-07-12T13:22:22Z</timestamp>
+      <contributor>
+        <username>imported&gt;System</username>
+        <id>0</id>
+      </contributor>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="152">{{habidat-bundle}}{{#semorg-list:group
+  |heading={{int:semorg-group-page-name}}
+  |formlink={{#semorg-forminput:group}}
+  |row template=group-custom
+}}</text>
+      <sha1>qbraetph616ozr6qzk4f41i24h19bpe</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Teams</title>
+    <ns>0</ns>
+    <id>527</id>
+    <revision>
+      <id>635</id>
+      <timestamp>2020-09-02T07:22:25Z</timestamp>
+      <contributor>
+        <username>imported&gt;System</username>
+        <id>0</id>
+      </contributor>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="575">{{habidat-bundle}}{{#semorg-list:role
+  |limit=1000
+  |links={{#ask:[[Category:Semorg-role]][[semorg-role-active::true]]
+    |mainlabel=-
+    |?semorg-role-name=Rolle
+    |?-semorg-role-task-role.semorg-role-task-name=Aufgaben
+    |?-semorg-role-holder-role.semorg-role-holder-holder.semorg-person-name=Inhaber*innen
+    |format=csv
+    |searchlabel=&lt;i class=&quot;fa fa-download&quot;&gt;&lt;/i&gt; Download als CSV
+    |limit=1000
+  }}
+  |heading={{int:semorg-role-page-name}}
+  |formlink={{#semorg-formlink:role}}
+  |filter links=role-holder.semorg-person-name,role-group,role-active=true
+}}</text>
+      <sha1>2s3bp00gcec0wux0kodzwzekr75x3cp</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Vorlage:Semorg-role-custom</title>
+    <ns>10</ns>
+    <id>529</id>
+    <revision>
+      <id>638</id>
+      <timestamp>2020-07-12T13:30:58Z</timestamp>
+      <contributor>
+        <username>imported&gt;System</username>
+        <id>0</id>
+      </contributor>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="677">&lt;noinclude&gt;{{habidat-bundle}}&lt;/noinclude&gt;&lt;includeonly&gt;[[Category:{{int:semorg-role-category}}]]{{DISPLAYTITLE:{{{name|}}}}}{{#semorg-set:role 
+  |name={{{name|}}} 
+  |group={{{group|}}}
+  |active={{{active|true}}}
+  |active-reason={{{active-reason|}}}
+}}{{#semorg-detail:role
+  |heading={{{name|}}}
+}}{{#semorg-true:{{{active|true}}}
+  |
+  |&lt;div class=&quot;alert alert-danger&quot;&gt;{{int:semorg-role-inactive-warning|{{{active-reason|}}}}}&lt;/div&gt;
+}}
+
+{{#semorg-table:role 
+  |group={{#if:{{{group|}}}|[[{{{group|}}}]]}}
+  |holders={{{holders|}}}
+}}
+
+&lt;br&gt;&lt;br&gt;
+
+&lt;h3&gt;{{int:semorg-field-role-tasks-name}}&lt;/h3&gt;
+&lt;table class=&quot;table table-condensed table-sm&quot;&gt;{{{tasks|}}}&lt;/table&gt;
+&lt;/includeonly&gt;</text>
+      <sha1>tfr73gokggdoln45kxdr8g46p5rv8at</sha1>
     </revision>
   </page>
   <page>
@@ -1359,6 +1448,24 @@ Anleitungen</text>
       <format>text/x-wiki</format>
       <text xml:space="preserve" bytes="12">Anzeigename:</text>
       <sha1>25lkxhuocw6r90da8em5du2x50ood3u</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>MediaWiki:Tweeki-personaltools-text</title>
+    <ns>8</ns>
+    <id>536</id>
+    <revision>
+      <id>652</id>
+      <timestamp>2021-01-09T13:23:15Z</timestamp>
+      <contributor>
+        <username>System</username>
+        <id>4</id>
+      </contributor>
+      <comment>Leere Seite erstellt</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="0" />
+      <sha1>phoiac9h4m842xq45sp7s6u21eteeq1</sha1>
     </revision>
   </page>
 </mediawiki>

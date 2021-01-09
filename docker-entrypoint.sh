@@ -54,4 +54,4 @@ if [ ! -e $CONTAINER_UPDATED ]; then
 fi
 
 echo "STARTUP WEB SERVER..."
-exec "apache2-foreground"
+exec "$@"
