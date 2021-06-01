@@ -1,9 +1,9 @@
-<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.10/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.10/ http://www.mediawiki.org/xml/export-0.10.xsd" version="0.10" xml:lang="de">
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.11/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.11/ http://www.mediawiki.org/xml/export-0.11.xsd" version="0.11" xml:lang="de">
   <siteinfo>
-    <sitename>habi*DAT</sitename>
+    <sitename>Demo</sitename>
     <dbname>mediawiki</dbname>
     <base>https://demo.orga.habidat.org/index.php/Spezial:MyPage</base>
-    <generator>MediaWiki 1.31.12</generator>
+    <generator>MediaWiki 1.35.2</generator>
     <case>first-letter</case>
     <namespaces>
       <namespace key="-2" case="first-letter">Medium</namespace>
@@ -12,8 +12,8 @@
       <namespace key="1" case="first-letter">Diskussion</namespace>
       <namespace key="2" case="first-letter">Benutzer</namespace>
       <namespace key="3" case="first-letter">Benutzer Diskussion</namespace>
-      <namespace key="4" case="first-letter">Habi*DAT</namespace>
-      <namespace key="5" case="first-letter">Habi*DAT Diskussion</namespace>
+      <namespace key="4" case="first-letter">Demo</namespace>
+      <namespace key="5" case="first-letter">Demo Diskussion</namespace>
       <namespace key="6" case="first-letter">Datei</namespace>
       <namespace key="7" case="first-letter">Datei Diskussion</namespace>
       <namespace key="8" case="first-letter">MediaWiki</namespace>
@@ -30,628 +30,105 @@
       <namespace key="107" case="first-letter">Formular Diskussion</namespace>
       <namespace key="108" case="first-letter">Konzept</namespace>
       <namespace key="109" case="first-letter">Konzept Diskussion</namespace>
+      <namespace key="112" case="first-letter">SMW/Schema</namespace>
+      <namespace key="113" case="first-letter">SMW/Schema Diskussion</namespace>
+      <namespace key="114" case="first-letter">Rule</namespace>
+      <namespace key="115" case="first-letter">Rule talk</namespace>
     </namespaces>
   </siteinfo>
   <page>
-    <title>Benutzer*innen</title>
-    <ns>0</ns>
-    <id>499</id>
-    <revision>
-      <id>651</id>
-      <parentid>617</parentid>
-      <timestamp>2021-01-09T13:14:34Z</timestamp>
-      <contributor>
-        <username>System</username>
-        <id>4</id>
-      </contributor>
-      <model>wikitext</model>
-      <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="179">{{habidat-bundle}}{{#semorg-list:person
-  |heading={{int:semorg-person-user-page-name}}
-  |category=semorg-person-user
-  |row template=person-user-custom
-  |headers=person-name
-}}</text>
-      <sha1>hf7t0wjyapa5qgvdrvfu3gvlor6pre5</sha1>
-    </revision>
-  </page>
-  <page>
-    <title>Vorlage:Semorg-role-task-custom</title>
-    <ns>10</ns>
-    <id>438</id>
-    <revision>
-      <id>572</id>
-      <parentid>439</parentid>
-      <timestamp>2021-01-08T22:34:52Z</timestamp>
-      <contributor>
-        <username>System</username>
-        <id>4</id>
-      </contributor>
-      <model>wikitext</model>
-      <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="512">&lt;noinclude&gt;{{habidat-bundle}}&lt;/noinclude&gt;&lt;includeonly&gt;{{#subobject:
-  |semorg-role-task-role={{FULLPAGENAME}} 
-  |semorg-role-task-name={{{name|}}} 
-  |semorg-role-task-description={{{description|}}} 
-  |semorg-role-task-hours={{{hours|}}} 
-  |semorg-role-task-month={{{month|}}}|+sep=,
-  |semorg-role-task-responsible={{{responsible|}}}|+sep=,
-}}&lt;tr&gt;
-&lt;td&gt;
-{{{name|}}}{{#if:{{{description|}}}
-  |&lt;br&gt;&lt;small&gt;
-{{{description|}}}&lt;/small&gt;}}&lt;/td&gt;
-&lt;td&gt;{{semorg-person-link|{{{responsible|}}}}}&lt;/td&gt;
-&lt;/tr&gt;&lt;/includeonly&gt;</text>
-      <sha1>68xvsplgbe2iqeluuosc3m34elj28gw</sha1>
-    </revision>
-  </page>
-  <page>
-    <title>Todos</title>
-    <ns>0</ns>
-    <id>428</id>
-    <revision>
-      <id>576</id>
-      <parentid>575</parentid>
-      <timestamp>2021-01-08T22:42:32Z</timestamp>
-      <contributor>
-        <username>System</username>
-        <id>4</id>
-      </contributor>
-      <minor/>
-      <comment>System verschob die Seite [[Aufgaben]] nach [[Todos]], ohne dabei eine Weiterleitung anzulegen</comment>
-      <model>wikitext</model>
-      <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="42">{{habidat-bundle}}{{semorg-task-overview}}</text>
-      <sha1>fde5nhiu7am7wn9r262ba1dt510nv3d</sha1>
-    </revision>
-  </page>
-  <page>
-    <title>Gremien</title>
-    <ns>0</ns>
-    <id>427</id>
-    <revision>
-      <id>589</id>
-      <parentid>584</parentid>
-      <timestamp>2021-01-08T23:02:57Z</timestamp>
-      <contributor>
-        <username>System</username>
-        <id>4</id>
-      </contributor>
-      <minor/>
-      <comment>System verschob die Seite [[Gruppen]] nach [[Gremien]], ohne dabei eine Weiterleitung anzulegen</comment>
-      <model>wikitext</model>
-      <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="43">{{habidat-bundle}}{{semorg-group-overview}}</text>
-      <sha1>dmudxwq1vmubhddn1vc240epgvhcevy</sha1>
-    </revision>
-  </page>
-  <page>
-    <title>Beschlüsse</title>
-    <ns>0</ns>
-    <id>429</id>
-    <revision>
-      <id>606</id>
-      <parentid>605</parentid>
-      <timestamp>2021-01-08T23:15:39Z</timestamp>
-      <contributor>
-        <username>System</username>
-        <id>4</id>
-      </contributor>
-      <model>wikitext</model>
-      <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="55">{{habidat-bundle}}{{semorg-agenda-resolution-overview}}</text>
-      <sha1>pmfpv5mzyd7ueaj2y05ob4426gyn8qz</sha1>
-    </revision>
-  </page>
-  <page>
-    <title>Rollen</title>
-    <ns>0</ns>
-    <id>430</id>
-    <revision>
-      <id>623</id>
-      <parentid>607</parentid>
-      <timestamp>2021-01-08T23:35:17Z</timestamp>
-      <contributor>
-        <username>System</username>
-        <id>4</id>
-      </contributor>
-      <comment>Der Seiteninhalt wurde durch einen anderen Text ersetzt: „{{habidat-bundle}}{{semorg-role-overview}}“</comment>
-      <model>wikitext</model>
-      <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="42">{{habidat-bundle}}{{semorg-role-overview}}</text>
-      <sha1>iw0q6aehq2w0qb68b7uappnrqvsqokt</sha1>
-    </revision>
-  </page>
-  <page>
-    <title>Projekte</title>
-    <ns>0</ns>
-    <id>431</id>
-    <revision>
-      <id>504</id>
-      <parentid>503</parentid>
-      <timestamp>2020-12-29T17:36:38Z</timestamp>
-      <contributor>
-        <username>System</username>
-        <id>3</id>
-      </contributor>
-      <minor/>
-      <comment>1 Version importiert</comment>
-      <model>wikitext</model>
-      <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="58">{{habidat-bundle}}{{semorg-project-overview
-  |limit=50
-}}</text>
-      <sha1>a1iuz0rv0rbaxz9uwje3ddrk7fg16tf</sha1>
-    </revision>
-  </page>
-  <page>
-    <title>Abgeschlossene Projekte</title>
-    <ns>0</ns>
-    <id>432</id>
-    <revision>
-      <id>433</id>
-      <timestamp>2020-07-12T13:23:59Z</timestamp>
-      <contributor>
-        <username>Admin</username>
-        <id>1</id>
-      </contributor>
-      <model>wikitext</model>
-      <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="52">{{habidat-bundle}}{{semorg-project-closed-overview}}</text>
-      <sha1>2h63ms3y7vykedzokpgw48h9mrkg3go</sha1>
-    </revision>
-  </page>
-  <page>
-    <title>Anleitungen</title>
-    <ns>0</ns>
-    <id>433</id>
-    <revision>
-      <id>434</id>
-      <timestamp>2020-07-12T13:24:11Z</timestamp>
-      <contributor>
-        <username>Admin</username>
-        <id>1</id>
-      </contributor>
-      <model>wikitext</model>
-      <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="44">{{habidat-bundle}}{{semorg-manual-overview}}</text>
-      <sha1>01ybt7siabtrx3mtfv6fbpgf6wkfqk5</sha1>
-    </revision>
-  </page>
-  <page>
-    <title>Ehemalige Gremien</title>
-    <ns>0</ns>
-    <id>513</id>
-    <revision>
-      <id>590</id>
-      <timestamp>2021-01-08T23:03:46Z</timestamp>
-      <contributor>
-        <username>System</username>
-        <id>4</id>
-      </contributor>
-      <comment>Die Seite wurde neu angelegt: „{{habidat-bundle}}{{semorg-group-inactive-overview}}“</comment>
-      <model>wikitext</model>
-      <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="52">{{habidat-bundle}}{{semorg-group-inactive-overview}}</text>
-      <sha1>2rd7bihf8eocrbfqd79v2qb8v7b7v1t</sha1>
-    </revision>
-  </page>
-  <page>
-    <title>Treffen</title>
-    <ns>0</ns>
-    <id>516</id>
-    <revision>
-      <id>598</id>
-      <parentid>597</parentid>
-      <timestamp>2021-01-08T23:11:07Z</timestamp>
-      <contributor>
-        <username>System</username>
-        <id>4</id>
-      </contributor>
-      <model>wikitext</model>
-      <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="45">{{habidat-bundle}}{{semorg-meeting-overview}}</text>
-      <sha1>0r1cf90co09ippbjz7ddahwph2xhl69</sha1>
-    </revision>
-  </page>
-  <page>
-    <title>Vergangene Treffen</title>
-    <ns>0</ns>
-    <id>517</id>
-    <revision>
-      <id>599</id>
-      <timestamp>2021-01-08T23:11:19Z</timestamp>
-      <contributor>
-        <username>System</username>
-        <id>4</id>
-      </contributor>
-      <comment>Die Seite wurde neu angelegt: „{{habidat-bundle}}{{semorg-meeting-past-overview}}“</comment>
-      <model>wikitext</model>
-      <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="50">{{habidat-bundle}}{{semorg-meeting-past-overview}}</text>
-      <sha1>nywz0dulp1oept9ep2xphwisdg7tb6n</sha1>
-    </revision>
-  </page>
-  <page>
-    <title>Projektbesprechungen</title>
-    <ns>0</ns>
-    <id>518</id>
-    <revision>
-      <id>601</id>
-      <timestamp>2021-01-08T23:13:32Z</timestamp>
-      <contributor>
-        <username>System</username>
-        <id>4</id>
-      </contributor>
-      <comment>Die Seite wurde neu angelegt: „{{habidat-bundle}}{{semorg-meeting-project-overview}}“</comment>
-      <model>wikitext</model>
-      <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="53">{{habidat-bundle}}{{semorg-meeting-project-overview}}</text>
-      <sha1>94q2akh19ny31c03kmbact5nuol5xr2</sha1>
-    </revision>
-  </page>
-  <page>
-    <title>Vergangene Projektbesprechungen</title>
-    <ns>0</ns>
-    <id>519</id>
-    <revision>
-      <id>602</id>
-      <timestamp>2021-01-08T23:13:44Z</timestamp>
-      <contributor>
-        <username>System</username>
-        <id>4</id>
-      </contributor>
-      <comment>Die Seite wurde neu angelegt: „{{habidat-bundle}}{{semorg-meeting-project-past-overview}}“</comment>
-      <model>wikitext</model>
-      <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="58">{{habidat-bundle}}{{semorg-meeting-project-past-overview}}</text>
-      <sha1>3uwkerjw7u2gpiuelwirnrbrdwsmu5h</sha1>
-    </revision>
-  </page>
-  <page>
-    <title>Vorlage:Semorg-person-user-custom-row</title>
-    <ns>10</ns>
-    <id>520</id>
-    <revision>
-      <id>650</id>
-      <parentid>631</parentid>
-      <timestamp>2021-01-09T13:14:25Z</timestamp>
-      <contributor>
-        <username>System</username>
-        <id>4</id>
-      </contributor>
-      <model>wikitext</model>
-      <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="169">&lt;noinclude&gt;{{habidat-bundle}}&lt;/noinclude&gt;&lt;includeonly&gt;&lt;tr&gt;
-&lt;td&gt;[[{{{?target}}}]] ({{PAGENAME:{{{?target|}}}}})&lt;/td&gt;
-&lt;td class=&quot;semorg-showedit&quot;&gt;&lt;/td&gt;
-&lt;/tr&gt;&lt;/includeonly&gt;</text>
-      <sha1>20juu7o03qm0s08ke89foefxfv5qgd5</sha1>
-    </revision>
-  </page>
-  <page>
-    <title>Hilfe</title>
-    <ns>0</ns>
-    <id>523</id>
-    <revision>
-      <id>622</id>
-      <timestamp>2021-01-08T23:31:50Z</timestamp>
-      <contributor>
-        <username>System</username>
-        <id>4</id>
-      </contributor>
-      <comment>Die Seite wurde neu angelegt: „{{habidat-bundle}} === Herzlich Willkommen in eurem neuen Wiki! ===  Hier findet ihr ein paar Tips, wie ihr es an eure Bedürfnisse anpassen könnt…  Technis…“</comment>
-      <model>wikitext</model>
-      <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="570">{{habidat-bundle}}
-=== Herzlich Willkommen in eurem neuen Wiki! ===
-
-Hier findet ihr ein paar Tips, wie ihr es an eure Bedürfnisse anpassen könnt…
-
-Technische Grundlagen:
-* es handelt sich um eine [https://www.mediawiki.org/ MediaWiki]-Installation, die mit [https://www.semantic-mediawiki.org/ Semantic MediaWiki] erweitert wurde
-* sie nutzt die auf Bootstrap basierende Skin [https://tweeki.kollabor.at/ Tweeki]
-* die Vorlagen und Formulare für die Selbstorganisation werden durch die Erweiterung [https://semorg.kollabor.at/ Semantic Organization] bereitgestellt</text>
-      <sha1>enuuqosv3qdoyjmfnkh5fv2wgvymi0f</sha1>
-    </revision>
-  </page>
-  <page>
-    <title>Abwesenheiten</title>
-    <ns>0</ns>
-    <id>434</id>
-    <revision>
-      <id>624</id>
-      <parentid>435</parentid>
-      <timestamp>2021-01-08T23:36:04Z</timestamp>
-      <contributor>
-        <username>System</username>
-        <id>4</id>
-      </contributor>
-      <minor/>
-      <comment>System verschob die Seite [[Urlaube]] nach [[Abwesenheiten]]</comment>
-      <model>wikitext</model>
-      <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="46">{{habidat-bundle}}{{semorg-vacation-overview}}</text>
-      <sha1>q4ge5bro9nfw8leog4h2r2x99t9pfmb</sha1>
-    </revision>
-  </page>
-  <page>
-    <title>Vorlage:Semorg-person-user-custom</title>
-    <ns>10</ns>
-    <id>442</id>
-    <revision>
-      <id>649</id>
-      <parentid>647</parentid>
-      <timestamp>2021-01-09T13:12:52Z</timestamp>
-      <contributor>
-        <username>System</username>
-        <id>4</id>
-      </contributor>
-      <model>wikitext</model>
-      <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="793">&lt;noinclude&gt;{{habidat-bundle}}&lt;/noinclude&gt;&lt;includeonly&gt;{{#tweekihide:sidebar-right}}[[Category:{{int:semorg-person-user-category}}]][[Category:{{int:semorg-person-category}}]]{{#semorg-detail:person-user
-  |heading={{#tweekirealname:{{FULLPAGENAME}}}}
-}}{{#semorg-set:person
-  |name = {{#tweekirealname:{{FULLPAGENAME}}}}
-}}
-&lt;div class=&quot;semorg-dashboard&quot;&gt;
-{{semorg-task-dashboard|user={{FULLPAGENAME}}}}
-{{semorg-meeting-dashboard|user={{FULLPAGENAME}}}}
-{{semorg-meeting-past-dashboard|user={{FULLPAGENAME}}}}
-{{semorg-role-dashboard|user={{FULLPAGENAME}}}}
-{{#semorg-dashboard:project
-  |query=[[-semorg-project-team-project.semorg-project-team-team::{{FULLPAGENAME}}]][[semorg-project-closed::false]]
-}}
-{{semorg-project-update-dashboard}}
-{{semorg-vacation-dashboard}}
-&lt;/div&gt;
-&lt;/includeonly&gt;</text>
-      <sha1>gtearj9a5n2p8sat2lcg05ag1xbuxhe</sha1>
-    </revision>
-  </page>
-  <page>
-    <title>Erledigte Todos</title>
-    <ns>0</ns>
-    <id>495</id>
-    <revision>
-      <id>512</id>
-      <parentid>511</parentid>
-      <timestamp>2020-12-29T17:36:39Z</timestamp>
-      <contributor>
-        <username>System</username>
-        <id>3</id>
-      </contributor>
-      <minor/>
-      <comment>1 Version importiert</comment>
-      <model>wikitext</model>
-      <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="47">{{habidat-bundle}}{{semorg-task-done-overview}}</text>
-      <sha1>t0gd16nf4n8tzil0hznvtn8zm66pkno</sha1>
-    </revision>
-  </page>
-  <page>
-    <title>Vorlage:Semorg-agenda-custom</title>
-    <ns>10</ns>
-    <id>435</id>
-    <revision>
-      <id>436</id>
-      <timestamp>2020-07-12T13:27:09Z</timestamp>
-      <contributor>
-        <username>Admin</username>
-        <id>1</id>
-      </contributor>
-      <model>wikitext</model>
-      <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="1502">&lt;noinclude&gt;{{habidat-bundle}}&lt;/noinclude&gt;&lt;includeonly&gt;{{#subobject:
-  |semorg-agenda-meeting={{PAGENAME}}
-  |semorg-agenda-proposal={{{proposal|}}}
-  |semorg-agenda-tag={{{tag|}}}|+sep=,
-  |semorg-agenda-title={{{title|}}}
-  |semorg-agenda-description={{{description|}}}
-  |semorg-agenda-person={{{person|}}}
-  |semorg-agenda-type={{{type|}}}
-  |semorg-agenda-time={{{time|}}}
-  |semorg-agenda-priority={{{priority|}}}
-  |semorg-agenda-responsible={{{responsible|}}}|+sep=,
-  |semorg-agenda-erledigt={{{erledigt|}}}
-}}&lt;h4 class=&quot;semorg-agenda-heading&quot; style=&quot;margin-top: 10px;font-weight:bold&quot;&gt;{{{title|}}}{{#ifeq:{{{erledigt|}}}|Ja
-  |&lt;i class=&quot;fa fa-check-circle float-right&quot;&gt;&lt;/i&gt;
-}}&lt;/h4&gt;{{#if:{{{person|}}}{{{time|}}}
-  |&lt;p&gt;''{{#if:{{{person|}}}
-    |{{PAGENAME:{{{person}}}}}{{#if:{{{time|}}}{{{time-real|}}}|,&amp;nbsp;}}
-  }}{{#if:{{{time|}}}{{{time-real|}}}
-  |{{#if:{{{time-real|}}}
-    |{{{time-real|}}} min {{#if:{{{time|}}}|({{int:semorg-agenda-times-planned}}: {{{time|}}} min)}}
-    |{{#if:{{{time|}}}|{{{time|}}} min}}
-  }}
-}}''&lt;/p&gt;
-}}{{#if:{{{description|}}}| 
-      &lt;h5 style=&quot;font-weight:bold&quot;&gt;Beschreibung / Besprochenes&lt;/h5&gt;
-{{{description}}}
-    }}{{#if:{{{proposal|}}}| 
-      &lt;h5 style=&quot;font-weight:bold&quot;&gt;Beschluss / Ergebnis&lt;/h5&gt;&lt;div&gt;
-{{{proposal}}}&lt;/div&gt;
-    }}{{#if:{{{responsible|}}}|&amp;nbsp;
-      &lt;h5 style=&quot;font-weight:bold&quot;&gt;Verantwortliche&lt;/h5&gt;
-{{semorg-person-link|{{{responsible|}}}}}
-    }}
-{{#ifeq:{{{priority|}}}|3
-  |
-&lt;b&gt;=&gt; nächstes Treffen&lt;/b&gt;
-    }}
-&lt;hr&gt;
-&lt;/includeonly&gt;</text>
-      <sha1>pv2f7vjzwcqkntzcs5oo1uowl2kl6ld</sha1>
-    </revision>
-  </page>
-  <page>
-    <title>Vorlage:Semorg-project-custom-row</title>
-    <ns>10</ns>
-    <id>439</id>
-    <revision>
-      <id>506</id>
-      <parentid>505</parentid>
-      <timestamp>2020-12-29T17:36:38Z</timestamp>
-      <contributor>
-        <username>System</username>
-        <id>3</id>
-      </contributor>
-      <minor/>
-      <comment>1 Version importiert</comment>
-      <model>wikitext</model>
-      <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="1081">&lt;noinclude&gt;{{habidat-bundle}}&lt;/noinclude&gt;&lt;includeonly&gt;&lt;tr&gt;
-&lt;td&gt;[[{{{?target|}}}]]{{#semorg-true:{{{?closed|}}}
-  |&lt;br&gt;&lt;span class=&quot;badge badge-secondary&quot;&gt;{{int:semorg-value-status-closed}}&lt;/span&gt;
-}}&lt;div class=&quot;semorg-list-row-details&quot;&gt;
-{{{?description|}}}&lt;/div&gt;&lt;div class=&quot;semorg-list-row-details m-2 px-2 py-1 bg-light&quot;&gt;'''{{int:semorg-field-project-last-update-name}}''': {{semorg-project-last-update|{{{?target|}}}}}&lt;/div&gt;&lt;/td&gt; 
-&lt;td&gt;{{semorg-date|{{{?end|}}}}}&lt;/td&gt; 
-&lt;td style=&quot;font-size:small&quot;&gt;{{#ask:[[semorg-project-team-project::{{{?target|}}}]][[Semorg-project-team-main-responsible::true]]
-  |mainlabel=-
-  |?Semorg-project-team-team=
-  |intro=&lt;b&gt;
-  |outro=&lt;/b&gt;{{#ask:[[semorg-project-team-project::{{{?target|}}}]][[Semorg-project-team-main-responsible::false]]
-    |mainlabel=-
-    |?Semorg-project-team-team=
-    |intro=,&amp;nbsp;
-}}
-  |default={{#ask:[[semorg-project-team-project::{{{?target|}}}]][[Semorg-project-team-main-responsible::false]]
-    |mainlabel=-
-    |?Semorg-project-team-team=
-}}
-}}&lt;/td&gt; 
-{{semorg-showedit
-  |target={{{?target|}}}
-}}&lt;/tr&gt;&lt;/includeonly&gt;</text>
-      <sha1>6dx21fzlspn14tjshrtybefrh5z1snz</sha1>
-    </revision>
-  </page>
-  <page>
-    <title>Vorlage:Semorg-role-custom-row</title>
-    <ns>10</ns>
-    <id>440</id>
-    <revision>
-      <id>441</id>
-      <timestamp>2020-09-29T20:28:14Z</timestamp>
-      <contributor>
-        <username>Admin</username>
-        <id>1</id>
-      </contributor>
-      <model>wikitext</model>
-      <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="934">&lt;noinclude&gt;{{habidat-bundle}}&lt;/noinclude&gt;&lt;includeonly&gt;&lt;tr {{#semorg-true:{{{?active|}}}||class=&quot;semorg-role-inactive&quot;}}&gt;
-&lt;td&gt;[[{{{?target|}}}|{{{?name|}}}]]&lt;/td&gt;
-&lt;td style=&quot;font-size:small&quot;&gt;{{#ask:[[semorg-role-task-role::{{{?target|}}}]]
-  |mainlabel=-
-  |?Semorg-role-task-name=
-  |?semorg-role-task-responsible=
-  |format=ul
-}}&lt;/td&gt;
-&lt;td style=&quot;font-size:small&quot;&gt;{{#ask:[[semorg-role-holder-role::{{{?target|}}}]][[Semorg-role-holder-main-responsible::true]]
-  |mainlabel=-
-  |?Semorg-role-holder-holder=
-  |intro=&lt;b&gt;
-  |outro=&lt;/b&gt;{{#ask:[[semorg-role-holder-role::{{{?target|}}}]][[Semorg-role-holder-main-responsible::false]]
-    |mainlabel=-
-    |?Semorg-role-holder-holder=
-    |intro=,&amp;nbsp;
-}}
-  |default={{#ask:[[semorg-role-holder-role::{{{?target|}}}]][[Semorg-role-holder-main-responsible::false]]
-    |mainlabel=-
-    |?Semorg-role-holder-holder=
-}}
-}}&lt;/td&gt;
-{{semorg-showedit
-  |target={{{?target|}}}
-}}&lt;/tr&gt;&lt;/includeonly&gt;</text>
-      <sha1>9b0ykfn6a85la7wx98z00gb5ex188nv</sha1>
-    </revision>
-  </page>
-  <page>
     <title>Vorlage:Habidat-bundle</title>
     <ns>10</ns>
-    <id>494</id>
+    <id>456</id>
     <revision>
-      <id>628</id>
-      <parentid>508</parentid>
+      <id>456</id>
       <timestamp>2021-01-08T23:38:55Z</timestamp>
       <contributor>
-        <username>System</username>
-        <id>4</id>
+        <username>imported&gt;System</username>
+        <id>0</id>
       </contributor>
+      <origin>456</origin>
       <model>wikitext</model>
       <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="305">[[Kategorie:habidat-bundle]]&lt;noinclude&gt;Diese Vorlage weist Seiten der Kategorie [[:Kategorie:habidat-bundle|&lt;code&gt;habidat-bundle&lt;/code&gt;]] zu. So lassen sich Seiten markieren, die zum Nachbauen der Struktur des Orga-Wikis benötigt werden und gemeinsam exportiert bzw. importiert werden sollen.&lt;/noinclude&gt;</text>
+      <text bytes="305" sha1="tdigdl4hv82qmvet3xmordzmcvlxu4v" xml:space="preserve">[[Kategorie:habidat-bundle]]&lt;noinclude&gt;Diese Vorlage weist Seiten der Kategorie [[:Kategorie:habidat-bundle|&lt;code&gt;habidat-bundle&lt;/code&gt;]] zu. So lassen sich Seiten markieren, die zum Nachbauen der Struktur des Orga-Wikis benötigt werden und gemeinsam exportiert bzw. importiert werden sollen.&lt;/noinclude&gt;</text>
       <sha1>tdigdl4hv82qmvet3xmordzmcvlxu4v</sha1>
     </revision>
   </page>
   <page>
     <title>Vorlage:Semorg-group-custom-row</title>
     <ns>10</ns>
-    <id>437</id>
+    <id>457</id>
     <revision>
-      <id>438</id>
-      <timestamp>2020-07-12T13:30:39Z</timestamp>
+      <id>755</id>
+      <parentid>457</parentid>
+      <timestamp>2021-06-01T22:15:51Z</timestamp>
       <contributor>
-        <username>Admin</username>
-        <id>1</id>
+        <username>Tobias haider</username>
+        <id>4</id>
       </contributor>
+      <minor/>
+      <comment>Textersetzung - „{{{?“ durch „{{{“</comment>
+      <origin>755</origin>
       <model>wikitext</model>
       <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="334">&lt;noinclude&gt;{{habidat-bundle}}&lt;/noinclude&gt;&lt;includeonly&gt;&lt;tr&gt;
-&lt;td&gt;[[{{{?target|}}}]]&lt;/td&gt; 
-&lt;td&gt;{{{?description|}}}&lt;/td&gt; 
-&lt;td&gt;{{#ask:[[semorg-group-member-group::{{{?target|+}}}]][[semorg-group-member-open-end::true]]
+      <text bytes="330" sha1="8fqktv62r2bud94x9qybv5pu2g0z0qe" xml:space="preserve">&lt;noinclude&gt;{{habidat-bundle}}&lt;/noinclude&gt;&lt;includeonly&gt;&lt;tr&gt;
+&lt;td&gt;[[{{{target|}}}]]&lt;/td&gt;
+&lt;td&gt;{{{description|}}}&lt;/td&gt;
+&lt;td&gt;{{#ask:[[semorg-group-member-group::{{{target|+}}}]][[semorg-group-member-open-end::true]]
   |mainlabel=-
   |?semorg-group-member-member=
 }}&lt;/td&gt;
 {{semorg-showedit
-  |target={{{?target|}}}
+  |target={{{target|}}}
 }}
 &lt;/tr&gt;&lt;/includeonly&gt;</text>
-      <sha1>2bir4r06vc6jewhqtqt9t6k7v5r0w5n</sha1>
+      <sha1>8fqktv62r2bud94x9qybv5pu2g0z0qe</sha1>
     </revision>
   </page>
   <page>
     <title>Vorlage:Semorg-agenda-custom-row</title>
     <ns>10</ns>
-    <id>441</id>
+    <id>458</id>
     <revision>
-      <id>442</id>
-      <timestamp>2020-07-12T13:30:25Z</timestamp>
+      <id>761</id>
+      <parentid>458</parentid>
+      <timestamp>2021-06-01T22:15:53Z</timestamp>
       <contributor>
-        <username>Admin</username>
-        <id>1</id>
+        <username>Tobias haider</username>
+        <id>4</id>
       </contributor>
+      <minor/>
+      <comment>Textersetzung - „{{{?“ durch „{{{“</comment>
+      <origin>761</origin>
       <model>wikitext</model>
       <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="263">&lt;noinclude&gt;{{habidat-bundle}}&lt;/noinclude&gt;&lt;includeonly&gt;&lt;tr&gt;
-&lt;td&gt;{{{?group|}}}&lt;/td&gt;
-&lt;td&gt;[[{{{?meeting|}}}|{{semorg-date|{{{?date|}}}|long}}]]&lt;/td&gt; 
-&lt;td&gt;'''{{{?title|}}}'''&lt;br&gt;
-{{{?proposal|}}}&lt;/td&gt; 
+      <text bytes="257" sha1="0bvdkyg44oyggavnppixfs6scelm38e" xml:space="preserve">&lt;noinclude&gt;{{habidat-bundle}}&lt;/noinclude&gt;&lt;includeonly&gt;&lt;tr&gt;
+&lt;td&gt;{{{group|}}}&lt;/td&gt;
+&lt;td&gt;[[{{{meeting|}}}|{{semorg-date|{{{date|}}}|long}}]]&lt;/td&gt;
+&lt;td&gt;'''{{{title|}}}'''&lt;br&gt;
+{{{proposal|}}}&lt;/td&gt;
 {{semorg-showedit
-  |target={{{?meeting|}}}
+  |target={{{meeting|}}}
 }}
 &lt;/tr&gt;&lt;/includeonly&gt;</text>
-      <sha1>cpq5h4irvyw55i85m1crv3yr67057hv</sha1>
+      <sha1>0bvdkyg44oyggavnppixfs6scelm38e</sha1>
     </revision>
   </page>
   <page>
     <title>Vorlage:Semorg-project-team-internal-custom</title>
     <ns>10</ns>
-    <id>443</id>
+    <id>459</id>
     <revision>
-      <id>444</id>
+      <id>459</id>
       <timestamp>2020-07-12T13:31:13Z</timestamp>
       <contributor>
-        <username>Admin</username>
-        <id>1</id>
+        <username>imported&gt;Admin</username>
+        <id>0</id>
       </contributor>
+      <origin>459</origin>
       <model>wikitext</model>
       <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="404">&lt;noinclude&gt;{{habidat-bundle}}&lt;/noinclude&gt;&lt;includeonly&gt;{{#semorg-subobject:project-team
+      <text bytes="404" sha1="m3ihsksh955vyko4kolh95eos099fzu" xml:space="preserve">&lt;noinclude&gt;{{habidat-bundle}}&lt;/noinclude&gt;&lt;includeonly&gt;{{#semorg-subobject:project-team
   |project={{FULLPAGENAME}}
   |team={{{team-internal|}}}
   |team-internal={{{team-internal|}}}
@@ -667,17 +144,18 @@ Technische Grundlagen:
   <page>
     <title>Gruppen</title>
     <ns>0</ns>
-    <id>526</id>
+    <id>460</id>
     <revision>
-      <id>634</id>
+      <id>460</id>
       <timestamp>2020-07-12T13:22:22Z</timestamp>
       <contributor>
         <username>imported&gt;System</username>
         <id>0</id>
       </contributor>
+      <origin>460</origin>
       <model>wikitext</model>
       <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="152">{{habidat-bundle}}{{#semorg-list:group
+      <text bytes="152" sha1="qbraetph616ozr6qzk4f41i24h19bpe" xml:space="preserve">{{habidat-bundle}}{{#semorg-list:group
   |heading={{int:semorg-group-page-name}}
   |formlink={{#semorg-forminput:group}}
   |row template=group-custom
@@ -688,17 +166,18 @@ Technische Grundlagen:
   <page>
     <title>Teams</title>
     <ns>0</ns>
-    <id>527</id>
+    <id>461</id>
     <revision>
-      <id>635</id>
+      <id>461</id>
       <timestamp>2020-09-02T07:22:25Z</timestamp>
       <contributor>
         <username>imported&gt;System</username>
         <id>0</id>
       </contributor>
+      <origin>461</origin>
       <model>wikitext</model>
       <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="575">{{habidat-bundle}}{{#semorg-list:role
+      <text bytes="575" sha1="2s3bp00gcec0wux0kodzwzekr75x3cp" xml:space="preserve">{{habidat-bundle}}{{#semorg-list:role
   |limit=1000
   |links={{#ask:[[Category:Semorg-role]][[semorg-role-active::true]]
     |mainlabel=-
@@ -706,7 +185,7 @@ Technische Grundlagen:
     |?-semorg-role-task-role.semorg-role-task-name=Aufgaben
     |?-semorg-role-holder-role.semorg-role-holder-holder.semorg-person-name=Inhaber*innen
     |format=csv
-    |searchlabel=&lt;i class=&quot;fa fa-download&quot;&gt;&lt;/i&gt; Download als CSV
+    |searchlabel=&lt;i class="fa fa-download"&gt;&lt;/i&gt; Download als CSV
     |limit=1000
   }}
   |heading={{int:semorg-role-page-name}}
@@ -719,18 +198,20 @@ Technische Grundlagen:
   <page>
     <title>Vorlage:Semorg-role-custom</title>
     <ns>10</ns>
-    <id>529</id>
+    <id>462</id>
     <revision>
-      <id>638</id>
-      <timestamp>2020-07-12T13:30:58Z</timestamp>
+      <id>519</id>
+      <parentid>462</parentid>
+      <timestamp>2021-03-10T13:28:05Z</timestamp>
       <contributor>
-        <username>imported&gt;System</username>
-        <id>0</id>
+        <username>Tobias haider</username>
+        <id>4</id>
       </contributor>
+      <origin>519</origin>
       <model>wikitext</model>
       <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="677">&lt;noinclude&gt;{{habidat-bundle}}&lt;/noinclude&gt;&lt;includeonly&gt;[[Category:{{int:semorg-role-category}}]]{{DISPLAYTITLE:{{{name|}}}}}{{#semorg-set:role 
-  |name={{{name|}}} 
+      <text bytes="667" sha1="3v8xr7sjz72ti069icyiuuvzqv7srhu" xml:space="preserve">&lt;noinclude&gt;{{habidat-bundle}}&lt;/noinclude&gt;&lt;includeonly&gt;[[Category:{{int:semorg-role-category}}]]{{DISPLAYTITLE:{{{name|}}}}}{{#semorg-set:role
+  |name={{{name|}}}
   |group={{{group|}}}
   |active={{{active|true}}}
   |active-reason={{{active-reason|}}}
@@ -738,607 +219,1444 @@ Technische Grundlagen:
   |heading={{{name|}}}
 }}{{#semorg-true:{{{active|true}}}
   |
-  |&lt;div class=&quot;alert alert-danger&quot;&gt;{{int:semorg-role-inactive-warning|{{{active-reason|}}}}}&lt;/div&gt;
+  |&lt;div class="alert alert-danger"&gt;{{int:semorg-role-inactive-warning|{{{active-reason|}}}}}&lt;/div&gt;
 }}
 
-{{#semorg-table:role 
+{{#semorg-table:role
   |group={{#if:{{{group|}}}|[[{{{group|}}}]]}}
   |holders={{{holders|}}}
 }}
 
-&lt;br&gt;&lt;br&gt;
-
 &lt;h3&gt;{{int:semorg-field-role-tasks-name}}&lt;/h3&gt;
-&lt;table class=&quot;table table-condensed table-sm&quot;&gt;{{{tasks|}}}&lt;/table&gt;
+&lt;table class="table table-condensed table-sm"&gt;{{{tasks|}}}&lt;/table&gt;
 &lt;/includeonly&gt;</text>
-      <sha1>tfr73gokggdoln45kxdr8g46p5rv8at</sha1>
+      <sha1>3v8xr7sjz72ti069icyiuuvzqv7srhu</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Anleitungen</title>
+    <ns>0</ns>
+    <id>442</id>
+    <revision>
+      <id>442</id>
+      <timestamp>2020-07-12T13:24:11Z</timestamp>
+      <contributor>
+        <username>imported&gt;Admin</username>
+        <id>0</id>
+      </contributor>
+      <origin>442</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="44" sha1="01ybt7siabtrx3mtfv6fbpgf6wkfqk5" xml:space="preserve">{{habidat-bundle}}{{semorg-manual-overview}}</text>
+      <sha1>01ybt7siabtrx3mtfv6fbpgf6wkfqk5</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Ehemalige Gremien</title>
+    <ns>0</ns>
+    <id>443</id>
+    <revision>
+      <id>443</id>
+      <timestamp>2021-01-08T23:03:46Z</timestamp>
+      <contributor>
+        <username>imported&gt;System</username>
+        <id>0</id>
+      </contributor>
+      <comment>Die Seite wurde neu angelegt: „{{habidat-bundle}}{{semorg-group-inactive-overview}}“</comment>
+      <origin>443</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="52" sha1="2rd7bihf8eocrbfqd79v2qb8v7b7v1t" xml:space="preserve">{{habidat-bundle}}{{semorg-group-inactive-overview}}</text>
+      <sha1>2rd7bihf8eocrbfqd79v2qb8v7b7v1t</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Vergangene Projektbesprechungen</title>
+    <ns>0</ns>
+    <id>447</id>
+    <revision>
+      <id>447</id>
+      <timestamp>2021-01-08T23:13:44Z</timestamp>
+      <contributor>
+        <username>imported&gt;System</username>
+        <id>0</id>
+      </contributor>
+      <comment>Die Seite wurde neu angelegt: „{{habidat-bundle}}{{semorg-meeting-project-past-overview}}“</comment>
+      <origin>447</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="58" sha1="3uwkerjw7u2gpiuelwirnrbrdwsmu5h" xml:space="preserve">{{habidat-bundle}}{{semorg-meeting-project-past-overview}}</text>
+      <sha1>3uwkerjw7u2gpiuelwirnrbrdwsmu5h</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Vorlage:Semorg-person-user-custom-row</title>
+    <ns>10</ns>
+    <id>448</id>
+    <revision>
+      <id>756</id>
+      <parentid>448</parentid>
+      <timestamp>2021-06-01T22:15:51Z</timestamp>
+      <contributor>
+        <username>Tobias haider</username>
+        <id>4</id>
+      </contributor>
+      <minor/>
+      <comment>Textersetzung - „{{{?“ durch „{{{“</comment>
+      <origin>756</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="167" sha1="p4pw3eyaqr5d08h4f0dx4aq9uj5anjl" xml:space="preserve">&lt;noinclude&gt;{{habidat-bundle}}&lt;/noinclude&gt;&lt;includeonly&gt;&lt;tr&gt;
+&lt;td&gt;[[{{{target}}}]] ({{PAGENAME:{{{target|}}}}})&lt;/td&gt;
+&lt;td class="semorg-showedit"&gt;&lt;/td&gt;
+&lt;/tr&gt;&lt;/includeonly&gt;</text>
+      <sha1>p4pw3eyaqr5d08h4f0dx4aq9uj5anjl</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Abwesenheiten</title>
+    <ns>0</ns>
+    <id>450</id>
+    <revision>
+      <id>450</id>
+      <timestamp>2021-01-08T23:36:04Z</timestamp>
+      <contributor>
+        <username>imported&gt;System</username>
+        <id>0</id>
+      </contributor>
+      <minor/>
+      <comment>System verschob die Seite [[Urlaube]] nach [[Abwesenheiten]]</comment>
+      <origin>450</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="46" sha1="q4ge5bro9nfw8leog4h2r2x99t9pfmb" xml:space="preserve">{{habidat-bundle}}{{semorg-vacation-overview}}</text>
+      <sha1>q4ge5bro9nfw8leog4h2r2x99t9pfmb</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Vorlage:Semorg-agenda-custom</title>
+    <ns>10</ns>
+    <id>453</id>
+    <revision>
+      <id>527</id>
+      <parentid>453</parentid>
+      <timestamp>2021-05-11T15:15:48Z</timestamp>
+      <contributor>
+        <username>Tobias haider</username>
+        <id>4</id>
+      </contributor>
+      <origin>527</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="1519" sha1="qkzc9byl60doc52ex4qw8e1q31e6olv" xml:space="preserve">&lt;noinclude&gt;{{habidat-bundle}}&lt;/noinclude&gt;&lt;includeonly&gt;{{#subobject:
+  |semorg-agenda-meeting={{PAGENAME}}
+  |semorg-agenda-proposal={{{proposal|}}}
+  |semorg-agenda-tag={{{tag|}}}|+sep=,
+  |semorg-agenda-title={{{title|}}}
+  |semorg-agenda-description={{{description|}}}
+  |semorg-agenda-person={{{person|}}}
+  |semorg-agenda-type={{{type|}}}
+  |semorg-agenda-time={{{time|}}}
+  |semorg-agenda-priority={{{priority|}}}
+  |semorg-agenda-responsible={{{responsible|}}}|+sep=,
+  |semorg-agenda-erledigt={{{erledigt|}}}
+}}&lt;h4 class="semorg-agenda-heading" style="margin-top: 10px;font-weight:bold"&gt;{{{title|}}}{{#ifeq:{{{erledigt|}}}|Ja
+  |&lt;i class="fa fa-check-circle float-right"&gt;&lt;/i&gt;
+}}&lt;/h4&gt;{{#if:{{{person|}}}{{{time|}}}
+  |&lt;p&gt;''{{#if:{{{person|}}}
+    |{{#show:{{{person}}}|?semorg-person-name}}{{#if:{{{time|}}}{{{time-real|}}}|,&amp;nbsp;}}
+  }}{{#if:{{{time|}}}{{{time-real|}}}
+  |{{#if:{{{time-real|}}}
+    |{{{time-real|}}} min {{#if:{{{time|}}}|({{int:semorg-agenda-times-planned}}: {{{time|}}} min)}}
+    |{{#if:{{{time|}}}|{{{time|}}} min}}
+  }}
+}}''&lt;/p&gt;
+}}{{#if:{{{description|}}}|
+      &lt;h5 style="font-weight:bold"&gt;Beschreibung / Besprochenes&lt;/h5&gt;
+{{{description}}}
+    }}{{#if:{{{proposal|}}}|
+      &lt;h5 style="font-weight:bold"&gt;Beschluss / Ergebnis&lt;/h5&gt;&lt;div&gt;
+{{{proposal}}}&lt;/div&gt;
+    }}{{#if:{{{responsible|}}}|&amp;nbsp;
+      &lt;h5 style="font-weight:bold"&gt;Verantwortliche&lt;/h5&gt;
+{{semorg-person-link|{{{responsible|}}}}}
+    }}
+{{#ifeq:{{{priority|}}}|3
+  |
+&lt;b&gt;=&gt; nächstes Treffen&lt;/b&gt;
+    }}
+&lt;hr&gt;
+&lt;/includeonly&gt;</text>
+      <sha1>qkzc9byl60doc52ex4qw8e1q31e6olv</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Vorlage:Semorg-project-custom-row</title>
+    <ns>10</ns>
+    <id>454</id>
+    <revision>
+      <id>757</id>
+      <parentid>454</parentid>
+      <timestamp>2021-06-01T22:15:51Z</timestamp>
+      <contributor>
+        <username>Tobias haider</username>
+        <id>4</id>
+      </contributor>
+      <minor/>
+      <comment>Textersetzung - „{{{?“ durch „{{{“</comment>
+      <origin>757</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="1072" sha1="d02ycphcsw0stiopu0zkhwhfyk22nyg" xml:space="preserve">&lt;noinclude&gt;{{habidat-bundle}}&lt;/noinclude&gt;&lt;includeonly&gt;&lt;tr&gt;
+&lt;td&gt;[[{{{target|}}}]]{{#semorg-true:{{{closed|}}}
+  |&lt;br&gt;&lt;span class="badge badge-secondary"&gt;{{int:semorg-value-status-closed}}&lt;/span&gt;
+}}&lt;div class="semorg-list-row-details"&gt;
+{{{description|}}}&lt;/div&gt;&lt;div class="semorg-list-row-details m-2 px-2 py-1 bg-light"&gt;'''{{int:semorg-field-project-last-update-name}}''': {{semorg-project-last-update|{{{target|}}}}}&lt;/div&gt;&lt;/td&gt;
+&lt;td&gt;{{semorg-date|{{{end|}}}}}&lt;/td&gt;
+&lt;td style="font-size:small"&gt;{{#ask:[[semorg-project-team-project::{{{target|}}}]][[Semorg-project-team-main-responsible::true]]
+  |mainlabel=-
+  |?Semorg-project-team-team=
+  |intro=&lt;b&gt;
+  |outro=&lt;/b&gt;{{#ask:[[semorg-project-team-project::{{{target|}}}]][[Semorg-project-team-main-responsible::false]]
+    |mainlabel=-
+    |?Semorg-project-team-team=
+    |intro=,&amp;nbsp;
+}}
+  |default={{#ask:[[semorg-project-team-project::{{{target|}}}]][[Semorg-project-team-main-responsible::false]]
+    |mainlabel=-
+    |?Semorg-project-team-team=
+}}
+}}&lt;/td&gt;
+{{semorg-showedit
+  |target={{{target|}}}
+}}&lt;/tr&gt;&lt;/includeonly&gt;</text>
+      <sha1>d02ycphcsw0stiopu0zkhwhfyk22nyg</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Todos</title>
+    <ns>0</ns>
+    <id>436</id>
+    <revision>
+      <id>436</id>
+      <timestamp>2021-01-08T22:42:32Z</timestamp>
+      <contributor>
+        <username>imported&gt;System</username>
+        <id>0</id>
+      </contributor>
+      <minor/>
+      <comment>System verschob die Seite [[Aufgaben]] nach [[Todos]], ohne dabei eine Weiterleitung anzulegen</comment>
+      <origin>436</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="42" sha1="fde5nhiu7am7wn9r262ba1dt510nv3d" xml:space="preserve">{{habidat-bundle}}{{semorg-task-overview}}</text>
+      <sha1>fde5nhiu7am7wn9r262ba1dt510nv3d</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Abgeschlossene Projekte</title>
+    <ns>0</ns>
+    <id>441</id>
+    <revision>
+      <id>441</id>
+      <timestamp>2020-07-12T13:23:59Z</timestamp>
+      <contributor>
+        <username>imported&gt;Admin</username>
+        <id>0</id>
+      </contributor>
+      <origin>441</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="52" sha1="2h63ms3y7vykedzokpgw48h9mrkg3go" xml:space="preserve">{{habidat-bundle}}{{semorg-project-closed-overview}}</text>
+      <sha1>2h63ms3y7vykedzokpgw48h9mrkg3go</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Treffen</title>
+    <ns>0</ns>
+    <id>444</id>
+    <revision>
+      <id>444</id>
+      <timestamp>2021-01-08T23:11:07Z</timestamp>
+      <contributor>
+        <username>imported&gt;System</username>
+        <id>0</id>
+      </contributor>
+      <origin>444</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="45" sha1="0r1cf90co09ippbjz7ddahwph2xhl69" xml:space="preserve">{{habidat-bundle}}{{semorg-meeting-overview}}</text>
+      <sha1>0r1cf90co09ippbjz7ddahwph2xhl69</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Vergangene Treffen</title>
+    <ns>0</ns>
+    <id>445</id>
+    <revision>
+      <id>445</id>
+      <timestamp>2021-01-08T23:11:19Z</timestamp>
+      <contributor>
+        <username>imported&gt;System</username>
+        <id>0</id>
+      </contributor>
+      <comment>Die Seite wurde neu angelegt: „{{habidat-bundle}}{{semorg-meeting-past-overview}}“</comment>
+      <origin>445</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="50" sha1="nywz0dulp1oept9ep2xphwisdg7tb6n" xml:space="preserve">{{habidat-bundle}}{{semorg-meeting-past-overview}}</text>
+      <sha1>nywz0dulp1oept9ep2xphwisdg7tb6n</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Projektbesprechungen</title>
+    <ns>0</ns>
+    <id>446</id>
+    <revision>
+      <id>446</id>
+      <timestamp>2021-01-08T23:13:32Z</timestamp>
+      <contributor>
+        <username>imported&gt;System</username>
+        <id>0</id>
+      </contributor>
+      <comment>Die Seite wurde neu angelegt: „{{habidat-bundle}}{{semorg-meeting-project-overview}}“</comment>
+      <origin>446</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="53" sha1="94q2akh19ny31c03kmbact5nuol5xr2" xml:space="preserve">{{habidat-bundle}}{{semorg-meeting-project-overview}}</text>
+      <sha1>94q2akh19ny31c03kmbact5nuol5xr2</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Hilfe</title>
+    <ns>0</ns>
+    <id>449</id>
+    <revision>
+      <id>449</id>
+      <timestamp>2021-01-08T23:31:50Z</timestamp>
+      <contributor>
+        <username>imported&gt;System</username>
+        <id>0</id>
+      </contributor>
+      <comment>Die Seite wurde neu angelegt: „{{habidat-bundle}} === Herzlich Willkommen in eurem neuen Wiki! ===  Hier findet ihr ein paar Tips, wie ihr es an eure Bedürfnisse anpassen könnt…  Technis…“</comment>
+      <origin>449</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="570" sha1="enuuqosv3qdoyjmfnkh5fv2wgvymi0f" xml:space="preserve">{{habidat-bundle}}
+=== Herzlich Willkommen in eurem neuen Wiki! ===
+
+Hier findet ihr ein paar Tips, wie ihr es an eure Bedürfnisse anpassen könnt…
+
+Technische Grundlagen:
+* es handelt sich um eine [https://www.mediawiki.org/ MediaWiki]-Installation, die mit [https://www.semantic-mediawiki.org/ Semantic MediaWiki] erweitert wurde
+* sie nutzt die auf Bootstrap basierende Skin [https://tweeki.kollabor.at/ Tweeki]
+* die Vorlagen und Formulare für die Selbstorganisation werden durch die Erweiterung [https://semorg.kollabor.at/ Semantic Organization] bereitgestellt</text>
+      <sha1>enuuqosv3qdoyjmfnkh5fv2wgvymi0f</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Vorlage:Semorg-person-user-custom</title>
+    <ns>10</ns>
+    <id>451</id>
+    <revision>
+      <id>522</id>
+      <parentid>521</parentid>
+      <timestamp>2021-03-12T16:38:05Z</timestamp>
+      <contributor>
+        <username>Tobias haider</username>
+        <id>4</id>
+      </contributor>
+      <origin>522</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="807" sha1="dg5c7nnhtlu7k8qwjisypid9t4bldap" xml:space="preserve">&lt;noinclude&gt;{{habidat-bundle}}&lt;/noinclude&gt;&lt;includeonly&gt;{{#tweekihide:sidebar-right}}[[Category:{{int:semorg-person-user-category}}]][[Category:{{int:semorg-person-category}}]]{{#semorg-detail:person-user
+  |heading={{#tweekirealname:{{FULLPAGENAME}}}}
+}}{{#semorg-set:person
+  |name = {{#tweekirealname:{{FULLPAGENAME}}}}
+}}
+&lt;div class="semorg-dashboard"&gt;
+{{semorg-task-dashboard|user={{FULLPAGENAME}}}}
+{{semorg-meeting-dashboard|user={{FULLPAGENAME}}}}
+{{semorg-meeting-past-dashboard|user={{FULLPAGENAME}}}}
+{{semorg-role-dashboard|user={{FULLPAGENAME}}}}
+{{semorg-manual-dashboard|user={{FULLPAGENAME}}}}
+{{#semorg-dashboard:project
+  |query=[[-semorg-project-team-project.semorg-project-team-team::{{FULLPAGENAME}}]][[semorg-project-closed::false]]
+}}
+{{semorg-vacation-dashboard}}
+&lt;/div&gt;
+&lt;/includeonly&gt;</text>
+      <sha1>dg5c7nnhtlu7k8qwjisypid9t4bldap</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Vorlage:Semorg-role-custom-row</title>
+    <ns>10</ns>
+    <id>455</id>
+    <revision>
+      <id>758</id>
+      <parentid>455</parentid>
+      <timestamp>2021-06-01T22:15:51Z</timestamp>
+      <contributor>
+        <username>Tobias haider</username>
+        <id>4</id>
+      </contributor>
+      <minor/>
+      <comment>Textersetzung - „{{{?“ durch „{{{“</comment>
+      <origin>758</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="926" sha1="b9zv1gfp2r8aljejdqhy96sqofoonpf" xml:space="preserve">&lt;noinclude&gt;{{habidat-bundle}}&lt;/noinclude&gt;&lt;includeonly&gt;&lt;tr {{#semorg-true:{{{active|}}}||class="semorg-role-inactive"}}&gt;
+&lt;td&gt;[[{{{target|}}}|{{{name|}}}]]&lt;/td&gt;
+&lt;td style="font-size:small"&gt;{{#ask:[[semorg-role-task-role::{{{target|}}}]]
+  |mainlabel=-
+  |?Semorg-role-task-name=
+  |?semorg-role-task-responsible=
+  |format=ul
+}}&lt;/td&gt;
+&lt;td style="font-size:small"&gt;{{#ask:[[semorg-role-holder-role::{{{target|}}}]][[Semorg-role-holder-main-responsible::true]]
+  |mainlabel=-
+  |?Semorg-role-holder-holder=
+  |intro=&lt;b&gt;
+  |outro=&lt;/b&gt;{{#ask:[[semorg-role-holder-role::{{{target|}}}]][[Semorg-role-holder-main-responsible::false]]
+    |mainlabel=-
+    |?Semorg-role-holder-holder=
+    |intro=,&amp;nbsp;
+}}
+  |default={{#ask:[[semorg-role-holder-role::{{{target|}}}]][[Semorg-role-holder-main-responsible::false]]
+    |mainlabel=-
+    |?Semorg-role-holder-holder=
+}}
+}}&lt;/td&gt;
+{{semorg-showedit
+  |target={{{target|}}}
+}}&lt;/tr&gt;&lt;/includeonly&gt;</text>
+      <sha1>b9zv1gfp2r8aljejdqhy96sqofoonpf</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Projekte</title>
+    <ns>0</ns>
+    <id>440</id>
+    <revision>
+      <id>440</id>
+      <timestamp>2020-12-29T17:36:38Z</timestamp>
+      <contributor>
+        <username>imported&gt;System</username>
+        <id>0</id>
+      </contributor>
+      <minor/>
+      <comment>1 Version importiert</comment>
+      <origin>440</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="58" sha1="a1iuz0rv0rbaxz9uwje3ddrk7fg16tf" xml:space="preserve">{{habidat-bundle}}{{semorg-project-overview
+  |limit=50
+}}</text>
+      <sha1>a1iuz0rv0rbaxz9uwje3ddrk7fg16tf</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Benutzer*innen</title>
+    <ns>0</ns>
+    <id>434</id>
+    <revision>
+      <id>434</id>
+      <timestamp>2021-01-09T13:14:34Z</timestamp>
+      <contributor>
+        <username>imported&gt;System</username>
+        <id>0</id>
+      </contributor>
+      <origin>434</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="179" sha1="hf7t0wjyapa5qgvdrvfu3gvlor6pre5" xml:space="preserve">{{habidat-bundle}}{{#semorg-list:person
+  |heading={{int:semorg-person-user-page-name}}
+  |category=semorg-person-user
+  |row template=person-user-custom
+  |headers=person-name
+}}</text>
+      <sha1>hf7t0wjyapa5qgvdrvfu3gvlor6pre5</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Rollen</title>
+    <ns>0</ns>
+    <id>439</id>
+    <revision>
+      <id>439</id>
+      <timestamp>2021-01-08T23:35:17Z</timestamp>
+      <contributor>
+        <username>imported&gt;System</username>
+        <id>0</id>
+      </contributor>
+      <comment>Der Seiteninhalt wurde durch einen anderen Text ersetzt: „{{habidat-bundle}}{{semorg-role-overview}}“</comment>
+      <origin>439</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="42" sha1="iw0q6aehq2w0qb68b7uappnrqvsqokt" xml:space="preserve">{{habidat-bundle}}{{semorg-role-overview}}</text>
+      <sha1>iw0q6aehq2w0qb68b7uappnrqvsqokt</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Vorlage:Semorg-role-task-custom</title>
+    <ns>10</ns>
+    <id>435</id>
+    <revision>
+      <id>520</id>
+      <parentid>435</parentid>
+      <timestamp>2021-03-10T13:29:25Z</timestamp>
+      <contributor>
+        <username>Tobias haider</username>
+        <id>4</id>
+      </contributor>
+      <origin>520</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="568" sha1="scx25jdaf6hnpef2iryumycfma7x3ni" xml:space="preserve">&lt;noinclude&gt;{{habidat-bundle}}&lt;/noinclude&gt;&lt;includeonly&gt;{{#subobject:
+  |semorg-role-task-role={{FULLPAGENAME}}
+  |semorg-role-task-name={{{name|}}}
+  |semorg-role-task-description={{{description|}}}
+  |semorg-role-task-hours={{{hours|}}}
+  |semorg-role-task-month={{{month|}}}|+sep=,
+  |semorg-role-task-responsible={{{responsible|}}}|+sep=,
+}}&lt;tr&gt;
+&lt;td&gt;
+{{{name|}}}{{#if:{{{description|}}}
+  |&lt;div class="semorg-list-row-details"&gt;
+{{{description|}}}&lt;/div&gt;
+}}&lt;/td&gt;
+&lt;td&gt;{{#if:{{{responsible|}}}
+  |{{semorg-person-link|{{{responsible|}}}}}
+}}&lt;/td&gt;
+&lt;/tr&gt;&lt;/includeonly&gt;</text>
+      <sha1>scx25jdaf6hnpef2iryumycfma7x3ni</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Gremien</title>
+    <ns>0</ns>
+    <id>437</id>
+    <revision>
+      <id>437</id>
+      <timestamp>2021-01-08T23:02:57Z</timestamp>
+      <contributor>
+        <username>imported&gt;System</username>
+        <id>0</id>
+      </contributor>
+      <minor/>
+      <comment>System verschob die Seite [[Gruppen]] nach [[Gremien]], ohne dabei eine Weiterleitung anzulegen</comment>
+      <origin>437</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="43" sha1="dmudxwq1vmubhddn1vc240epgvhcevy" xml:space="preserve">{{habidat-bundle}}{{semorg-group-overview}}</text>
+      <sha1>dmudxwq1vmubhddn1vc240epgvhcevy</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Beschlüsse</title>
+    <ns>0</ns>
+    <id>438</id>
+    <revision>
+      <id>438</id>
+      <timestamp>2021-01-08T23:15:39Z</timestamp>
+      <contributor>
+        <username>imported&gt;System</username>
+        <id>0</id>
+      </contributor>
+      <origin>438</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="55" sha1="pmfpv5mzyd7ueaj2y05ob4426gyn8qz" xml:space="preserve">{{habidat-bundle}}{{semorg-agenda-resolution-overview}}</text>
+      <sha1>pmfpv5mzyd7ueaj2y05ob4426gyn8qz</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Erledigte Todos</title>
+    <ns>0</ns>
+    <id>452</id>
+    <revision>
+      <id>452</id>
+      <timestamp>2020-12-29T17:36:39Z</timestamp>
+      <contributor>
+        <username>imported&gt;System</username>
+        <id>0</id>
+      </contributor>
+      <minor/>
+      <comment>1 Version importiert</comment>
+      <origin>452</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="47" sha1="t0gd16nf4n8tzil0hznvtn8zm66pkno" xml:space="preserve">{{habidat-bundle}}{{semorg-task-done-overview}}</text>
+      <sha1>t0gd16nf4n8tzil0hznvtn8zm66pkno</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Setup</title>
+    <ns>0</ns>
+    <id>508</id>
+    <revision>
+      <id>509</id>
+      <parentid>508</parentid>
+      <timestamp>2021-01-16T16:07:32Z</timestamp>
+      <contributor>
+        <username>Tobias haider</username>
+        <id>4</id>
+      </contributor>
+      <comment>/* Export-Liste */</comment>
+      <origin>509</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="4247" sha1="9ngig1z0hddeypuaoejc8hxa7xrk1u2" xml:space="preserve">{{habidat-bundle}}
+
+'''nicht aktuell'''
+
+=== Extensions ===
+
+Zusätzlich zu den Dependencies von SemanticOrganization werden folgende Extensions installiert:
+
+* [https://www.mediawiki.org/wiki/Extension:Replace_Text ReplaceText], um Textersetzungen durchführen zu können, wenn beispielsweise nachträglich eine benutzerdefinierte Vorlage verwendet werden soll
+* [https://www.mediawiki.org/wiki/Extension:UserMerge UserMerge], um Benutzerkonten zusammenführen/löschen zu können
+
+Extensions klonen:
+
+ cd extensions
+ git clone https://gerrit.wikimedia.org/r/p/mediawiki/extensions/ReplaceText.git
+ git clone https://gerrit.wikimedia.org/r/p/mediawiki/extensions/UserMerge.git
+
+=== Änderungen in &lt;code&gt;LocalSettings.php&lt;/code&gt; ===
+
+ # Extensions laden
+ wfLoadExtension( 'ReplaceText' );
+ wfLoadExtension( 'UserMerge' );
+ $wgGroupPermissions['bureaucrat']['usermerge'] = true;
+
+ # Tooltips anzeigen
+ $wgTweekiSkinUseTooltips = true;
+
+ # Navbar und Footer für nicht angemeldete Benutzer*innen ausblenden
+ $wgTweekiSkinHideAnon['navbar'] = true;
+ $wgTweekiSkinHideAnon['footer'] = true;
+
+ # Footer anpassen
+ $wgTweekiSkinHideAll['footer-info'] = false;
+ $wgTweekiSkinHideAll['footer-places'] = true;
+ $wgTweekiSkinHideAll['footer-info-copyright'] = true;
+ $wgTweekiSkinHideAll['footer-icons'] = true;
+ $wgMaxCredits = 1;
+
+ # Runrate für Jobs erhöhen
+ $wgJobRunRate = 100;
+
+ # nicht benötigte Benutzereinstellungen ausblenden
+ $wgHiddenPrefs = array_merge( $wgHiddenPrefs, [
+     'fancysig',
+     'language',
+     'skin',
+     'imagesize',
+     'thumbsize',
+     'editsectiononrightclick',
+     'editondblclick',
+     'externaleditor',
+     'uselivepreview',
+     'forceeditsummary',
+     'hidepatrolled',
+     'newpageshidepatrolled',
+     'hidecategorization',
+     'watchlisthidebots',
+     'watchlisthideanons',
+     'smw-prefs-ask-options-tooltip-display',
+     'smw-prefs-ask-options-collapsed-default',
+     'smw-prefs-general-options-time-correction',
+     'smw-prefs-general-options-suggester-textinput',
+     'smw-prefs-general-options-disable-editpage-info',
+     'smw-prefs-general-options-disable-search-info',
+     'srf-prefs-eventcalendar-options-update-default',
+     'srf-prefs-eventcalendar-options-paneview-default',
+     'srf-prefs-datatables-options-update-default',
+     'srf-prefs-datatables-options-cache-default',
+ ] );
+
+ # Anzeigenamen aus LDAP verwenden
+ $wgTweekiSkinUseRealnames = true;
+
+=== Export-Liste ===
+
+auf [[Special:Export]] alle Seiten der Kategorie [[:Kategorie:habidat-bundle]] hinzufügen (zugewiesen über die Vorlage &lt;code&gt;&lt;nowiki&gt;{{habidat-bundle}}&lt;/nowiki&gt;&lt;/code&gt;), dann noch die folgenden Messages ergänzen:
+
+ MediaWiki:Mainpage
+ MediaWiki:Semorg-agenda-template
+ MediaWiki:Semorg-agenda-times
+ MediaWiki:Semorg-field-person-realname-name
+ MediaWiki:Semorg-field-person-username-name
+ MediaWiki:Semorg-field-project-end-name
+ MediaWiki:Semorg-field-project-end-prefix
+ MediaWiki:Semorg-field-project-team-internal-name
+ MediaWiki:Semorg-field-project-team-main-responsible-suffix
+ MediaWiki:Semorg-field-project-team-oneliner-internal-fields
+ MediaWiki:Semorg-field-project-team-role-parameters
+ MediaWiki:Semorg-field-role-holder-oneliner-fields
+ MediaWiki:Semorg-field-role-task-responsible-parameters
+ MediaWiki:Semorg-form-agenda-rows
+ MediaWiki:Semorg-form-group-rows
+ MediaWiki:Semorg-form-meeting-project-rows
+ MediaWiki:Semorg-form-person-user-rows
+ MediaWiki:Semorg-form-project-rows
+ MediaWiki:Semorg-form-project-team-internal-add-button-text
+ MediaWiki:Semorg-form-role-task-rows
+ MediaWiki:Semorg-list-agenda-headers
+ MediaWiki:Semorg-list-group-headers
+ MediaWiki:Semorg-list-group-row-template
+ MediaWiki:Semorg-list-project-headers
+ MediaWiki:Semorg-list-role-headers
+ MediaWiki:Semorg-list-role-row-template
+ MediaWiki:Semorg-meeting-group-page-name
+ MediaWiki:Semorg-meeting-group-past-page-name
+ MediaWiki:Semorg-person-user-page-name
+ MediaWiki:Semorg-person-user-template
+ MediaWiki:Semorg-project-team-internal-template
+ MediaWiki:Semorg-role-task-template
+ MediaWiki:Semorg-tab-group-meetings
+ MediaWiki:Siteuser
+ MediaWiki:Tweeki-navbar-brand
+ MediaWiki:Tweeki-navbar-left
+ MediaWiki:Tweeki-navbar-right
+ MediaWiki:Tweeki-personaltools-text
+ MediaWiki:Yourrealname</text>
+      <sha1>9ngig1z0hddeypuaoejc8hxa7xrk1u2</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Projektupdates</title>
+    <ns>0</ns>
+    <id>511</id>
+    <revision>
+      <id>518</id>
+      <timestamp>2021-01-16T16:14:28Z</timestamp>
+      <contributor>
+        <username>Tobias haider</username>
+        <id>4</id>
+      </contributor>
+      <comment>Die Seite wurde neu angelegt: „{{habidat-bundle}}{{semorg-project-update-overview}}“</comment>
+      <origin>518</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="52" sha1="3enrx96zju9ecc3h2tc5yg5edox25yh" xml:space="preserve">{{habidat-bundle}}{{semorg-project-update-overview}}</text>
+      <sha1>3enrx96zju9ecc3h2tc5yg5edox25yh</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Kategorie:Habidat-bundle</title>
+    <ns>14</ns>
+    <id>514</id>
+    <revision>
+      <id>528</id>
+      <timestamp>2021-06-01T18:41:39Z</timestamp>
+      <contributor>
+        <username>Tobias haider</username>
+        <id>4</id>
+      </contributor>
+      <comment>Die Seite wurde neu angelegt: „{{habidat-bundle}}“</comment>
+      <origin>528</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="18" sha1="dnaal0eyk11qd64nkn9dxffnjvt829w" xml:space="preserve">{{habidat-bundle}}</text>
+      <sha1>dnaal0eyk11qd64nkn9dxffnjvt829w</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Inaktive Rollen</title>
+    <ns>0</ns>
+    <id>587</id>
+    <revision>
+      <id>763</id>
+      <timestamp>2021-06-01T22:16:40Z</timestamp>
+      <contributor>
+        <username>Tobias haider</username>
+        <id>4</id>
+      </contributor>
+      <comment>Die Seite wurde neu angelegt: „{{habidat-bundle}} {{semorg-role-inactive-overview}}“</comment>
+      <origin>763</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="52" sha1="glryu0xhjulwm16sdjvoaqwlnhw9zsd" xml:space="preserve">{{habidat-bundle}}
+{{semorg-role-inactive-overview}}</text>
+      <sha1>glryu0xhjulwm16sdjvoaqwlnhw9zsd</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>MediaWiki:Mainpage</title>
+    <ns>8</ns>
+    <id>499</id>
+    <revision>
+      <id>499</id>
+      <timestamp>2020-09-29T20:45:02Z</timestamp>
+      <contributor>
+        <username>imported&gt;Admin</username>
+        <id>0</id>
+      </contributor>
+      <comment>Die Seite wurde neu angelegt: „Special:MyPage“</comment>
+      <origin>499</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="14" sha1="t0qf36cvnwn141nia71tbhkp48bpdoi" xml:space="preserve">Special:MyPage</text>
+      <sha1>t0qf36cvnwn141nia71tbhkp48bpdoi</sha1>
     </revision>
   </page>
   <page>
     <title>MediaWiki:Semorg-agenda-template</title>
     <ns>8</ns>
-    <id>445</id>
+    <id>463</id>
     <revision>
-      <id>446</id>
+      <id>463</id>
       <timestamp>2020-07-12T14:06:13Z</timestamp>
       <contributor>
-        <username>Admin</username>
-        <id>1</id>
+        <username>imported&gt;Admin</username>
+        <id>0</id>
       </contributor>
+      <origin>463</origin>
       <model>wikitext</model>
       <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="20">semorg-agenda-custom</text>
+      <text bytes="20" sha1="2xt8dp7hwmxzjhohcmx7xl23p95f67y" xml:space="preserve">semorg-agenda-custom</text>
       <sha1>2xt8dp7hwmxzjhohcmx7xl23p95f67y</sha1>
     </revision>
   </page>
   <page>
     <title>MediaWiki:Semorg-agenda-times</title>
     <ns>8</ns>
-    <id>446</id>
+    <id>464</id>
     <revision>
-      <id>447</id>
+      <id>464</id>
       <timestamp>2019-11-16T13:36:30Z</timestamp>
       <contributor>
-        <username>Admin</username>
-        <id>1</id>
+        <username>imported&gt;Admin</username>
+        <id>0</id>
       </contributor>
+      <origin>464</origin>
       <model>wikitext</model>
       <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="24">(Agenda: $1 min geplant)</text>
+      <text bytes="24" sha1="h2qzx0t99cibynz9n42hmvfgd1nuvvq" xml:space="preserve">(Agenda: $1 min geplant)</text>
       <sha1>h2qzx0t99cibynz9n42hmvfgd1nuvvq</sha1>
     </revision>
   </page>
   <page>
     <title>MediaWiki:Semorg-field-person-realname-name</title>
     <ns>8</ns>
-    <id>522</id>
+    <id>465</id>
     <revision>
-      <id>620</id>
+      <id>465</id>
       <timestamp>2021-01-08T23:28:07Z</timestamp>
       <contributor>
-        <username>System</username>
-        <id>4</id>
+        <username>imported&gt;System</username>
+        <id>0</id>
       </contributor>
       <comment>Die Seite wurde neu angelegt: „Anzeigename“</comment>
+      <origin>465</origin>
       <model>wikitext</model>
       <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="11">Anzeigename</text>
+      <text bytes="11" sha1="2lscofo7ydmqsofarm0oemgt5un2gzi" xml:space="preserve">Anzeigename</text>
       <sha1>2lscofo7ydmqsofarm0oemgt5un2gzi</sha1>
     </revision>
   </page>
   <page>
     <title>MediaWiki:Semorg-field-person-username-name</title>
     <ns>8</ns>
-    <id>521</id>
+    <id>466</id>
     <revision>
-      <id>618</id>
+      <id>466</id>
       <timestamp>2021-01-08T23:27:07Z</timestamp>
       <contributor>
-        <username>System</username>
-        <id>4</id>
+        <username>imported&gt;System</username>
+        <id>0</id>
       </contributor>
       <comment>Die Seite wurde neu angelegt: „Benutzername“</comment>
+      <origin>466</origin>
       <model>wikitext</model>
       <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="12">Benutzername</text>
+      <text bytes="12" sha1="hx11l0c6xtlmuv72ue3c7z942ep9urc" xml:space="preserve">Benutzername</text>
       <sha1>hx11l0c6xtlmuv72ue3c7z942ep9urc</sha1>
     </revision>
   </page>
   <page>
     <title>MediaWiki:Semorg-field-project-end-name</title>
     <ns>8</ns>
-    <id>448</id>
+    <id>467</id>
     <revision>
-      <id>449</id>
+      <id>467</id>
       <timestamp>2019-05-27T18:30:55Z</timestamp>
       <contributor>
-        <username>Admin</username>
-        <id>1</id>
+        <username>imported&gt;Admin</username>
+        <id>0</id>
       </contributor>
       <comment>Die Seite wurde neu angelegt: „geplant bis“</comment>
+      <origin>467</origin>
       <model>wikitext</model>
       <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="11">geplant bis</text>
+      <text bytes="11" sha1="d08ed42fehr6daef7bbksbmhxt3b0nx" xml:space="preserve">geplant bis</text>
       <sha1>d08ed42fehr6daef7bbksbmhxt3b0nx</sha1>
     </revision>
   </page>
   <page>
     <title>MediaWiki:Semorg-field-project-end-prefix</title>
     <ns>8</ns>
-    <id>449</id>
+    <id>468</id>
     <revision>
-      <id>450</id>
+      <id>468</id>
       <timestamp>2020-06-17T15:00:35Z</timestamp>
       <contributor>
-        <username>Admin</username>
-        <id>1</id>
+        <username>imported&gt;Admin</username>
+        <id>0</id>
       </contributor>
       <comment>Die Seite wurde neu angelegt: „geplant bis “</comment>
+      <origin>468</origin>
       <model>wikitext</model>
       <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="13">geplant bis </text>
+      <text bytes="13" sha1="oyd9rdl4q657aw8zpmmtn6pwsdscror" xml:space="preserve">geplant bis </text>
       <sha1>oyd9rdl4q657aw8zpmmtn6pwsdscror</sha1>
     </revision>
   </page>
   <page>
     <title>MediaWiki:Semorg-field-project-team-internal-name</title>
     <ns>8</ns>
-    <id>450</id>
+    <id>469</id>
     <revision>
-      <id>451</id>
+      <id>469</id>
       <timestamp>2019-05-27T18:20:14Z</timestamp>
       <contributor>
-        <username>Admin</username>
-        <id>1</id>
+        <username>imported&gt;Admin</username>
+        <id>0</id>
       </contributor>
       <comment>Die Seite wurde neu angelegt: „Team“</comment>
+      <origin>469</origin>
       <model>wikitext</model>
       <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="4">Team</text>
+      <text bytes="4" sha1="3x0ikxjb3s2sya5c0fywfxhu6u9setr" xml:space="preserve">Team</text>
       <sha1>3x0ikxjb3s2sya5c0fywfxhu6u9setr</sha1>
     </revision>
   </page>
   <page>
     <title>MediaWiki:Semorg-field-project-team-main-responsible-suffix</title>
     <ns>8</ns>
-    <id>451</id>
+    <id>470</id>
     <revision>
-      <id>452</id>
+      <id>470</id>
       <timestamp>2020-06-17T14:56:24Z</timestamp>
       <contributor>
-        <username>Admin</username>
-        <id>1</id>
+        <username>imported&gt;Admin</username>
+        <id>0</id>
       </contributor>
+      <origin>470</origin>
       <model>wikitext</model>
       <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="10">&amp;nbsp;Host</text>
+      <text bytes="10" sha1="1c5d2kevysqc6t95vjy925ppij4vyei" xml:space="preserve">&amp;nbsp;Host</text>
       <sha1>1c5d2kevysqc6t95vjy925ppij4vyei</sha1>
     </revision>
   </page>
   <page>
     <title>MediaWiki:Semorg-field-project-team-oneliner-internal-fields</title>
     <ns>8</ns>
-    <id>452</id>
+    <id>471</id>
     <revision>
-      <id>453</id>
+      <id>471</id>
       <timestamp>2019-06-12T21:27:35Z</timestamp>
       <contributor>
-        <username>Admin</username>
-        <id>1</id>
+        <username>imported&gt;Admin</username>
+        <id>0</id>
       </contributor>
       <comment>Die Seite wurde neu angelegt: „team-internal,role,main-responsible“</comment>
+      <origin>471</origin>
       <model>wikitext</model>
       <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="35">team-internal,role,main-responsible</text>
+      <text bytes="35" sha1="6irqgrjc11g7al6rnhoqfkq9jwcxdgk" xml:space="preserve">team-internal,role,main-responsible</text>
       <sha1>6irqgrjc11g7al6rnhoqfkq9jwcxdgk</sha1>
     </revision>
   </page>
   <page>
     <title>MediaWiki:Semorg-field-project-team-role-parameters</title>
     <ns>8</ns>
-    <id>453</id>
+    <id>472</id>
     <revision>
-      <id>454</id>
+      <id>472</id>
       <timestamp>2019-06-12T21:40:59Z</timestamp>
       <contributor>
-        <username>Admin</username>
-        <id>1</id>
+        <username>imported&gt;Admin</username>
+        <id>0</id>
       </contributor>
+      <origin>472</origin>
       <model>wikitext</model>
       <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="7">size=20</text>
+      <text bytes="7" sha1="4btstoze04lgg4w1wctkybfepeo8p72" xml:space="preserve">size=20</text>
       <sha1>4btstoze04lgg4w1wctkybfepeo8p72</sha1>
     </revision>
   </page>
   <page>
     <title>MediaWiki:Semorg-field-role-holder-oneliner-fields</title>
     <ns>8</ns>
-    <id>454</id>
+    <id>473</id>
     <revision>
-      <id>455</id>
+      <id>473</id>
       <timestamp>2019-05-27T15:27:46Z</timestamp>
       <contributor>
-        <username>Admin</username>
-        <id>1</id>
+        <username>imported&gt;Admin</username>
+        <id>0</id>
       </contributor>
+      <origin>473</origin>
       <model>wikitext</model>
       <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="43">holder,start-date,end-date,main-responsible</text>
+      <text bytes="43" sha1="0uvynbm7oonb0s5la6w8se9sopo9ypu" xml:space="preserve">holder,start-date,end-date,main-responsible</text>
       <sha1>0uvynbm7oonb0s5la6w8se9sopo9ypu</sha1>
     </revision>
   </page>
   <page>
     <title>MediaWiki:Semorg-field-role-task-responsible-parameters</title>
     <ns>8</ns>
-    <id>456</id>
+    <id>474</id>
     <revision>
-      <id>457</id>
+      <id>474</id>
       <timestamp>2019-05-27T16:14:36Z</timestamp>
       <contributor>
-        <username>Admin</username>
-        <id>1</id>
+        <username>imported&gt;Admin</username>
+        <id>0</id>
       </contributor>
+      <origin>474</origin>
       <model>wikitext</model>
       <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="93">input type=tokens|values from category=semorg-person-user|mapping property=Semorg-person-name</text>
+      <text bytes="93" sha1="8x9zdjfx5lczodpszwwtoy57chhkmea" xml:space="preserve">input type=tokens|values from category=semorg-person-user|mapping property=Semorg-person-name</text>
       <sha1>8x9zdjfx5lczodpszwwtoy57chhkmea</sha1>
     </revision>
   </page>
   <page>
     <title>MediaWiki:Semorg-form-agenda-rows</title>
     <ns>8</ns>
-    <id>457</id>
+    <id>475</id>
     <revision>
-      <id>516</id>
-      <parentid>458</parentid>
-      <timestamp>2020-12-29T17:36:39Z</timestamp>
+      <id>525</id>
+      <parentid>475</parentid>
+      <timestamp>2021-03-27T13:15:06Z</timestamp>
       <contributor>
-        <username>System</username>
-        <id>3</id>
+        <username>Tobias haider</username>
+        <id>4</id>
       </contributor>
-      <minor/>
-      <comment>1 Version importiert</comment>
+      <origin>525</origin>
       <model>wikitext</model>
       <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="39">title,person,timer,description,proposal</text>
-      <sha1>2w162o5mfdfqxcc20otyx3dw3zowj5q</sha1>
+      <text bytes="43" sha1="t1ac74pb2j9zbqalyfll5gcvfwvz4vf" xml:space="preserve">title,person,timer,description,proposal,tag</text>
+      <sha1>t1ac74pb2j9zbqalyfll5gcvfwvz4vf</sha1>
     </revision>
   </page>
   <page>
     <title>MediaWiki:Semorg-form-group-rows</title>
     <ns>8</ns>
-    <id>458</id>
+    <id>476</id>
     <revision>
-      <id>459</id>
+      <id>476</id>
       <timestamp>2019-01-16T14:34:10Z</timestamp>
       <contributor>
         <username>imported&gt;Admin</username>
         <id>0</id>
       </contributor>
       <comment>Die Seite wurde neu angelegt: „description, properties, members“</comment>
+      <origin>476</origin>
       <model>wikitext</model>
       <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="32">description, properties, members</text>
+      <text bytes="32" sha1="dxnr2ocn7m6cdv978pknh4v9qkl1z3w" xml:space="preserve">description, properties, members</text>
       <sha1>dxnr2ocn7m6cdv978pknh4v9qkl1z3w</sha1>
     </revision>
   </page>
   <page>
     <title>MediaWiki:Semorg-form-meeting-project-rows</title>
     <ns>8</ns>
-    <id>459</id>
+    <id>477</id>
     <revision>
-      <id>460</id>
+      <id>477</id>
       <timestamp>2019-09-16T10:02:15Z</timestamp>
       <contributor>
-        <username>Admin</username>
-        <id>1</id>
+        <username>imported&gt;Admin</username>
+        <id>0</id>
       </contributor>
       <comment>Die Seite wurde neu angelegt: „project,datetime,location,participant,excused,secretary,moderator,overview,guest,files“</comment>
+      <origin>477</origin>
       <model>wikitext</model>
       <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="86">project,datetime,location,participant,excused,secretary,moderator,overview,guest,files</text>
+      <text bytes="86" sha1="kqk8in9t6nq17l6r0u1vpsailde2bsd" xml:space="preserve">project,datetime,location,participant,excused,secretary,moderator,overview,guest,files</text>
       <sha1>kqk8in9t6nq17l6r0u1vpsailde2bsd</sha1>
     </revision>
   </page>
   <page>
     <title>MediaWiki:Semorg-form-person-user-rows</title>
     <ns>8</ns>
-    <id>460</id>
+    <id>478</id>
     <revision>
-      <id>518</id>
-      <parentid>517</parentid>
+      <id>478</id>
       <timestamp>2020-12-29T17:36:39Z</timestamp>
       <contributor>
-        <username>System</username>
-        <id>3</id>
+        <username>imported&gt;System</username>
+        <id>0</id>
       </contributor>
       <minor/>
       <comment>1 Version importiert</comment>
+      <origin>478</origin>
       <model>wikitext</model>
       <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="0" />
+      <text bytes="0" sha1="phoiac9h4m842xq45sp7s6u21eteeq1" xml:space="preserve" />
       <sha1>phoiac9h4m842xq45sp7s6u21eteeq1</sha1>
     </revision>
   </page>
   <page>
     <title>MediaWiki:Semorg-form-project-rows</title>
     <ns>8</ns>
-    <id>461</id>
+    <id>479</id>
     <revision>
-      <id>462</id>
+      <id>479</id>
       <timestamp>2020-06-17T15:08:12Z</timestamp>
       <contributor>
-        <username>Admin</username>
-        <id>1</id>
+        <username>imported&gt;Admin</username>
+        <id>0</id>
       </contributor>
+      <origin>479</origin>
       <model>wikitext</model>
       <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="32">status,description,team-internal</text>
+      <text bytes="32" sha1="1h5bc1ttd7hbkdrzrj1tu3a0gyy5rk7" xml:space="preserve">status,description,team-internal</text>
       <sha1>1h5bc1ttd7hbkdrzrj1tu3a0gyy5rk7</sha1>
     </revision>
   </page>
   <page>
     <title>MediaWiki:Semorg-form-project-team-internal-add-button-text</title>
     <ns>8</ns>
-    <id>462</id>
+    <id>480</id>
     <revision>
-      <id>463</id>
+      <id>480</id>
       <timestamp>2020-02-07T04:44:09Z</timestamp>
       <contributor>
-        <username>Admin</username>
-        <id>1</id>
+        <username>imported&gt;Admin</username>
+        <id>0</id>
       </contributor>
       <comment>Die Seite wurde neu angelegt: „Teammitglied hinzufügen“</comment>
+      <origin>480</origin>
       <model>wikitext</model>
       <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="24">Teammitglied hinzufügen</text>
+      <text bytes="24" sha1="bderd7diwc79neubrvmit9q8twe47cb" xml:space="preserve">Teammitglied hinzufügen</text>
       <sha1>bderd7diwc79neubrvmit9q8twe47cb</sha1>
     </revision>
   </page>
   <page>
     <title>MediaWiki:Semorg-form-role-task-rows</title>
     <ns>8</ns>
-    <id>465</id>
+    <id>481</id>
     <revision>
-      <id>466</id>
+      <id>481</id>
       <timestamp>2019-05-27T16:05:20Z</timestamp>
       <contributor>
-        <username>Admin</username>
-        <id>1</id>
+        <username>imported&gt;Admin</username>
+        <id>0</id>
       </contributor>
+      <origin>481</origin>
       <model>wikitext</model>
       <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="30">name, description, responsible</text>
+      <text bytes="30" sha1="3s33nf4l5oaupteeu19oir4wiq7d602" xml:space="preserve">name, description, responsible</text>
       <sha1>3s33nf4l5oaupteeu19oir4wiq7d602</sha1>
     </revision>
   </page>
   <page>
     <title>MediaWiki:Semorg-list-agenda-headers</title>
     <ns>8</ns>
-    <id>469</id>
+    <id>482</id>
     <revision>
-      <id>470</id>
+      <id>482</id>
       <timestamp>2019-05-28T05:44:34Z</timestamp>
       <contributor>
-        <username>Admin</username>
-        <id>1</id>
+        <username>imported&gt;Admin</username>
+        <id>0</id>
       </contributor>
       <comment>Die Seite wurde neu angelegt: „meeting-group,agenda-meeting,agenda-proposal“</comment>
+      <origin>482</origin>
       <model>wikitext</model>
       <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="44">meeting-group,agenda-meeting,agenda-proposal</text>
+      <text bytes="44" sha1="ny8ujuhgaawvlzwi7cla8qzfdasry8f" xml:space="preserve">meeting-group,agenda-meeting,agenda-proposal</text>
       <sha1>ny8ujuhgaawvlzwi7cla8qzfdasry8f</sha1>
     </revision>
   </page>
   <page>
     <title>MediaWiki:Semorg-list-group-headers</title>
     <ns>8</ns>
-    <id>470</id>
+    <id>483</id>
     <revision>
-      <id>471</id>
+      <id>483</id>
       <timestamp>2019-01-16T14:35:05Z</timestamp>
       <contributor>
         <username>imported&gt;Admin</username>
         <id>0</id>
       </contributor>
       <comment>Die Seite wurde neu angelegt: „group-name, group-description, group-members“</comment>
+      <origin>483</origin>
       <model>wikitext</model>
       <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="44">group-name, group-description, group-members</text>
+      <text bytes="44" sha1="3cuobnpy2eennj32iwne8n0lz1vn6rg" xml:space="preserve">group-name, group-description, group-members</text>
       <sha1>3cuobnpy2eennj32iwne8n0lz1vn6rg</sha1>
     </revision>
   </page>
   <page>
     <title>MediaWiki:Semorg-list-group-row-template</title>
     <ns>8</ns>
-    <id>515</id>
+    <id>484</id>
     <revision>
-      <id>594</id>
+      <id>484</id>
       <timestamp>2021-01-08T23:09:17Z</timestamp>
       <contributor>
-        <username>System</username>
-        <id>4</id>
+        <username>imported&gt;System</username>
+        <id>0</id>
       </contributor>
       <comment>Die Seite wurde neu angelegt: „group-custom“</comment>
+      <origin>484</origin>
       <model>wikitext</model>
       <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="12">group-custom</text>
+      <text bytes="12" sha1="j8cg2o2ov69vj1wnnmzdem8xofvutps" xml:space="preserve">group-custom</text>
       <sha1>j8cg2o2ov69vj1wnnmzdem8xofvutps</sha1>
     </revision>
   </page>
   <page>
     <title>MediaWiki:Semorg-list-project-headers</title>
     <ns>8</ns>
-    <id>471</id>
+    <id>485</id>
     <revision>
-      <id>472</id>
+      <id>485</id>
       <timestamp>2019-05-27T18:43:08Z</timestamp>
       <contributor>
-        <username>Admin</username>
-        <id>1</id>
+        <username>imported&gt;Admin</username>
+        <id>0</id>
       </contributor>
       <comment>Die Seite wurde neu angelegt: „project-title, project-end, project-team-internal“</comment>
+      <origin>485</origin>
       <model>wikitext</model>
       <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="49">project-title, project-end, project-team-internal</text>
+      <text bytes="49" sha1="sccmko12oomualnagrkanh1kcznvwqh" xml:space="preserve">project-title, project-end, project-team-internal</text>
       <sha1>sccmko12oomualnagrkanh1kcznvwqh</sha1>
     </revision>
   </page>
   <page>
     <title>MediaWiki:Semorg-list-role-headers</title>
     <ns>8</ns>
-    <id>472</id>
+    <id>486</id>
     <revision>
-      <id>473</id>
+      <id>486</id>
       <timestamp>2020-06-09T15:42:01Z</timestamp>
       <contributor>
-        <username>Admin</username>
-        <id>1</id>
+        <username>imported&gt;Admin</username>
+        <id>0</id>
       </contributor>
+      <origin>486</origin>
       <model>wikitext</model>
       <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="33">role-name,role-tasks,role-holders</text>
+      <text bytes="33" sha1="5dj3d6xfiwelydko418w6nw4uq4sa4q" xml:space="preserve">role-name,role-tasks,role-holders</text>
       <sha1>5dj3d6xfiwelydko418w6nw4uq4sa4q</sha1>
     </revision>
   </page>
   <page>
     <title>MediaWiki:Semorg-list-role-row-template</title>
     <ns>8</ns>
-    <id>498</id>
+    <id>487</id>
     <revision>
-      <id>527</id>
+      <id>487</id>
       <timestamp>2020-12-29T17:43:16Z</timestamp>
       <contributor>
-        <username>System</username>
-        <id>4</id>
+        <username>imported&gt;System</username>
+        <id>0</id>
       </contributor>
       <comment>Die Seite wurde neu angelegt: „role-custom“</comment>
+      <origin>487</origin>
       <model>wikitext</model>
       <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="11">role-custom</text>
+      <text bytes="11" sha1="m2wodtrnabsct9bxta71bw9zhsxct0p" xml:space="preserve">role-custom</text>
       <sha1>m2wodtrnabsct9bxta71bw9zhsxct0p</sha1>
     </revision>
   </page>
   <page>
     <title>MediaWiki:Semorg-meeting-group-page-name</title>
     <ns>8</ns>
-    <id>473</id>
+    <id>488</id>
     <revision>
-      <id>474</id>
+      <id>488</id>
       <timestamp>2020-04-01T10:18:16Z</timestamp>
       <contributor>
-        <username>Admin</username>
-        <id>1</id>
+        <username>imported&gt;Admin</username>
+        <id>0</id>
       </contributor>
       <comment>Die Seite wurde neu angelegt: „Treffen“</comment>
+      <origin>488</origin>
       <model>wikitext</model>
       <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="7">Treffen</text>
+      <text bytes="7" sha1="n6qt18t77er0ccm0kuvlod6nccdmhs1" xml:space="preserve">Treffen</text>
       <sha1>n6qt18t77er0ccm0kuvlod6nccdmhs1</sha1>
     </revision>
   </page>
   <page>
     <title>MediaWiki:Semorg-meeting-group-past-page-name</title>
     <ns>8</ns>
-    <id>474</id>
+    <id>489</id>
     <revision>
-      <id>475</id>
+      <id>489</id>
       <timestamp>2020-02-04T22:26:52Z</timestamp>
       <contributor>
-        <username>Admin</username>
-        <id>1</id>
+        <username>imported&gt;Admin</username>
+        <id>0</id>
       </contributor>
       <comment>Die Seite wurde neu angelegt: „Vergangene Treffen“</comment>
+      <origin>489</origin>
       <model>wikitext</model>
       <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="18">Vergangene Treffen</text>
+      <text bytes="18" sha1="2nylygga3hw9oob2py74t7ah3s4701j" xml:space="preserve">Vergangene Treffen</text>
       <sha1>2nylygga3hw9oob2py74t7ah3s4701j</sha1>
     </revision>
   </page>
   <page>
     <title>MediaWiki:Semorg-person-user-page-name</title>
     <ns>8</ns>
-    <id>475</id>
+    <id>490</id>
     <revision>
-      <id>476</id>
+      <id>490</id>
       <timestamp>2019-09-11T15:41:47Z</timestamp>
       <contributor>
-        <username>Admin</username>
-        <id>1</id>
+        <username>imported&gt;Admin</username>
+        <id>0</id>
       </contributor>
       <comment>Die Seite wurde neu angelegt: „Benutzer*innen“</comment>
+      <origin>490</origin>
       <model>wikitext</model>
       <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="14">Benutzer*innen</text>
+      <text bytes="14" sha1="7xktk5hea1kcyiakkis8nvv0uwgggzp" xml:space="preserve">Benutzer*innen</text>
       <sha1>7xktk5hea1kcyiakkis8nvv0uwgggzp</sha1>
     </revision>
   </page>
   <page>
     <title>MediaWiki:Semorg-person-user-template</title>
     <ns>8</ns>
-    <id>476</id>
+    <id>491</id>
     <revision>
-      <id>477</id>
+      <id>491</id>
       <timestamp>2019-01-16T17:52:18Z</timestamp>
       <contributor>
-        <username>Admin</username>
-        <id>1</id>
+        <username>imported&gt;Admin</username>
+        <id>0</id>
       </contributor>
       <comment>Die Seite wurde neu angelegt: „semorg-person-user-custom“</comment>
+      <origin>491</origin>
       <model>wikitext</model>
       <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="25">semorg-person-user-custom</text>
+      <text bytes="25" sha1="1uw9hapki3k8e602fjz2n0u18w11nm9" xml:space="preserve">semorg-person-user-custom</text>
       <sha1>1uw9hapki3k8e602fjz2n0u18w11nm9</sha1>
     </revision>
   </page>
   <page>
     <title>MediaWiki:Semorg-project-team-internal-template</title>
     <ns>8</ns>
-    <id>477</id>
+    <id>492</id>
     <revision>
-      <id>478</id>
+      <id>492</id>
       <timestamp>2019-06-12T21:38:26Z</timestamp>
       <contributor>
-        <username>Admin</username>
-        <id>1</id>
+        <username>imported&gt;Admin</username>
+        <id>0</id>
       </contributor>
+      <origin>492</origin>
       <model>wikitext</model>
       <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="35">semorg-project-team-internal-custom</text>
+      <text bytes="35" sha1="6stkv3n7e89s0bdh9zh8kovaz15chl3" xml:space="preserve">semorg-project-team-internal-custom</text>
       <sha1>6stkv3n7e89s0bdh9zh8kovaz15chl3</sha1>
     </revision>
   </page>
   <page>
     <title>MediaWiki:Semorg-role-task-template</title>
     <ns>8</ns>
-    <id>480</id>
+    <id>493</id>
     <revision>
-      <id>481</id>
+      <id>493</id>
       <timestamp>2019-05-27T16:00:22Z</timestamp>
       <contributor>
-        <username>Admin</username>
-        <id>1</id>
+        <username>imported&gt;Admin</username>
+        <id>0</id>
       </contributor>
       <comment>Die Seite wurde neu angelegt: „semorg-role-task-custom“</comment>
+      <origin>493</origin>
       <model>wikitext</model>
       <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="23">semorg-role-task-custom</text>
+      <text bytes="23" sha1="ntuyxlxkls5tpi3asmkbrnwsgsm7bfg" xml:space="preserve">semorg-role-task-custom</text>
       <sha1>ntuyxlxkls5tpi3asmkbrnwsgsm7bfg</sha1>
     </revision>
   </page>
   <page>
     <title>MediaWiki:Semorg-tab-group-meetings</title>
     <ns>8</ns>
-    <id>482</id>
+    <id>494</id>
     <revision>
-      <id>483</id>
+      <id>494</id>
       <timestamp>2019-05-28T11:54:35Z</timestamp>
       <contributor>
-        <username>Admin</username>
-        <id>1</id>
+        <username>imported&gt;Admin</username>
+        <id>0</id>
       </contributor>
       <comment>Die Seite wurde neu angelegt: „Treffen“</comment>
+      <origin>494</origin>
       <model>wikitext</model>
       <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="7">Treffen</text>
+      <text bytes="7" sha1="n6qt18t77er0ccm0kuvlod6nccdmhs1" xml:space="preserve">Treffen</text>
       <sha1>n6qt18t77er0ccm0kuvlod6nccdmhs1</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>MediaWiki:Siteuser</title>
+    <ns>8</ns>
+    <id>498</id>
+    <revision>
+      <id>498</id>
+      <timestamp>2020-12-29T17:36:39Z</timestamp>
+      <contributor>
+        <username>imported&gt;System</username>
+        <id>0</id>
+      </contributor>
+      <minor/>
+      <comment>1 Version importiert</comment>
+      <origin>498</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="2" sha1="rq0hjs7fpmzgl4u73gupx0a4684l5e2" xml:space="preserve">$1</text>
+      <sha1>rq0hjs7fpmzgl4u73gupx0a4684l5e2</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>MediaWiki:Tweeki-navbar-brand</title>
+    <ns>8</ns>
+    <id>497</id>
+    <revision>
+      <id>497</id>
+      <timestamp>2020-12-29T17:36:39Z</timestamp>
+      <contributor>
+        <username>imported&gt;System</username>
+        <id>0</id>
+      </contributor>
+      <minor/>
+      <comment>1 Version importiert</comment>
+      <origin>497</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="16">file:$HABIDAT_LOGO</text>
+      <sha1>oysc4zq6qhfokdhrw1pxkknty0w6c1a</sha1>
     </revision>
   </page>
   <page>
     <title>MediaWiki:Tweeki-navbar-left</title>
     <ns>8</ns>
-    <id>483</id>
+    <id>495</id>
     <revision>
-      <id>604</id>
-      <parentid>603</parentid>
+      <id>495</id>
       <timestamp>2021-01-08T23:14:51Z</timestamp>
       <contributor>
-        <username>System</username>
-        <id>4</id>
+        <username>imported&gt;System</username>
+        <id>0</id>
       </contributor>
+      <origin>495</origin>
       <model>wikitext</model>
       <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="131">Treffen
+      <text bytes="131" sha1="caga2izwqxxw8rjjtoztbbxyft81juy" xml:space="preserve">Treffen
 Gremien
 * Gremien|''Übersicht''
 *
@@ -1355,117 +1673,60 @@ Anleitungen</text>
   <page>
     <title>MediaWiki:Tweeki-navbar-right</title>
     <ns>8</ns>
-    <id>485</id>
+    <id>496</id>
     <revision>
-      <id>621</id>
-      <parentid>486</parentid>
+      <id>496</id>
       <timestamp>2021-01-08T23:28:28Z</timestamp>
       <contributor>
-        <username>System</username>
-        <id>4</id>
+        <username>imported&gt;System</username>
+        <id>0</id>
       </contributor>
+      <origin>496</origin>
       <model>wikitext</model>
       <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="54">TOOLBOX,PERSONAL,SEARCH,Admin
+      <text bytes="54" sha1="33rmes2nk4hs5sp1w38l39l9x569mjt" xml:space="preserve">TOOLBOX,PERSONAL,SEARCH,Admin
 * Benutzer*innen
 * Hilfe</text>
       <sha1>33rmes2nk4hs5sp1w38l39l9x569mjt</sha1>
     </revision>
   </page>
   <page>
-    <title>MediaWiki:Tweeki-navbar-brand</title>
+    <title>MediaWiki:Tweeki-personaltools-text</title>
     <ns>8</ns>
-    <id>484</id>
+    <id>501</id>
     <revision>
-      <id>522</id>
-      <parentid>485</parentid>
-      <timestamp>2020-12-29T17:36:39Z</timestamp>
+      <id>501</id>
+      <timestamp>2021-01-09T13:23:15Z</timestamp>
       <contributor>
-        <username>System</username>
-        <id>3</id>
+        <username>imported&gt;System</username>
+        <id>0</id>
       </contributor>
-      <minor/>
-      <comment>1 Version importiert</comment>
+      <comment>Leere Seite erstellt</comment>
+      <origin>501</origin>
       <model>wikitext</model>
       <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="16">file:$HABIDAT_LOGO</text>
-      <sha1>oysc4zq6qhfokdhrw1pxkknty0w6c1a</sha1>
-    </revision>
-  </page>
-  <page>
-    <title>MediaWiki:Siteuser</title>
-    <ns>8</ns>
-    <id>486</id>
-    <revision>
-      <id>524</id>
-      <parentid>523</parentid>
-      <timestamp>2020-12-29T17:36:39Z</timestamp>
-      <contributor>
-        <username>System</username>
-        <id>3</id>
-      </contributor>
-      <minor/>
-      <comment>1 Version importiert</comment>
-      <model>wikitext</model>
-      <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="2">$1</text>
-      <sha1>rq0hjs7fpmzgl4u73gupx0a4684l5e2</sha1>
-    </revision>
-  </page>
-  <page>
-    <title>MediaWiki:Mainpage</title>
-    <ns>8</ns>
-    <id>488</id>
-    <revision>
-      <id>489</id>
-      <timestamp>2020-09-29T20:45:02Z</timestamp>
-      <contributor>
-        <username>Admin</username>
-        <id>1</id>
-      </contributor>
-      <comment>Die Seite wurde neu angelegt: „Special:MyPage“</comment>
-      <model>wikitext</model>
-      <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="14">Special:MyPage</text>
-      <sha1>t0qf36cvnwn141nia71tbhkp48bpdoi</sha1>
+      <text bytes="0" sha1="phoiac9h4m842xq45sp7s6u21eteeq1" xml:space="preserve" />
+      <sha1>phoiac9h4m842xq45sp7s6u21eteeq1</sha1>
     </revision>
   </page>
   <page>
     <title>MediaWiki:Yourrealname</title>
     <ns>8</ns>
-    <id>497</id>
+    <id>500</id>
     <revision>
-      <id>526</id>
-      <parentid>525</parentid>
+      <id>500</id>
       <timestamp>2020-12-29T17:36:39Z</timestamp>
       <contributor>
-        <username>System</username>
-        <id>3</id>
+        <username>imported&gt;System</username>
+        <id>0</id>
       </contributor>
       <minor/>
       <comment>1 Version importiert</comment>
+      <origin>500</origin>
       <model>wikitext</model>
       <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="12">Anzeigename:</text>
+      <text bytes="12" sha1="25lkxhuocw6r90da8em5du2x50ood3u" xml:space="preserve">Anzeigename:</text>
       <sha1>25lkxhuocw6r90da8em5du2x50ood3u</sha1>
-    </revision>
-  </page>
-  <page>
-    <title>MediaWiki:Tweeki-personaltools-text</title>
-    <ns>8</ns>
-    <id>536</id>
-    <revision>
-      <id>652</id>
-      <timestamp>2021-01-09T13:23:15Z</timestamp>
-      <contributor>
-        <username>System</username>
-        <id>4</id>
-      </contributor>
-      <comment>Leere Seite erstellt</comment>
-      <model>wikitext</model>
-      <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="0" />
-      <sha1>phoiac9h4m842xq45sp7s6u21eteeq1</sha1>
     </revision>
   </page>
 </mediawiki>
