@@ -23,6 +23,8 @@ if [ ! -e $CONTAINER_1_35 ]; then
 
     cp -a config/LocalSettings.php ./
 
+    envsubst '$HABIDAT_LDAP_HOST $HABIDAT_LDAP_PORT $HABIDAT_LDAP_BINDDN $HABIDAT_LDAP_ADMIN_PASSWORD $HABIDAT_LDAP_BASE' < templates/config/LocalSettings.additional.template.php > LocalSettings.additional.php
+
     echo " " >> LocalSettings.php
     echo "require_once('LocalSettings.additional.php');" >> LocalSettings.php
 
@@ -77,7 +79,7 @@ if [ ! -e $CONTAINER_UPDATED ]; then
 
     echo "IMPORTING SEMORG PAGES..."
     php maintenance/importDump.php < extensions/SemanticOrganization/import/semorg_pages.xml
-    php maintenance/importDump.php < additonal-pages.xml
+    php maintenance/importDump.php < additional-pages.xml
 
     echo "CLEANUP..."
     php maintenance/rebuildrecentchanges.php
