@@ -48,6 +48,7 @@ fi
 if [ ! -e $CONTAINER_UPDATED ]; then
 
     cp -a config/LocalSettings.php ./
+    envsubst '$HABIDAT_LDAP_HOST $HABIDAT_LDAP_PORT $HABIDAT_LDAP_BINDDN $HABIDAT_LDAP_ADMIN_PASSWORD $HABIDAT_LDAP_BASE' < templates/config/LocalSettings.additional.template.php > LocalSettings.additional.php
 
     echo " " >> LocalSettings.php
     echo "\$wgServer = \"https://$VIRTUAL_HOST\";" >> LocalSettings.php
@@ -56,7 +57,6 @@ if [ ! -e $CONTAINER_UPDATED ]; then
     php maintenance/update.php --quick
 
     echo "UPDATE LOCALSETTINGS.PHP..."
-    envsubst '$HABIDAT_LDAP_HOST $HABIDAT_LDAP_PORT $HABIDAT_LDAP_BINDDN $HABIDAT_LDAP_ADMIN_PASSWORD $HABIDAT_LDAP_BASE' < templates/config/LocalSettings.additional.template.php > LocalSettings.additional.php
     envsubst '$HABIDAT_LOGO' < templates/config/additional-pages.template.xml > additional-pages.xml
 
     if [ $HABIDAT_SSO == "true" ]
