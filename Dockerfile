@@ -1,4 +1,4 @@
-FROM mediawiki:1.31
+FROM mediawiki:1.35
 
 RUN apt-get update && \
     apt-get install -y libldap2-dev nano gettext-base wget zip unzip libzip-dev zlib1g-dev && \
@@ -13,15 +13,15 @@ WORKDIR /var/www/html
 RUN git clone https://github.com/thaider/Tweeki /var/www/html/skins/Tweeki \
     && git clone https://gerrit.wikimedia.org/r/mediawiki/extensions/PageForms.git /var/www/html/extensions/PageForms \
     && git clone https://github.com/thaider/SemanticOrganization.git /var/www/html/extensions/SemanticOrganization \
-    && git clone -b REL1_31 https://gerrit.wikimedia.org/r/mediawiki/extensions/PluggableAuth.git extensions/PluggableAuth \
-    && git clone -b REL1_31 https://github.com/wikimedia/mediawiki-extensions-SimpleSAMLphp extensions/SimpleSAMLphp \
-    && git clone -b REL1_31 https://github.com/wikimedia/mediawiki-extensions-Auth_remoteuser.git extensions/Auth_remoteuser \ 
-    && git clone -b REL1_31 https://github.com/wikimedia/mediawiki-extensions-LdapAuthentication extensions/LdapAuthentication \
-    && git clone -b REL1_31 https://gerrit.wikimedia.org/r/mediawiki/extensions/CreateUserPage.git extensions/CreateUserPage \
-    && git clone -b REL1_31 https://gerrit.wikimedia.org/r/mediawiki/extensions/UserMerge.git extensions/UserMerge 
+    && git clone -b REL1_35 https://gerrit.wikimedia.org/r/mediawiki/extensions/PluggableAuth.git extensions/PluggableAuth \
+    && git clone -b REL1_35 https://github.com/wikimedia/mediawiki-extensions-SimpleSAMLphp extensions/SimpleSAMLphp \
+    && git clone -b REL1_35 https://github.com/wikimedia/mediawiki-extensions-Auth_remoteuser.git extensions/Auth_remoteuser \
+    && git clone -b REL1_35 https://github.com/wikimedia/mediawiki-extensions-LdapAuthentication extensions/LdapAuthentication \
+    && git clone -b REL1_35 https://gerrit.wikimedia.org/r/mediawiki/extensions/CreateUserPage.git extensions/CreateUserPage \
+    && git clone -b REL1_35 https://gerrit.wikimedia.org/r/mediawiki/extensions/UserMerge.git extensions/UserMerge
 
 WORKDIR /var/www/html/extensions/PageForms
-RUN git checkout 397dfbb
+RUN git checkout 731d226
 
 WORKDIR /var/www/html
 
@@ -53,6 +53,9 @@ COPY apache2-security.conf /etc/apache2/conf-enabled/security.conf
 
 COPY docker-entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
+
+COPY update.sh /update.sh
+RUN chmod +x /update.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
 

@@ -5,6 +5,7 @@ cd /var/www/html
 
 CONTAINER_UPDATED="UPDATED"
 CONTAINER_INSTALLED="config/INSTALLED"
+CONTAINER_1_35="config/1_35"
 
 if [ ! -e $CONTAINER_INSTALLED ]; then
 
@@ -13,22 +14,54 @@ if [ ! -e $CONTAINER_INSTALLED ]; then
 
     cp -a LocalSettings.php config/
 
+    touch $CONTAINER_1_35
     touch $CONTAINER_INSTALLED
 
+fi
+
+if [ ! -e $CONTAINER_1_35 ]; then
+
+    cp -a config/LocalSettings.php ./
+
+    echo " " >> LocalSettings.php
+    echo "require_once('LocalSettings.additional.php');" >> LocalSettings.php
+
+    echo "IMPORTING SEMORG PAGES..."
+    php maintenance/importDump.php < extensions/SemanticOrganization/import/semorg_pages.xml
+    php maintenance/importDump.php < additonal-pages.xml
+
+    echo "CLEANUP..."
+    php maintenance/rebuildrecentchanges.php
+    php maintenance/runJobs.php
+
+    php maintenance/populateContentTables.php
+    php maintenance/update.php --quick
+    php extensions/SemanticMediaWiki/maintenance/updateEntityCountMap.php
+    php extensions/SemanticMediaWiki/maintenance/rebuildData.php -v --with-maintenance-log
+
+    echo "CHANGED BEHAVIOUR OF NAMED ARGS AND USERPARAM"
+    set +e # replaceAll.php throws an error if there is nothing to replace
+    php extensions/ReplaceText/maintenance/replaceAll.php "{{{?" "{{{" --yes --nsall
+    php extensions/ReplaceText/maintenance/replaceAll.php "{{{userparam" "{{{#userparam" --yes --nsall
+    set -e
+
+    php maintenance/runJobs.php
+
+    touch $CONTAINER_1_35
 fi
 
 if [ ! -e $CONTAINER_UPDATED ]; then
 
     cp -a config/LocalSettings.php ./
 
-    php maintenance/update.php --skip-external-dependencies
-
     echo " " >> LocalSettings.php
-    echo "require_once('LocalSettings.additional.php');" >> LocalSettings.php    
+    echo "require_once('LocalSettings.additional.php');" >> LocalSettings.php
+
+    php maintenance/update.php --quick
 
     echo "UPDATE LOCALSETTINGS.PHP..."
     envsubst '$HABIDAT_LDAP_HOST $HABIDAT_LDAP_PORT $HABIDAT_LDAP_BINDDN $HABIDAT_LDAP_ADMIN_PASSWORD $HABIDAT_LDAP_BASE' < templates/config/LocalSettings.additional.template.php > LocalSettings.additional.php
-    envsubst '$HABIDAT_LOGO' < templates/config/additonal-pages.template.xml > additonal-pages.xml    
+    envsubst '$HABIDAT_LOGO' < templates/config/additional-pages.template.xml > additional-pages.xml
 
     if [ $HABIDAT_SSO == "true" ]
     then
@@ -40,7 +73,7 @@ if [ ! -e $CONTAINER_UPDATED ]; then
         echo "require_once('LocalSettings.sso.php');" >> LocalSettings.php
     fi
 
-    echo "require_once('config/LocalSettings.override.php');" >> LocalSettings.php    
+    echo "require_once('config/LocalSettings.override.php');" >> LocalSettings.php
 
     echo "IMPORTING SEMORG PAGES..."
     php maintenance/importDump.php < extensions/SemanticOrganization/import/semorg_pages.xml
