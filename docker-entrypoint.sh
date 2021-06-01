@@ -29,13 +29,6 @@ if [ ! -e $CONTAINER_1_35 ]; then
     echo "\$wgServer = \"$MEDIAWIKI_SERVER\";" >> LocalSettings.php
     echo "require_once('LocalSettings.additional.php');" >> LocalSettings.php
 
-    echo "IMPORTING SEMORG PAGES..."
-    php maintenance/importDump.php < extensions/SemanticOrganization/import/semorg_pages.xml
-
-    echo "CLEANUP..."
-    php maintenance/rebuildrecentchanges.php
-    php maintenance/runJobs.php
-
     php maintenance/populateContentTables.php
     php maintenance/update.php --quick
     php extensions/SemanticMediaWiki/maintenance/updateEntityCountMap.php
