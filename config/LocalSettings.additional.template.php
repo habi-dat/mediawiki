@@ -1,31 +1,50 @@
 <?php
 
-$wgDefaultSkin = "tweeki";
 $wgLanguageCode = "de";
 
-$wgEnableUploads = true; 
+$wgEnableUploads = true;
+$wgFileExtensions = array_merge( $wgFileExtensions, [
+  'pdf',
+  'ppt',
+  'pptx',
+  'xls',
+  'xlsx',
+  'doc',
+  'docx',
+  'odt',
+  'ods',
+  'odc',
+  'odp',
+  'odg',
+  'svg'
+] );
 
-# Show Tweeki's advanced features by default
-$wgDefaultUserOptions['tweeki-advanced'] = 1;
+$wgDefaultSkin = "tweeki";
+$wgDefaultUserOptions['tweeki-advanced'] = 1; # Show Tweeki's advanced features by default
+$wgTweekiSkinUseTooltips = true; # Use Bootstrap Tooltips
 
 # Load Parser Functions extension
 wfLoadExtension( 'ParserFunctions' );
-# Enable String Functions
-$wgPFEnableStringFunctions = true;
+$wgPFEnableStringFunctions = true; # Enable String Functions
 
 # Enable Semantic MediaWiki
-enableSemantics('localhost');
+enableSemantics();
 $smwgEnabledEditPageHelp = false;
-$smwgLinksInValues = true;
+$smwgPageSpecialProperties[] = '_CDAT';
+$smwgParserFeatures = $smwgParserFeatures | SMW_PARSER_LINV;
 
 # Load Page Forms and Semantic Organization extensions
 wfLoadExtension('PageForms');
 $wgPageFormsAutocompleteOnAllChars = true;
-wfLoadExtension('SemanticOrganization');
 
-# Disable caching
-$wgEnableParserCache = false;
-$wgCachePages = false;
+# Load Semantic Result Formats extension
+wfLoadExtension( 'SemanticResultFormats' );
+
+# Load Replace Text extension
+wfLoadExtension( 'ReplaceText' );
+
+# Load Semantic Organization extension
+wfLoadExtension('SemanticOrganization');
 
 # Allow display titles for automatically created page names
 $wgRestrictDisplayTitle = false;
@@ -34,6 +53,7 @@ $wgRestrictDisplayTitle = false;
 $wgGroupPermissions['*']['createaccount'] = false;
 $wgGroupPermissions['*']['read'] = false;
 $wgGroupPermissions['*']['edit'] = false;
+$wgGroupPermissions['user']['delete'] = true;
 
 # Load auto user page creation extension
 wfLoadExtension( 'CreateUserPage' );
@@ -45,17 +65,19 @@ $wgCreateUserPage_PageContent = '{{semorg-person-user-custom}}';
 wfLoadExtension('UserMerge');
 $wgGroupPermissions['bureaucrat']['usermerge'] = true;
 
-$wgTweekiSkinHideAnon['navbar'] = true; 
-$wgTweekiSkinHideAnon['footer'] = true; 
-$wgTweekiSkinHideAll['footer-info'] = false; 
-$wgTweekiSkinHideAll['footer-places'] = true; 
-$wgTweekiSkinHideAll['footer-info-copyright'] = true; 
+# Clean up navigation
+$wgTweekiSkinHideAnon['navbar'] = true;
+$wgTweekiSkinHideAnon['footer'] = true;
+$wgTweekiSkinHideAll['footer-info'] = false;
+$wgTweekiSkinHideAll['footer-places'] = true;
+$wgTweekiSkinHideAll['footer-info-copyright'] = true;
 $wgTweekiSkinHideAll['footer-icons'] = true;
-$wgTweekiSkinUseTooltips = true;
 $wgTweekiSkinUseRealnames = true;
-$wgJobRunRate = 100;
 
 $wgMaxCredits = 1;
+
+# Increase Job Run Rate, to speed up assignation of categories/forms to pages
+$wgJobRunRate = 10;
 
 # LDAP
 /*require_once ('extensions/LdapAuthentication/LdapAuthentication.php');
