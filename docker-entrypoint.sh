@@ -26,6 +26,7 @@ if [ ! -e $CONTAINER_1_35 ]; then
     envsubst '$HABIDAT_LDAP_HOST $HABIDAT_LDAP_PORT $HABIDAT_LDAP_BINDDN $HABIDAT_LDAP_ADMIN_PASSWORD $HABIDAT_LDAP_BASE' < templates/config/LocalSettings.additional.template.php > LocalSettings.additional.php
 
     echo " " >> LocalSettings.php
+    echo "\$wgServer = \"$MEDIAWIKI_SERVER\";" >> LocalSettings.php
     echo "require_once('LocalSettings.additional.php');" >> LocalSettings.php
 
     echo "IMPORTING SEMORG PAGES..."
@@ -57,6 +58,7 @@ if [ ! -e $CONTAINER_UPDATED ]; then
     cp -a config/LocalSettings.php ./
 
     echo " " >> LocalSettings.php
+    echo "\$wgServer = \"https://$VIRTUAL_HOST\";" >> LocalSettings.php
     echo "require_once('LocalSettings.additional.php');" >> LocalSettings.php
 
     php maintenance/update.php --quick
