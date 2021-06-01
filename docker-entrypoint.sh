@@ -31,7 +31,6 @@ if [ ! -e $CONTAINER_1_35 ]; then
 
     echo "IMPORTING SEMORG PAGES..."
     php maintenance/importDump.php < extensions/SemanticOrganization/import/semorg_pages.xml
-    php maintenance/importDump.php < additional-pages.xml
 
     echo "CLEANUP..."
     php maintenance/rebuildrecentchanges.php
