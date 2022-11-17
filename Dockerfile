@@ -1,4 +1,4 @@
-FROM mediawiki:1.35
+FROM mediawiki:1.35.8
 
 RUN apt-get update && \
     apt-get install -y libldap2-dev nano gettext-base wget zip unzip libzip-dev zlib1g-dev && \
