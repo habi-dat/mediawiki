@@ -64,7 +64,7 @@ if [ ! -e $CONTAINER_UPDATED ]; then
         export HABIDAT_SSO_CERTIFICATE=$(echo $HABIDAT_SSO_CERTIFICATE | sed --expression='s/\\n/\n/g')
         envsubst '$HABIDAT_MEDIAWIKI_SUBDOMAIN $HABIDAT_DOMAIN $MEDIAWIKI_ADMIN_PASSWORD' < templates/sso/config.template.php > /var/simplesamlphp/config/config.php
         envsubst '$HABIDAT_MEDIAWIKI_SUBDOMAIN $HABIDAT_DOMAIN' < templates/sso/authsources.template.php > /var/simplesamlphp/config/authsources.php
-        envsubst '$HABIDAT_SSO_CERTIFICATE $HABIDAT_DOMAIN' < templates/sso/saml20-idp-remote.template.php > /var/simplesamlphp/metadata/saml20-idp-remote.php
+        envsubst '$HABIDAT_SSO_CERTIFICATE $HABIDAT_DOMAIN $HABIDAT_MEDIAWIKI_SUBDOMAIN' < templates/sso/saml20-idp-remote.template.php > /var/simplesamlphp/metadata/saml20-idp-remote.php
         envsubst '$HABIDAT_MEDIAWIKI_SUBDOMAIN $HABIDAT_DOMAIN $HABIDAT_SSO_CERTIFICATE' < templates/sso/LocalSettings.sso.template.php > LocalSettings.sso.php
         echo "require_once('LocalSettings.sso.php');" >> LocalSettings.php
     fi
