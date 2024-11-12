@@ -57,7 +57,7 @@ $wgGroupPermissions['user']['delete'] = true;
 
 # Load auto user page creation extension
 wfLoadExtension( 'CreateUserPage' );
-$wgCreateUserPage_PageContent = '{{semorg-person-user-custom}}';
+$wgCreateUserPage_PageContent = '{{semorg-person-user-custom|membership=Ja}}';
 
 # Load extension to get current user name
 #wfLoadExtension( 'MyVariables' );

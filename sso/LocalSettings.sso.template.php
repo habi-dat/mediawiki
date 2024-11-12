@@ -10,8 +10,13 @@ $wgGroupPermissions['*']['autocreateaccount'] = true;
 wfLoadExtension( 'SimpleSAMLphp' );
 
 $wgSimpleSAMLphp_InstallDir = '/var/simplesamlphp';
-$wgSimpleSAMLphp_AuthSourceId = 'habidat';
-$wgSimpleSAMLphp_RealNameAttribute = 'cn';
-$wgSimpleSAMLphp_EmailAttribute = 'mail';
-$wgSimpleSAMLphp_UsernameAttribute = 'uid';
 
+$wgPluggableAuth_Config['Log in using my SAML'] = [
+	'plugin' => 'SimpleSAMLphp',
+	'data' => [
+		'authSourceId' => 'habidat',
+		'usernameAttribute' => 'uid',
+		'realNameAttribute' => 'cn',
+		'emailAttribute' => 'mail'
+	]
+];
