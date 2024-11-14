@@ -26,7 +26,8 @@ RUN git clone -b 5.39 https://github.com/thaider/Tweeki /var/www/html/skins/Twee
     && git clone -b REL1_39 https://github.com/wikimedia/mediawiki-extensions-Auth_remoteuser.git extensions/Auth_remoteuser \
     && git clone -b REL1_39 https://github.com/wikimedia/mediawiki-extensions-LdapAuthentication extensions/LdapAuthentication \
     && git clone -b REL1_39 https://gerrit.wikimedia.org/r/mediawiki/extensions/CreateUserPage.git extensions/CreateUserPage \
-    && git clone -b REL1_39 https://gerrit.wikimedia.org/r/mediawiki/extensions/UserMerge.git extensions/UserMerge
+    && git clone -b REL1_39 https://gerrit.wikimedia.org/r/mediawiki/extensions/UserMerge.git extensions/UserMerge \
+    && git clone -b REL1_39 https://gerrit.wikimedia.org/r/mediawiki/extensions/VEForAll.git extensions/VEForAll
 
 WORKDIR /var/www/html/extensions/PageForms
 RUN git checkout a171657

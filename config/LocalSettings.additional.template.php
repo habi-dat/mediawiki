@@ -1,4 +1,10 @@
 <?php
+# Debug Mode
+if( isset( $wgDebug ) && $wgDebug ) {
+  $wgShowExceptionDetails = true;
+  $wgDebugToolbar = true;
+}
+
 
 $wgLanguageCode = "de";
 
