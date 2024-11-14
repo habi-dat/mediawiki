@@ -21,7 +21,7 @@ $config = [
 
         // The entity ID of the IdP this SP should contact.
         // Can be NULL/unset, in which case the user will be shown a list of available IdPs.
-        'idp' => 'https://sso.$HABIDAT_DOMAIN',
+        'idp' => 'https://user.$HABIDAT_DOMAIN',
 
         // The URL to the discovery service.
         // Can be NULL/unset, in which case a builtin discovery service will be used.
@@ -41,12 +41,16 @@ $config = [
         ],
 
         'attributes' => [
-            'attrname' => 'urn:oid:x.x.x.x',
+            'uid',
+            'name',
+            'email',
         ],
+
         'attributes.required' => [
-            'urn:oid:x.x.x.x',
-        ],
-        */
+            'uid',
+            'name'
+        ]*/
+
     ],
 
 ];
