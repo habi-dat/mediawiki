@@ -1,5 +1,10 @@
 FROM mediawiki:1.39
 
+# run setup as root user
+USER root
+# allow running composer as superuser
+ENV COMPOSER_ALLOW_SUPERUSER=1 
+
 RUN apt-get update && \
     apt-get install -y libldap2-dev nano gettext-base wget zip unzip libzip-dev zlib1g-dev vim && \
     apt-get clean && \
@@ -8,7 +13,7 @@ RUN apt-get update && \
     docker-php-ext-install ldap && \
     docker-php-ext-install zip
 
-COPY --from=composer /usr/bin/composer /usr/bin/composer
+COPY --from=composer:2.2 /usr/bin/composer /usr/bin/composer
 
 WORKDIR /var/www/html
 
@@ -38,6 +43,7 @@ COPY sso/000-default.conf /etc/apache2/sites-available
 
 ADD composer.local.json ./
 
+RUN chown root:root composer.json
 RUN composer config --no-interaction allow-plugins.composer/installers true
 RUN composer update --no-dev -o
 

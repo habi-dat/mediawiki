@@ -28,6 +28,7 @@ wfLoadExtension( 'ParserFunctions' );
 $wgPFEnableStringFunctions = true; # Enable String Functions
 
 # Enable Semantic MediaWiki
+wfLoadExtension( 'SemanticMediaWiki' );
 enableSemantics();
 $smwgEnabledEditPageHelp = false;
 $smwgPageSpecialProperties[] = '_CDAT';
@@ -45,6 +46,17 @@ wfLoadExtension( 'ReplaceText' );
 
 # Load Semantic Organization extension
 wfLoadExtension('SemanticOrganization');
+
+# Load VisualEditor extension
+wfLoadExtension( 'VisualEditor' );
+wfLoadExtension( 'Parsoid', 'vendor/wikimedia/parsoid/extension.json' );
+$wgGroupPermissions['user']['writeapi'] = true;
+$wgSessionsInObjectCache = true;
+$wgVirtualRestConfig['modules']['parsoid'] = array(
+        'url' => "http://semorg:80/rest.php",
+        'forwardCookies' => true,
+);
+wfLoadExtension( 'VEForAll' );
 
 # Allow display titles for automatically created page names
 $wgRestrictDisplayTitle = false;
