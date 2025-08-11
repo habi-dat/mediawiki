@@ -39,6 +39,7 @@ enableSemantics();
 $smwgEnabledEditPageHelp = false;
 $smwgPageSpecialProperties[] = '_CDAT';
 $smwgParserFeatures = $smwgParserFeatures | SMW_PARSER_LINV;
+$smwgQMaxSize = 20;
 
 # Load Page Forms and Semantic Organization extensions
 wfLoadExtension('PageForms');
