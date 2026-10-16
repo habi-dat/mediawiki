@@ -7,6 +7,7 @@ CONTAINER_UPDATED="UPDATED"
 CONTAINER_INSTALLED="config/INSTALLED"
 CONTAINER_1_35="config/1_35"
 CONTAINER_1_39="config/1_39"
+CONTAINER_1_43="config/1_43"
 
 if [ ! -e $CONTAINER_INSTALLED ]; then
 
@@ -17,6 +18,7 @@ if [ ! -e $CONTAINER_INSTALLED ]; then
 
     touch $CONTAINER_1_35
     touch $CONTAINER_1_39
+    touch $CONTAINER_1_43
     touch $CONTAINER_INSTALLED
 
 fi

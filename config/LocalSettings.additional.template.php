@@ -29,6 +29,11 @@ $wgDefaultSkin = "tweeki";
 $wgDefaultUserOptions['tweeki-advanced'] = 1; # Show Tweeki's advanced features by default
 $wgTweekiSkinUseTooltips = true; # Use Bootstrap Tooltips
 
+$wgTweekiSkinGridNone = [
+  "mainoffset" => 0,
+  "mainwidth" => 12,
+];
+
 # Load Parser Functions extension
 wfLoadExtension( 'ParserFunctions' );
 $wgPFEnableStringFunctions = true; # Enable String Functions
@@ -56,7 +61,7 @@ wfLoadExtension('SemanticOrganization');
 
 # Load VisualEditor extension
 wfLoadExtension( 'VisualEditor' );
-wfLoadExtension( 'Parsoid', 'vendor/wikimedia/parsoid/extension.json' );
+wfLoadExtension( 'Parsoid', "$IP/vendor/wikimedia/parsoid/extension.json" );
 $wgGroupPermissions['user']['writeapi'] = true;
 $wgSessionsInObjectCache = true;
 wfLoadExtension( 'VEForAll' );
@@ -79,6 +84,8 @@ $wgCreateUserPage_PageContent = '{{semorg-person-user-custom|membership=Ja}}';
 
 wfLoadExtension('UserMerge');
 $wgGroupPermissions['bureaucrat']['usermerge'] = true;
+
+wfLoadExtension('Habidat');
 
 # Clean up navigation
 $wgTweekiSkinHideAnon['navbar'] = true;
